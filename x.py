@@ -220,9 +220,9 @@ def main():
     driver = None
     
     try:
-        search_term = "ciudad de mexico"
-        max_tweets = 5
-        max_workers = 3
+        search_term = "#cuenca, comida, restaurantes, delincuencia, protestas, turismo, accidentes"
+        max_tweets = 15
+        max_workers = 5
         
         driver = get_headless_chrome_driver()
         logger.info("Driver inicializado en modo headless")
@@ -231,7 +231,7 @@ def main():
         go_to_explore(driver)
         search_keyword(driver, search_term)
         
-        tweet_links = get_tweet_links(driver, max_tweets, extra_scrolls=5)
+        tweet_links = get_tweet_links(driver, max_tweets, extra_scrolls=20)
         
         if not tweet_links:
             logger.warning("No se encontraron enlaces de tweets")
