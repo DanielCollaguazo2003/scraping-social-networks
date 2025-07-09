@@ -1,0 +1,3456 @@
+2025-07-08 21:26:11,570 - INFO - Directorio 'resultados' creado
+2025-07-08 21:26:11,571 - INFO - Iniciando scraping para 'perros' con 5 videos
+2025-07-08 21:30:18,295 - INFO - Iniciando scraping para 'perros' con 5 videos
+2025-07-08 21:30:20,384 - INFO - Driver de Chrome configurado exitosamente
+2025-07-08 21:30:20,385 - INFO - Buscando videos con palabra clave: perros
+2025-07-08 21:30:38,567 - INFO - Encontrados 0 videos
+2025-07-08 21:30:38,570 - WARNING - No se encontraron videos
+2025-07-08 21:30:40,986 - INFO - Driver cerrado
+2025-07-08 21:32:59,087 - INFO - Iniciando scraping para 'perros' con 5 videos
+2025-07-08 21:33:00,444 - INFO - Driver de Chrome configurado exitosamente
+2025-07-08 21:33:00,445 - INFO - Buscando videos con palabra clave: perros
+2025-07-08 21:33:17,963 - INFO - Scroll 1 completado
+2025-07-08 21:33:20,994 - INFO - Scroll 2 completado
+2025-07-08 21:33:24,020 - INFO - Scroll 3 completado
+2025-07-08 21:33:27,052 - INFO - Scroll 4 completado
+2025-07-08 21:33:30,078 - INFO - Scroll 5 completado
+2025-07-08 21:33:30,102 - INFO - Selector 'div[data-e2e="search-video-item"]': 0 elementos encontrados
+2025-07-08 21:33:30,115 - INFO - Selector '[data-e2e="search-video-item"]': 0 elementos encontrados
+2025-07-08 21:33:30,133 - INFO - Selector 'div[data-e2e="search_top-item"]': 71 elementos encontrados
+2025-07-08 21:33:30,133 - INFO - Encontrados 71 videos totales
+2025-07-08 21:33:30,511 - INFO - Video 1 extraído: Usuario no disponible
+2025-07-08 21:33:30,659 - INFO - Video 2 extraído: Usuario no disponible
+2025-07-08 21:33:30,800 - INFO - Video 3 extraído: Usuario no disponible
+2025-07-08 21:33:30,985 - INFO - Video 4 extraído: Usuario no disponible
+2025-07-08 21:33:31,134 - INFO - Video 5 extraído: Usuario no disponible
+2025-07-08 21:35:32,204 - INFO - Extrayendo comentarios del video 1
+2025-07-08 21:35:58,596 - INFO - Extraídos 0 comentarios del video 1
+2025-07-08 21:35:58,597 - INFO - Comentarios guardados en: comentarios/video_1_Usuario no disponible.txt
+2025-07-08 21:36:01,598 - INFO - Extrayendo comentarios del video 2
+2025-07-08 21:36:22,919 - INFO - Extraídos 0 comentarios del video 2
+2025-07-08 21:36:22,921 - INFO - Comentarios guardados en: comentarios/video_2_Usuario no disponible.txt
+2025-07-08 21:36:25,922 - INFO - Extrayendo comentarios del video 3
+2025-07-08 21:36:47,337 - INFO - Extraídos 0 comentarios del video 3
+2025-07-08 21:36:47,340 - INFO - Comentarios guardados en: comentarios/video_3_Usuario no disponible.txt
+2025-07-08 21:36:50,342 - INFO - Extrayendo comentarios del video 4
+2025-07-08 21:36:56,086 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/c651630061156e2cb42aef1ef9876253
+2025-07-08 21:37:00,195 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002542A1D58D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c651630061156e2cb42aef1ef9876253
+2025-07-08 21:37:04,295 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002542A1D6450>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c651630061156e2cb42aef1ef9876253
+2025-07-08 21:37:08,390 - INFO - Driver cerrado
+2025-07-08 21:41:55,674 - INFO - Iniciando scraping para 'perros' con 5 videos
+2025-07-08 21:42:55,103 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-08 21:42:58,446 - ERROR - Error al configurar el driver: Message: session not created: cannot connect to chrome at 127.0.0.1:62667
+from session not created: This version of ChromeDriver only supports Chrome version 138
+Current browser version is 137.0.7151.120
+Stacktrace:
+	GetHandleVerifier [0x0xd844a3+62419]
+	GetHandleVerifier [0x0xd844e4+62484]
+	(No symbol) [0x0xbc2133]
+	(No symbol) [0x0xbfbfab]
+	(No symbol) [0x0xbfafc9]
+	(No symbol) [0x0xbf132f]
+	(No symbol) [0x0xbf1166]
+	(No symbol) [0x0xc3af3e]
+	(No symbol) [0x0xc3a82a]
+	(No symbol) [0x0xc2f266]
+	(No symbol) [0x0xbfe852]
+	(No symbol) [0x0xbff6f4]
+	GetHandleVerifier [0x0xff4793+2619075]
+	GetHandleVerifier [0x0xfefbaa+2599642]
+	GetHandleVerifier [0x0xdab04a+221050]
+	GetHandleVerifier [0x0xd9b2c8+156152]
+	GetHandleVerifier [0x0xda1c7d+183213]
+	GetHandleVerifier [0x0xd8c388+94904]
+	GetHandleVerifier [0x0xd8c512+95298]
+	GetHandleVerifier [0x0xd7766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 21:42:58,448 - ERROR - Error durante el scraping: Message: session not created: cannot connect to chrome at 127.0.0.1:62667
+from session not created: This version of ChromeDriver only supports Chrome version 138
+Current browser version is 137.0.7151.120
+Stacktrace:
+	GetHandleVerifier [0x0xd844a3+62419]
+	GetHandleVerifier [0x0xd844e4+62484]
+	(No symbol) [0x0xbc2133]
+	(No symbol) [0x0xbfbfab]
+	(No symbol) [0x0xbfafc9]
+	(No symbol) [0x0xbf132f]
+	(No symbol) [0x0xbf1166]
+	(No symbol) [0x0xc3af3e]
+	(No symbol) [0x0xc3a82a]
+	(No symbol) [0x0xc2f266]
+	(No symbol) [0x0xbfe852]
+	(No symbol) [0x0xbff6f4]
+	GetHandleVerifier [0x0xff4793+2619075]
+	GetHandleVerifier [0x0xfefbaa+2599642]
+	GetHandleVerifier [0x0xdab04a+221050]
+	GetHandleVerifier [0x0xd9b2c8+156152]
+	GetHandleVerifier [0x0xda1c7d+183213]
+	GetHandleVerifier [0x0xd8c388+94904]
+	GetHandleVerifier [0x0xd8c512+95298]
+	GetHandleVerifier [0x0xd7766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 21:52:06,718 - INFO - Iniciando scraping para 'perros' con 5 videos
+2025-07-08 21:53:03,930 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-08 21:53:05,251 - INFO - Driver configurado exitosamente con undetected-chromedriver
+2025-07-08 21:53:05,251 - INFO - Navegando a página principal de TikTok...
+2025-07-08 21:53:17,473 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 21:53:17,474 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 21:53:17,474 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 21:53:31,211 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x3244a3+62419]
+	GetHandleVerifier [0x0x3244e4+62484]
+	(No symbol) [0x0x161f90]
+	(No symbol) [0x0x1f8f51]
+	(No symbol) [0x0x1cf46c]
+	(No symbol) [0x0x1f087a]
+	(No symbol) [0x0x1cf266]
+	(No symbol) [0x0x19e852]
+	(No symbol) [0x0x19f6f4]
+	GetHandleVerifier [0x0x594793+2619075]
+	GetHandleVerifier [0x0x58fbaa+2599642]
+	GetHandleVerifier [0x0x34b04a+221050]
+	GetHandleVerifier [0x0x33b2c8+156152]
+	GetHandleVerifier [0x0x341c7d+183213]
+	GetHandleVerifier [0x0x32c388+94904]
+	GetHandleVerifier [0x0x32c512+95298]
+	GetHandleVerifier [0x0x31766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+	(No symbol) [0x0]
+
+2025-07-08 21:53:44,644 - INFO - Buscando videos con palabra clave: perros
+2025-07-08 21:54:00,135 - INFO - Cargando videos con scroll gradual...
+2025-07-08 21:54:04,511 - INFO - Scroll 1 completado
+2025-07-08 21:54:10,405 - INFO - Scroll 2 completado
+2025-07-08 21:54:16,210 - INFO - Scroll 3 completado
+2025-07-08 21:54:21,712 - INFO - Scroll 4 completado
+2025-07-08 21:54:27,650 - INFO - Scroll 5 completado
+2025-07-08 21:54:32,755 - INFO - Scroll 6 completado
+2025-07-08 21:54:39,059 - INFO - Scroll 7 completado
+2025-07-08 21:54:39,139 - INFO - Selector 'div[data-e2e="search-video-item"]': 0 elementos encontrados
+2025-07-08 21:54:39,159 - INFO - Selector 'div[data-e2e="search_top-item"]': 22 elementos encontrados
+2025-07-08 21:54:39,626 - INFO - Encontrados 22 videos válidos
+2025-07-08 21:54:39,841 - INFO - Video 1 extraído: Usuario no disponible
+2025-07-08 21:54:42,510 - INFO - Video 2 extraído: Usuario no disponible
+2025-07-08 21:54:44,154 - INFO - Video 3 extraído: Usuario no disponible
+2025-07-08 21:54:45,652 - INFO - Video 4 extraído: Usuario no disponible
+2025-07-08 21:54:48,274 - INFO - Video 5 extraído: Usuario no disponible
+2025-07-08 21:55:22,020 - INFO - Extrayendo comentarios del video 1
+2025-07-08 21:55:34,849 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 21:55:34,849 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 21:55:34,850 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 21:55:56,718 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x3244a3+62419]
+	GetHandleVerifier [0x0x3244e4+62484]
+	(No symbol) [0x0x161f90]
+	(No symbol) [0x0x1f8f51]
+	(No symbol) [0x0x1cf46c]
+	(No symbol) [0x0x1f087a]
+	(No symbol) [0x0x1cf266]
+	(No symbol) [0x0x19e852]
+	(No symbol) [0x0x19f6f4]
+	GetHandleVerifier [0x0x594793+2619075]
+	GetHandleVerifier [0x0x58fbaa+2599642]
+	GetHandleVerifier [0x0x34b04a+221050]
+	GetHandleVerifier [0x0x33b2c8+156152]
+	GetHandleVerifier [0x0x341c7d+183213]
+	GetHandleVerifier [0x0x32c388+94904]
+	GetHandleVerifier [0x0x32c512+95298]
+	GetHandleVerifier [0x0x31766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+	(No symbol) [0x0]
+
+2025-07-08 21:56:16,493 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 21:56:16,514 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 21:56:16,514 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 21:56:16,514 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 21:56:38,588 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x3244a3+62419]
+	GetHandleVerifier [0x0x3244e4+62484]
+	(No symbol) [0x0x161f90]
+	(No symbol) [0x0x1f8f51]
+	(No symbol) [0x0x1cf46c]
+	(No symbol) [0x0x1f087a]
+	(No symbol) [0x0x1cf266]
+	(No symbol) [0x0x19e852]
+	(No symbol) [0x0x19f6f4]
+	GetHandleVerifier [0x0x594793+2619075]
+	GetHandleVerifier [0x0x58fbaa+2599642]
+	GetHandleVerifier [0x0x34b04a+221050]
+	GetHandleVerifier [0x0x33b2c8+156152]
+	GetHandleVerifier [0x0x341c7d+183213]
+	GetHandleVerifier [0x0x32c388+94904]
+	GetHandleVerifier [0x0x32c512+95298]
+	GetHandleVerifier [0x0x31766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+	(No symbol) [0x0]
+
+2025-07-08 21:57:08,443 - INFO - Extraídos 0 comentarios del video 1
+2025-07-08 21:57:08,455 - INFO - Comentarios guardados en: comentarios/video_1_Usuario no disponible.txt
+2025-07-08 21:57:18,167 - INFO - Extrayendo comentarios del video 2
+2025-07-08 21:57:26,959 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 21:57:26,959 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 21:57:26,960 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:00:25,031 - INFO - Iniciando scraping para 'turismo' con 5 videos
+2025-07-08 22:01:08,926 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-08 22:01:10,342 - INFO - Driver configurado exitosamente con undetected-chromedriver
+2025-07-08 22:01:10,342 - INFO - Navegando a página principal de TikTok...
+2025-07-08 22:01:27,109 - INFO - Buscando videos con palabra clave: turismo
+2025-07-08 22:01:38,439 - INFO - Cargando videos con scroll gradual...
+2025-07-08 22:01:45,091 - INFO - Scroll 1 completado
+2025-07-08 22:01:51,145 - INFO - Scroll 2 completado
+2025-07-08 22:01:56,628 - INFO - Scroll 3 completado
+2025-07-08 22:02:03,481 - INFO - Scroll 4 completado
+2025-07-08 22:02:10,724 - INFO - Scroll 5 completado
+2025-07-08 22:02:17,835 - INFO - Scroll 6 completado
+2025-07-08 22:02:25,063 - INFO - Scroll 7 completado
+2025-07-08 22:02:25,163 - INFO - Selector 'div[data-e2e="search-video-item"]': 0 elementos encontrados
+2025-07-08 22:02:25,180 - INFO - Selector 'div[data-e2e="search_top-item"]': 36 elementos encontrados
+2025-07-08 22:02:25,965 - INFO - Encontrados 36 videos válidos
+2025-07-08 22:02:26,125 - INFO - Video 1 extraído: Usuario no disponible
+2025-07-08 22:02:29,128 - INFO - Video 2 extraído: Usuario no disponible
+2025-07-08 22:02:32,215 - INFO - Video 3 extraído: Usuario no disponible
+2025-07-08 22:02:34,571 - INFO - Video 4 extraído: Usuario no disponible
+2025-07-08 22:02:37,508 - INFO - Video 5 extraído: Usuario no disponible
+2025-07-08 22:02:42,592 - INFO - Extrayendo comentarios del video 1
+2025-07-08 22:02:49,375 - INFO - Video pausado con tecla SPACE
+2025-07-08 22:02:58,877 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:02:58,877 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 22:02:58,877 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:03:20,579 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xe044a3+62419]
+	GetHandleVerifier [0x0xe044e4+62484]
+	(No symbol) [0x0xc41f90]
+	(No symbol) [0x0xcd8f51]
+	(No symbol) [0x0xcaf46c]
+	(No symbol) [0x0xcd087a]
+	(No symbol) [0x0xcaf266]
+	(No symbol) [0x0xc7e852]
+	(No symbol) [0x0xc7f6f4]
+	GetHandleVerifier [0x0x1074793+2619075]
+	GetHandleVerifier [0x0x106fbaa+2599642]
+	GetHandleVerifier [0x0xe2b04a+221050]
+	GetHandleVerifier [0x0xe1b2c8+156152]
+	GetHandleVerifier [0x0xe21c7d+183213]
+	GetHandleVerifier [0x0xe0c388+94904]
+	GetHandleVerifier [0x0xe0c512+95298]
+	GetHandleVerifier [0x0xdf766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:03:36,607 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:03:36,623 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:03:36,624 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 22:03:36,624 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:03:54,422 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xe044a3+62419]
+	GetHandleVerifier [0x0xe044e4+62484]
+	(No symbol) [0x0xc41f90]
+	(No symbol) [0x0xcd8f51]
+	(No symbol) [0x0xcaf46c]
+	(No symbol) [0x0xcd087a]
+	(No symbol) [0x0xcaf266]
+	(No symbol) [0x0xc7e852]
+	(No symbol) [0x0xc7f6f4]
+	GetHandleVerifier [0x0x1074793+2619075]
+	GetHandleVerifier [0x0x106fbaa+2599642]
+	GetHandleVerifier [0x0xe2b04a+221050]
+	GetHandleVerifier [0x0xe1b2c8+156152]
+	GetHandleVerifier [0x0xe21c7d+183213]
+	GetHandleVerifier [0x0xe0c388+94904]
+	GetHandleVerifier [0x0xe0c512+95298]
+	GetHandleVerifier [0x0xdf766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:04:07,204 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:04:07,205 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-08 22:04:07,205 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:04:29,029 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xe044a3+62419]
+	GetHandleVerifier [0x0xe044e4+62484]
+	(No symbol) [0x0xc41f90]
+	(No symbol) [0x0xcd8f51]
+	(No symbol) [0x0xcaf46c]
+	(No symbol) [0x0xcd087a]
+	(No symbol) [0x0xcaf266]
+	(No symbol) [0x0xc7e852]
+	(No symbol) [0x0xc7f6f4]
+	GetHandleVerifier [0x0x1074793+2619075]
+	GetHandleVerifier [0x0x106fbaa+2599642]
+	GetHandleVerifier [0x0xe2b04a+221050]
+	GetHandleVerifier [0x0xe1b2c8+156152]
+	GetHandleVerifier [0x0xe21c7d+183213]
+	GetHandleVerifier [0x0xe0c388+94904]
+	GetHandleVerifier [0x0xe0c512+95298]
+	GetHandleVerifier [0x0xdf766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:05:03,920 - INFO - Extraídos 0 comentarios del video 1
+2025-07-08 22:05:03,922 - INFO - Comentarios guardados en: comentarios/video_1_Usuario no disponible.txt
+2025-07-08 22:05:09,747 - INFO - Extrayendo comentarios del video 2
+2025-07-08 22:05:15,009 - INFO - Video pausado con tecla SPACE
+2025-07-08 22:05:25,375 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:05:25,375 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 22:05:25,376 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:05:47,044 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xe044a3+62419]
+	GetHandleVerifier [0x0xe044e4+62484]
+	(No symbol) [0x0xc41f90]
+	(No symbol) [0x0xcd8f51]
+	(No symbol) [0x0xcaf46c]
+	(No symbol) [0x0xcd087a]
+	(No symbol) [0x0xcaf266]
+	(No symbol) [0x0xc7e852]
+	(No symbol) [0x0xc7f6f4]
+	GetHandleVerifier [0x0x1074793+2619075]
+	GetHandleVerifier [0x0x106fbaa+2599642]
+	GetHandleVerifier [0x0xe2b04a+221050]
+	GetHandleVerifier [0x0xe1b2c8+156152]
+	GetHandleVerifier [0x0xe21c7d+183213]
+	GetHandleVerifier [0x0xe0c388+94904]
+	GetHandleVerifier [0x0xe0c512+95298]
+	GetHandleVerifier [0x0xdf766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:06:00,846 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:06:00,867 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:06:00,867 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 22:06:00,867 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:06:13,560 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xe044a3+62419]
+	GetHandleVerifier [0x0xe044e4+62484]
+	(No symbol) [0x0xc41f90]
+	(No symbol) [0x0xcd8f51]
+	(No symbol) [0x0xcaf46c]
+	(No symbol) [0x0xcd087a]
+	(No symbol) [0x0xcaf266]
+	(No symbol) [0x0xc7e852]
+	(No symbol) [0x0xc7f6f4]
+	GetHandleVerifier [0x0x1074793+2619075]
+	GetHandleVerifier [0x0x106fbaa+2599642]
+	GetHandleVerifier [0x0xe2b04a+221050]
+	GetHandleVerifier [0x0xe1b2c8+156152]
+	GetHandleVerifier [0x0xe21c7d+183213]
+	GetHandleVerifier [0x0xe0c388+94904]
+	GetHandleVerifier [0x0xe0c512+95298]
+	GetHandleVerifier [0x0xdf766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:06:25,483 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:06:25,483 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-08 22:06:25,484 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:06:42,100 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xe044a3+62419]
+	GetHandleVerifier [0x0xe044e4+62484]
+	(No symbol) [0x0xc41f90]
+	(No symbol) [0x0xcd8f51]
+	(No symbol) [0x0xcaf46c]
+	(No symbol) [0x0xcd087a]
+	(No symbol) [0x0xcaf266]
+	(No symbol) [0x0xc7e852]
+	(No symbol) [0x0xc7f6f4]
+	GetHandleVerifier [0x0x1074793+2619075]
+	GetHandleVerifier [0x0x106fbaa+2599642]
+	GetHandleVerifier [0x0xe2b04a+221050]
+	GetHandleVerifier [0x0xe1b2c8+156152]
+	GetHandleVerifier [0x0xe21c7d+183213]
+	GetHandleVerifier [0x0xe0c388+94904]
+	GetHandleVerifier [0x0xe0c512+95298]
+	GetHandleVerifier [0x0xdf766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:07:11,661 - INFO - Extraídos 0 comentarios del video 2
+2025-07-08 22:07:11,664 - INFO - Comentarios guardados en: comentarios/video_2_Usuario no disponible.txt
+2025-07-08 22:07:17,810 - INFO - Extrayendo comentarios del video 3
+2025-07-08 22:07:21,910 - INFO - Video pausado con tecla SPACE
+2025-07-08 22:07:30,177 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:07:30,178 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 22:07:30,178 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:07:44,345 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xe044a3+62419]
+	GetHandleVerifier [0x0xe044e4+62484]
+	(No symbol) [0x0xc41f90]
+	(No symbol) [0x0xcd8f51]
+	(No symbol) [0x0xcaf46c]
+	(No symbol) [0x0xcd087a]
+	(No symbol) [0x0xcaf266]
+	(No symbol) [0x0xc7e852]
+	(No symbol) [0x0xc7f6f4]
+	GetHandleVerifier [0x0x1074793+2619075]
+	GetHandleVerifier [0x0x106fbaa+2599642]
+	GetHandleVerifier [0x0xe2b04a+221050]
+	GetHandleVerifier [0x0xe1b2c8+156152]
+	GetHandleVerifier [0x0xe21c7d+183213]
+	GetHandleVerifier [0x0xe0c388+94904]
+	GetHandleVerifier [0x0xe0c512+95298]
+	GetHandleVerifier [0x0xdf766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:07:56,971 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:07:56,972 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-08 22:07:56,972 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:08:14,742 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xe044a3+62419]
+	GetHandleVerifier [0x0xe044e4+62484]
+	(No symbol) [0x0xc41f90]
+	(No symbol) [0x0xcd8f51]
+	(No symbol) [0x0xcaf46c]
+	(No symbol) [0x0xcd087a]
+	(No symbol) [0x0xcaf266]
+	(No symbol) [0x0xc7e852]
+	(No symbol) [0x0xc7f6f4]
+	GetHandleVerifier [0x0x1074793+2619075]
+	GetHandleVerifier [0x0x106fbaa+2599642]
+	GetHandleVerifier [0x0xe2b04a+221050]
+	GetHandleVerifier [0x0xe1b2c8+156152]
+	GetHandleVerifier [0x0xe21c7d+183213]
+	GetHandleVerifier [0x0xe0c388+94904]
+	GetHandleVerifier [0x0xe0c512+95298]
+	GetHandleVerifier [0x0xdf766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:08:24,859 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:08:24,860 - WARNING - CAPTCHA detectado. Intento 3/3
+2025-07-08 22:08:24,860 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:08:40,539 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xe044a3+62419]
+	GetHandleVerifier [0x0xe044e4+62484]
+	(No symbol) [0x0xc41f90]
+	(No symbol) [0x0xcd8f51]
+	(No symbol) [0x0xcaf46c]
+	(No symbol) [0x0xcd087a]
+	(No symbol) [0x0xcaf266]
+	(No symbol) [0x0xc7e852]
+	(No symbol) [0x0xc7f6f4]
+	GetHandleVerifier [0x0x1074793+2619075]
+	GetHandleVerifier [0x0x106fbaa+2599642]
+	GetHandleVerifier [0x0xe2b04a+221050]
+	GetHandleVerifier [0x0xe1b2c8+156152]
+	GetHandleVerifier [0x0xe21c7d+183213]
+	GetHandleVerifier [0x0xe0c388+94904]
+	GetHandleVerifier [0x0xe0c512+95298]
+	GetHandleVerifier [0x0xdf766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:08:52,346 - ERROR - No se pudo superar CAPTCHA al cargar video
+2025-07-08 22:08:52,352 - INFO - Comentarios guardados en: comentarios/video_3_Usuario no disponible.txt
+2025-07-08 22:08:59,663 - INFO - Extrayendo comentarios del video 4
+2025-07-08 22:09:04,912 - INFO - Video pausado con tecla SPACE
+2025-07-08 22:09:45,090 - INFO - Encontrados 20 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-08 22:09:45,487 - INFO - Extraídos 20 comentarios del video 4
+2025-07-08 22:09:45,491 - INFO - Comentarios guardados en: comentarios/video_4_Usuario no disponible.txt
+2025-07-08 22:09:52,334 - INFO - Extrayendo comentarios del video 5
+2025-07-08 22:10:04,368 - INFO - Video pausado con tecla SPACE
+2025-07-08 22:10:37,189 - INFO - Encontrados 20 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-08 22:10:37,439 - INFO - Extraídos 20 comentarios del video 5
+2025-07-08 22:10:37,443 - INFO - Comentarios guardados en: comentarios/video_5_Usuario no disponible.txt
+2025-07-08 22:10:43,048 - INFO - Resultados guardados en CSV: resultados/tiktok_scraping_turismo_20250708_221043.csv
+2025-07-08 22:10:43,049 - INFO - Scraping completado exitosamente
+2025-07-08 22:10:43,652 - INFO - Driver cerrado
+2025-07-08 22:11:56,141 - INFO - Iniciando scraping para 'turismo global' con 5 videos
+2025-07-08 22:12:09,277 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-08 22:12:10,682 - INFO - Driver configurado exitosamente con undetected-chromedriver
+2025-07-08 22:12:10,682 - INFO - Navegando a página principal de TikTok...
+2025-07-08 22:12:29,328 - INFO - Buscando videos con palabra clave: turismo global
+2025-07-08 22:12:39,100 - INFO - Cargando videos con scroll gradual...
+2025-07-08 22:12:44,697 - INFO - Scroll 1 completado
+2025-07-08 22:12:51,041 - INFO - Scroll 2 completado
+2025-07-08 22:12:56,952 - INFO - Scroll 3 completado
+2025-07-08 22:13:02,798 - INFO - Scroll 4 completado
+2025-07-08 22:13:08,001 - INFO - Scroll 5 completado
+2025-07-08 22:13:13,989 - INFO - Scroll 6 completado
+2025-07-08 22:13:18,651 - INFO - Scroll 7 completado
+2025-07-08 22:13:18,796 - INFO - Selector 'div[data-e2e="search-video-item"]': 0 elementos encontrados
+2025-07-08 22:13:18,817 - INFO - Selector 'div[data-e2e="search_top-item"]': 36 elementos encontrados
+2025-07-08 22:13:19,685 - INFO - Encontrados 36 videos válidos
+2025-07-08 22:13:19,929 - INFO - Video 1 extraído: Usuario no disponible
+2025-07-08 22:13:21,657 - INFO - Video 2 extraído: Usuario no disponible
+2025-07-08 22:13:23,876 - INFO - Video 3 extraído: Usuario no disponible
+2025-07-08 22:13:25,814 - INFO - Video 4 extraído: Usuario no disponible
+2025-07-08 22:13:28,472 - INFO - Video 5 extraído: Usuario no disponible
+2025-07-08 22:22:08,129 - INFO - Extrayendo comentarios del video 1
+2025-07-08 22:22:13,182 - INFO - Driver cerrado
+2025-07-08 22:22:24,065 - INFO - Iniciando scraping para 'Turismo' con 20 videos
+2025-07-08 22:22:34,652 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-08 22:22:36,271 - INFO - Driver configurado exitosamente con undetected-chromedriver
+2025-07-08 22:22:36,272 - INFO - Navegando a página principal de TikTok...
+2025-07-08 22:22:44,778 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:22:44,779 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 22:22:44,779 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:23:04,904 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xf744a3+62419]
+	GetHandleVerifier [0x0xf744e4+62484]
+	(No symbol) [0x0xdb1f90]
+	(No symbol) [0x0xe48f51]
+	(No symbol) [0x0xe1f46c]
+	(No symbol) [0x0xe4087a]
+	(No symbol) [0x0xe1f266]
+	(No symbol) [0x0xdee852]
+	(No symbol) [0x0xdef6f4]
+	GetHandleVerifier [0x0x11e4793+2619075]
+	GetHandleVerifier [0x0x11dfbaa+2599642]
+	GetHandleVerifier [0x0xf9b04a+221050]
+	GetHandleVerifier [0x0xf8b2c8+156152]
+	GetHandleVerifier [0x0xf91c7d+183213]
+	GetHandleVerifier [0x0xf7c388+94904]
+	GetHandleVerifier [0x0xf7c512+95298]
+	GetHandleVerifier [0x0xf6766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:23:19,362 - INFO - Buscando videos con palabra clave: Turismo
+2025-07-08 22:23:34,008 - INFO - Cargando videos con scroll gradual...
+2025-07-08 22:23:39,317 - INFO - Scroll 1 completado
+2025-07-08 22:23:44,345 - INFO - Scroll 2 completado
+2025-07-08 22:23:48,687 - INFO - Scroll 3 completado
+2025-07-08 22:23:55,086 - INFO - Scroll 4 completado
+2025-07-08 22:24:01,371 - INFO - Scroll 5 completado
+2025-07-08 22:24:05,947 - INFO - Scroll 6 completado
+2025-07-08 22:24:11,146 - INFO - Scroll 7 completado
+2025-07-08 22:24:11,206 - INFO - Selector 'div[data-e2e="search-video-item"]': 0 elementos encontrados
+2025-07-08 22:24:11,221 - INFO - Selector 'div[data-e2e="search_top-item"]': 24 elementos encontrados
+2025-07-08 22:24:11,642 - INFO - Encontrados 24 videos válidos
+2025-07-08 22:24:11,827 - INFO - Video 1 extraído: Usuario no disponible
+2025-07-08 22:24:14,613 - INFO - Video 2 extraído: Usuario no disponible
+2025-07-08 22:24:16,459 - INFO - Video 3 extraído: Usuario no disponible
+2025-07-08 22:24:18,974 - INFO - Video 4 extraído: Usuario no disponible
+2025-07-08 22:24:21,581 - INFO - Video 5 extraído: Usuario no disponible
+2025-07-08 22:24:23,055 - INFO - Video 6 extraído: Usuario no disponible
+2025-07-08 22:24:25,786 - INFO - Video 7 extraído: Usuario no disponible
+2025-07-08 22:24:27,132 - INFO - Video 8 extraído: Usuario no disponible
+2025-07-08 22:24:29,926 - INFO - Video 9 extraído: Usuario no disponible
+2025-07-08 22:24:32,979 - INFO - Video 10 extraído: Usuario no disponible
+2025-07-08 22:24:34,309 - INFO - Video 11 extraído: Usuario no disponible
+2025-07-08 22:24:36,756 - INFO - Video 12 extraído: Usuario no disponible
+2025-07-08 22:24:38,075 - INFO - Video 13 extraído: Usuario no disponible
+2025-07-08 22:24:40,343 - INFO - Video 14 extraído: Usuario no disponible
+2025-07-08 22:24:43,649 - INFO - Video 15 extraído: Usuario no disponible
+2025-07-08 22:24:46,793 - INFO - Video 16 extraído: Usuario no disponible
+2025-07-08 22:24:48,531 - INFO - Video 17 extraído: Usuario no disponible
+2025-07-08 22:24:49,898 - INFO - Video 18 extraído: Usuario no disponible
+2025-07-08 22:24:51,969 - INFO - Video 19 extraído: Usuario no disponible
+2025-07-08 22:24:54,263 - INFO - Video 20 extraído: Usuario no disponible
+2025-07-08 22:24:59,317 - INFO - Extrayendo comentarios del video 1
+2025-07-08 22:25:06,057 - INFO - Video pausado con tecla SPACE
+2025-07-08 22:25:12,597 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:25:12,597 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 22:25:12,597 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:25:27,558 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xf744a3+62419]
+	GetHandleVerifier [0x0xf744e4+62484]
+	(No symbol) [0x0xdb1f90]
+	(No symbol) [0x0xe48f51]
+	(No symbol) [0x0xe1f46c]
+	(No symbol) [0x0xe4087a]
+	(No symbol) [0x0xe1f266]
+	(No symbol) [0x0xdee852]
+	(No symbol) [0x0xdef6f4]
+	GetHandleVerifier [0x0x11e4793+2619075]
+	GetHandleVerifier [0x0x11dfbaa+2599642]
+	GetHandleVerifier [0x0xf9b04a+221050]
+	GetHandleVerifier [0x0xf8b2c8+156152]
+	GetHandleVerifier [0x0xf91c7d+183213]
+	GetHandleVerifier [0x0xf7c388+94904]
+	GetHandleVerifier [0x0xf7c512+95298]
+	GetHandleVerifier [0x0xf6766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:25:42,469 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:25:42,492 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:25:42,492 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 22:25:42,493 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:26:03,567 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xf744a3+62419]
+	GetHandleVerifier [0x0xf744e4+62484]
+	(No symbol) [0x0xdb1f90]
+	(No symbol) [0x0xe48f51]
+	(No symbol) [0x0xe1f46c]
+	(No symbol) [0x0xe4087a]
+	(No symbol) [0x0xe1f266]
+	(No symbol) [0x0xdee852]
+	(No symbol) [0x0xdef6f4]
+	GetHandleVerifier [0x0x11e4793+2619075]
+	GetHandleVerifier [0x0x11dfbaa+2599642]
+	GetHandleVerifier [0x0xf9b04a+221050]
+	GetHandleVerifier [0x0xf8b2c8+156152]
+	GetHandleVerifier [0x0xf91c7d+183213]
+	GetHandleVerifier [0x0xf7c388+94904]
+	GetHandleVerifier [0x0xf7c512+95298]
+	GetHandleVerifier [0x0xf6766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:26:13,957 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:26:13,957 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-08 22:26:13,958 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:26:30,141 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xf744a3+62419]
+	GetHandleVerifier [0x0xf744e4+62484]
+	(No symbol) [0x0xdb1f90]
+	(No symbol) [0x0xe48f51]
+	(No symbol) [0x0xe1f46c]
+	(No symbol) [0x0xe4087a]
+	(No symbol) [0x0xe1f266]
+	(No symbol) [0x0xdee852]
+	(No symbol) [0x0xdef6f4]
+	GetHandleVerifier [0x0x11e4793+2619075]
+	GetHandleVerifier [0x0x11dfbaa+2599642]
+	GetHandleVerifier [0x0xf9b04a+221050]
+	GetHandleVerifier [0x0xf8b2c8+156152]
+	GetHandleVerifier [0x0xf91c7d+183213]
+	GetHandleVerifier [0x0xf7c388+94904]
+	GetHandleVerifier [0x0xf7c512+95298]
+	GetHandleVerifier [0x0xf6766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:27:03,203 - INFO - Extraídos 0 comentarios del video 1
+2025-07-08 22:27:03,205 - INFO - Comentarios guardados en: comentarios/video_1_Usuario no disponible.txt
+2025-07-08 22:27:11,512 - INFO - Extrayendo comentarios del video 2
+2025-07-08 22:27:14,507 - INFO - Video pausado con tecla SPACE
+2025-07-08 22:27:21,175 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:27:21,175 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 22:27:21,175 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:27:40,144 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xf744a3+62419]
+	GetHandleVerifier [0x0xf744e4+62484]
+	(No symbol) [0x0xdb1f90]
+	(No symbol) [0x0xe48f51]
+	(No symbol) [0x0xe1f46c]
+	(No symbol) [0x0xe4087a]
+	(No symbol) [0x0xe1f266]
+	(No symbol) [0x0xdee852]
+	(No symbol) [0x0xdef6f4]
+	GetHandleVerifier [0x0x11e4793+2619075]
+	GetHandleVerifier [0x0x11dfbaa+2599642]
+	GetHandleVerifier [0x0xf9b04a+221050]
+	GetHandleVerifier [0x0xf8b2c8+156152]
+	GetHandleVerifier [0x0xf91c7d+183213]
+	GetHandleVerifier [0x0xf7c388+94904]
+	GetHandleVerifier [0x0xf7c512+95298]
+	GetHandleVerifier [0x0xf6766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:27:57,999 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:27:58,020 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:27:58,020 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 22:27:58,021 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:28:11,035 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xf744a3+62419]
+	GetHandleVerifier [0x0xf744e4+62484]
+	(No symbol) [0x0xdb1f90]
+	(No symbol) [0x0xe48f51]
+	(No symbol) [0x0xe1f46c]
+	(No symbol) [0x0xe4087a]
+	(No symbol) [0x0xe1f266]
+	(No symbol) [0x0xdee852]
+	(No symbol) [0x0xdef6f4]
+	GetHandleVerifier [0x0x11e4793+2619075]
+	GetHandleVerifier [0x0x11dfbaa+2599642]
+	GetHandleVerifier [0x0xf9b04a+221050]
+	GetHandleVerifier [0x0xf8b2c8+156152]
+	GetHandleVerifier [0x0xf91c7d+183213]
+	GetHandleVerifier [0x0xf7c388+94904]
+	GetHandleVerifier [0x0xf7c512+95298]
+	GetHandleVerifier [0x0xf6766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:28:21,991 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:28:21,991 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-08 22:28:21,992 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:28:35,504 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xf744a3+62419]
+	GetHandleVerifier [0x0xf744e4+62484]
+	(No symbol) [0x0xdb1f90]
+	(No symbol) [0x0xe48f51]
+	(No symbol) [0x0xe1f46c]
+	(No symbol) [0x0xe4087a]
+	(No symbol) [0x0xe1f266]
+	(No symbol) [0x0xdee852]
+	(No symbol) [0x0xdef6f4]
+	GetHandleVerifier [0x0x11e4793+2619075]
+	GetHandleVerifier [0x0x11dfbaa+2599642]
+	GetHandleVerifier [0x0xf9b04a+221050]
+	GetHandleVerifier [0x0xf8b2c8+156152]
+	GetHandleVerifier [0x0xf91c7d+183213]
+	GetHandleVerifier [0x0xf7c388+94904]
+	GetHandleVerifier [0x0xf7c512+95298]
+	GetHandleVerifier [0x0xf6766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:29:08,020 - INFO - Extraídos 0 comentarios del video 2
+2025-07-08 22:29:08,022 - INFO - Comentarios guardados en: comentarios/video_2_Usuario no disponible.txt
+2025-07-08 22:29:13,356 - INFO - Extrayendo comentarios del video 3
+2025-07-08 22:29:16,468 - INFO - Video pausado con tecla SPACE
+2025-07-08 22:29:26,990 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:29:26,991 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 22:29:26,991 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:29:45,104 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xf744a3+62419]
+	GetHandleVerifier [0x0xf744e4+62484]
+	(No symbol) [0x0xdb1f90]
+	(No symbol) [0x0xe48f51]
+	(No symbol) [0x0xe1f46c]
+	(No symbol) [0x0xe4087a]
+	(No symbol) [0x0xe1f266]
+	(No symbol) [0x0xdee852]
+	(No symbol) [0x0xdef6f4]
+	GetHandleVerifier [0x0x11e4793+2619075]
+	GetHandleVerifier [0x0x11dfbaa+2599642]
+	GetHandleVerifier [0x0xf9b04a+221050]
+	GetHandleVerifier [0x0xf8b2c8+156152]
+	GetHandleVerifier [0x0xf91c7d+183213]
+	GetHandleVerifier [0x0xf7c388+94904]
+	GetHandleVerifier [0x0xf7c512+95298]
+	GetHandleVerifier [0x0xf6766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:30:01,927 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:30:01,945 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:30:01,945 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 22:30:01,945 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:30:21,277 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xf744a3+62419]
+	GetHandleVerifier [0x0xf744e4+62484]
+	(No symbol) [0x0xdb1f90]
+	(No symbol) [0x0xe48f51]
+	(No symbol) [0x0xe1f46c]
+	(No symbol) [0x0xe4087a]
+	(No symbol) [0x0xe1f266]
+	(No symbol) [0x0xdee852]
+	(No symbol) [0x0xdef6f4]
+	GetHandleVerifier [0x0x11e4793+2619075]
+	GetHandleVerifier [0x0x11dfbaa+2599642]
+	GetHandleVerifier [0x0xf9b04a+221050]
+	GetHandleVerifier [0x0xf8b2c8+156152]
+	GetHandleVerifier [0x0xf91c7d+183213]
+	GetHandleVerifier [0x0xf7c388+94904]
+	GetHandleVerifier [0x0xf7c512+95298]
+	GetHandleVerifier [0x0xf6766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:30:32,734 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:30:32,735 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-08 22:30:32,736 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:30:46,287 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xf744a3+62419]
+	GetHandleVerifier [0x0xf744e4+62484]
+	(No symbol) [0x0xdb1f90]
+	(No symbol) [0x0xe48f51]
+	(No symbol) [0x0xe1f46c]
+	(No symbol) [0x0xe4087a]
+	(No symbol) [0x0xe1f266]
+	(No symbol) [0x0xdee852]
+	(No symbol) [0x0xdef6f4]
+	GetHandleVerifier [0x0x11e4793+2619075]
+	GetHandleVerifier [0x0x11dfbaa+2599642]
+	GetHandleVerifier [0x0xf9b04a+221050]
+	GetHandleVerifier [0x0xf8b2c8+156152]
+	GetHandleVerifier [0x0xf91c7d+183213]
+	GetHandleVerifier [0x0xf7c388+94904]
+	GetHandleVerifier [0x0xf7c512+95298]
+	GetHandleVerifier [0x0xf6766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:31:20,270 - INFO - Extraídos 0 comentarios del video 3
+2025-07-08 22:31:20,271 - INFO - Comentarios guardados en: comentarios/video_3_Usuario no disponible.txt
+2025-07-08 22:31:29,157 - INFO - Extrayendo comentarios del video 4
+2025-07-08 22:31:32,489 - INFO - Video pausado con tecla SPACE
+2025-07-08 22:31:41,437 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:31:41,437 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 22:31:41,439 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:31:53,808 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xf744a3+62419]
+	GetHandleVerifier [0x0xf744e4+62484]
+	(No symbol) [0x0xdb1f90]
+	(No symbol) [0x0xe48f51]
+	(No symbol) [0x0xe1f46c]
+	(No symbol) [0x0xe4087a]
+	(No symbol) [0x0xe1f266]
+	(No symbol) [0x0xdee852]
+	(No symbol) [0x0xdef6f4]
+	GetHandleVerifier [0x0x11e4793+2619075]
+	GetHandleVerifier [0x0x11dfbaa+2599642]
+	GetHandleVerifier [0x0xf9b04a+221050]
+	GetHandleVerifier [0x0xf8b2c8+156152]
+	GetHandleVerifier [0x0xf91c7d+183213]
+	GetHandleVerifier [0x0xf7c388+94904]
+	GetHandleVerifier [0x0xf7c512+95298]
+	GetHandleVerifier [0x0xf6766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:32:10,863 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:32:10,884 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:32:10,885 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 22:32:10,885 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:32:29,921 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xf744a3+62419]
+	GetHandleVerifier [0x0xf744e4+62484]
+	(No symbol) [0x0xdb1f90]
+	(No symbol) [0x0xe48f51]
+	(No symbol) [0x0xe1f46c]
+	(No symbol) [0x0xe4087a]
+	(No symbol) [0x0xe1f266]
+	(No symbol) [0x0xdee852]
+	(No symbol) [0x0xdef6f4]
+	GetHandleVerifier [0x0x11e4793+2619075]
+	GetHandleVerifier [0x0x11dfbaa+2599642]
+	GetHandleVerifier [0x0xf9b04a+221050]
+	GetHandleVerifier [0x0xf8b2c8+156152]
+	GetHandleVerifier [0x0xf91c7d+183213]
+	GetHandleVerifier [0x0xf7c388+94904]
+	GetHandleVerifier [0x0xf7c512+95298]
+	GetHandleVerifier [0x0xf6766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:32:39,493 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:32:39,493 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-08 22:32:39,493 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:33:01,696 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xf744a3+62419]
+	GetHandleVerifier [0x0xf744e4+62484]
+	(No symbol) [0x0xdb1f90]
+	(No symbol) [0x0xe48f51]
+	(No symbol) [0x0xe1f46c]
+	(No symbol) [0x0xe4087a]
+	(No symbol) [0x0xe1f266]
+	(No symbol) [0x0xdee852]
+	(No symbol) [0x0xdef6f4]
+	GetHandleVerifier [0x0x11e4793+2619075]
+	GetHandleVerifier [0x0x11dfbaa+2599642]
+	GetHandleVerifier [0x0xf9b04a+221050]
+	GetHandleVerifier [0x0xf8b2c8+156152]
+	GetHandleVerifier [0x0xf91c7d+183213]
+	GetHandleVerifier [0x0xf7c388+94904]
+	GetHandleVerifier [0x0xf7c512+95298]
+	GetHandleVerifier [0x0xf6766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:33:36,199 - INFO - Extraídos 0 comentarios del video 4
+2025-07-08 22:33:36,201 - INFO - Comentarios guardados en: comentarios/video_4_Usuario no disponible.txt
+2025-07-08 22:33:45,840 - INFO - Extrayendo comentarios del video 5
+2025-07-08 22:33:48,582 - INFO - Video pausado con tecla SPACE
+2025-07-08 22:34:26,013 - INFO - Encontrados 20 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-08 22:34:26,253 - INFO - Extraídos 20 comentarios del video 5
+2025-07-08 22:34:26,256 - INFO - Comentarios guardados en: comentarios/video_5_Usuario no disponible.txt
+2025-07-08 22:34:33,210 - INFO - Extrayendo comentarios del video 6
+2025-07-08 22:34:35,636 - INFO - Video pausado con tecla SPACE
+2025-07-08 22:35:05,453 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:35:05,475 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:35:05,475 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 22:35:05,476 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:35:17,423 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xf744a3+62419]
+	GetHandleVerifier [0x0xf744e4+62484]
+	(No symbol) [0x0xdb1f90]
+	(No symbol) [0x0xe48f51]
+	(No symbol) [0x0xe1f46c]
+	(No symbol) [0x0xe4087a]
+	(No symbol) [0x0xe1f266]
+	(No symbol) [0x0xdee852]
+	(No symbol) [0x0xdef6f4]
+	GetHandleVerifier [0x0x11e4793+2619075]
+	GetHandleVerifier [0x0x11dfbaa+2599642]
+	GetHandleVerifier [0x0xf9b04a+221050]
+	GetHandleVerifier [0x0xf8b2c8+156152]
+	GetHandleVerifier [0x0xf91c7d+183213]
+	GetHandleVerifier [0x0xf7c388+94904]
+	GetHandleVerifier [0x0xf7c512+95298]
+	GetHandleVerifier [0x0xf6766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:35:28,606 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:35:28,606 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-08 22:35:28,606 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:35:42,556 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xf744a3+62419]
+	GetHandleVerifier [0x0xf744e4+62484]
+	(No symbol) [0x0xdb1f90]
+	(No symbol) [0x0xe48f51]
+	(No symbol) [0x0xe1f46c]
+	(No symbol) [0x0xe4087a]
+	(No symbol) [0x0xe1f266]
+	(No symbol) [0x0xdee852]
+	(No symbol) [0x0xdef6f4]
+	GetHandleVerifier [0x0x11e4793+2619075]
+	GetHandleVerifier [0x0x11dfbaa+2599642]
+	GetHandleVerifier [0x0xf9b04a+221050]
+	GetHandleVerifier [0x0xf8b2c8+156152]
+	GetHandleVerifier [0x0xf91c7d+183213]
+	GetHandleVerifier [0x0xf7c388+94904]
+	GetHandleVerifier [0x0xf7c512+95298]
+	GetHandleVerifier [0x0xf6766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:35:57,500 - INFO - Extraídos 0 comentarios del video 6
+2025-07-08 22:35:57,501 - INFO - Comentarios guardados en: comentarios/video_6_Usuario no disponible.txt
+2025-07-08 22:36:05,145 - INFO - Extrayendo comentarios del video 7
+2025-07-08 22:36:08,264 - INFO - Video pausado con tecla SPACE
+2025-07-08 22:36:15,522 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:36:15,522 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 22:36:15,522 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:36:29,908 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xf744a3+62419]
+	GetHandleVerifier [0x0xf744e4+62484]
+	(No symbol) [0x0xdb1f90]
+	(No symbol) [0x0xe48f51]
+	(No symbol) [0x0xe1f46c]
+	(No symbol) [0x0xe4087a]
+	(No symbol) [0x0xe1f266]
+	(No symbol) [0x0xdee852]
+	(No symbol) [0x0xdef6f4]
+	GetHandleVerifier [0x0x11e4793+2619075]
+	GetHandleVerifier [0x0x11dfbaa+2599642]
+	GetHandleVerifier [0x0xf9b04a+221050]
+	GetHandleVerifier [0x0xf8b2c8+156152]
+	GetHandleVerifier [0x0xf91c7d+183213]
+	GetHandleVerifier [0x0xf7c388+94904]
+	GetHandleVerifier [0x0xf7c512+95298]
+	GetHandleVerifier [0x0xf6766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:36:48,138 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:36:48,158 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:36:48,158 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 22:36:48,159 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:37:05,747 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xf744a3+62419]
+	GetHandleVerifier [0x0xf744e4+62484]
+	(No symbol) [0x0xdb1f90]
+	(No symbol) [0x0xe48f51]
+	(No symbol) [0x0xe1f46c]
+	(No symbol) [0x0xe4087a]
+	(No symbol) [0x0xe1f266]
+	(No symbol) [0x0xdee852]
+	(No symbol) [0x0xdef6f4]
+	GetHandleVerifier [0x0x11e4793+2619075]
+	GetHandleVerifier [0x0x11dfbaa+2599642]
+	GetHandleVerifier [0x0xf9b04a+221050]
+	GetHandleVerifier [0x0xf8b2c8+156152]
+	GetHandleVerifier [0x0xf91c7d+183213]
+	GetHandleVerifier [0x0xf7c388+94904]
+	GetHandleVerifier [0x0xf7c512+95298]
+	GetHandleVerifier [0x0xf6766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:37:16,537 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 22:37:16,538 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-08 22:37:16,538 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 22:37:34,653 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xf744a3+62419]
+	GetHandleVerifier [0x0xf744e4+62484]
+	(No symbol) [0x0xdb1f90]
+	(No symbol) [0x0xe48f51]
+	(No symbol) [0x0xe1f46c]
+	(No symbol) [0x0xe4087a]
+	(No symbol) [0x0xe1f266]
+	(No symbol) [0x0xdee852]
+	(No symbol) [0x0xdef6f4]
+	GetHandleVerifier [0x0x11e4793+2619075]
+	GetHandleVerifier [0x0x11dfbaa+2599642]
+	GetHandleVerifier [0x0xf9b04a+221050]
+	GetHandleVerifier [0x0xf8b2c8+156152]
+	GetHandleVerifier [0x0xf91c7d+183213]
+	GetHandleVerifier [0x0xf7c388+94904]
+	GetHandleVerifier [0x0xf7c512+95298]
+	GetHandleVerifier [0x0xf6766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 22:38:08,664 - INFO - Extraídos 0 comentarios del video 7
+2025-07-08 22:38:08,666 - INFO - Comentarios guardados en: comentarios/video_7_Usuario no disponible.txt
+2025-07-08 22:38:16,845 - INFO - Extrayendo comentarios del video 8
+2025-07-08 22:38:28,509 - INFO - Video pausado con tecla SPACE
+2025-07-08 22:39:07,690 - INFO - Encontrados 20 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-08 22:39:08,125 - INFO - Extraídos 20 comentarios del video 8
+2025-07-08 22:39:08,128 - INFO - Comentarios guardados en: comentarios/video_8_Usuario no disponible.txt
+2025-07-08 22:39:13,785 - INFO - Extrayendo comentarios del video 9
+2025-07-08 22:39:21,613 - INFO - Video pausado con tecla SPACE
+2025-07-08 22:39:59,544 - INFO - Encontrados 20 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-08 22:39:59,938 - INFO - Extraídos 20 comentarios del video 9
+2025-07-08 22:39:59,940 - INFO - Comentarios guardados en: comentarios/video_9_Usuario no disponible.txt
+2025-07-08 22:40:09,564 - INFO - Extrayendo comentarios del video 10
+2025-07-08 22:40:18,959 - INFO - Video pausado con tecla SPACE
+2025-07-08 22:40:56,450 - INFO - Encontrados 20 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-08 22:40:56,775 - INFO - Extraídos 20 comentarios del video 10
+2025-07-08 22:40:56,778 - INFO - Comentarios guardados en: comentarios/video_10_Usuario no disponible.txt
+2025-07-08 22:41:03,222 - INFO - Extrayendo comentarios del video 11
+2025-07-08 22:41:12,624 - INFO - Video pausado con tecla SPACE
+2025-07-08 22:41:51,056 - INFO - Encontrados 20 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-08 22:41:51,711 - INFO - Extraídos 14 comentarios del video 11
+2025-07-08 22:41:51,713 - INFO - Comentarios guardados en: comentarios/video_11_Usuario no disponible.txt
+2025-07-08 22:41:58,259 - INFO - Driver cerrado
+2025-07-08 23:00:56,397 - INFO - Iniciando scraping para 'turismo' con 20 videos
+2025-07-08 23:00:58,603 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-08 23:01:00,441 - INFO - Driver configurado exitosamente con undetected-chromedriver
+2025-07-08 23:01:00,441 - INFO - Navegando a página principal de TikTok...
+2025-07-08 23:01:15,009 - INFO - Buscando videos con palabra clave: turismo
+2025-07-08 23:01:26,937 - INFO - Cargando videos con scroll gradual...
+2025-07-08 23:01:33,940 - INFO - Scroll 1 completado
+2025-07-08 23:01:38,676 - INFO - Scroll 2 completado
+2025-07-08 23:01:44,172 - INFO - Scroll 3 completado
+2025-07-08 23:01:49,874 - INFO - Scroll 4 completado
+2025-07-08 23:01:55,739 - INFO - Scroll 5 completado
+2025-07-08 23:02:01,250 - INFO - Scroll 6 completado
+2025-07-08 23:02:06,692 - INFO - Scroll 7 completado
+2025-07-08 23:02:06,770 - INFO - Selector 'div[data-e2e="search-video-item"]': 0 elementos encontrados
+2025-07-08 23:02:06,797 - INFO - Selector 'div[data-e2e="search_top-item"]': 12 elementos encontrados
+2025-07-08 23:02:07,094 - INFO - Encontrados 12 videos válidos
+2025-07-08 23:02:07,442 - INFO - Video 1 extraído: Usuario no disponible
+2025-07-08 23:02:10,129 - INFO - Video 2 extraído: Usuario no disponible
+2025-07-08 23:02:11,865 - INFO - Video 3 extraído: Usuario no disponible
+2025-07-08 23:02:13,982 - INFO - Video 4 extraído: Usuario no disponible
+2025-07-08 23:02:16,267 - INFO - Video 5 extraído: Usuario no disponible
+2025-07-08 23:02:18,264 - INFO - Video 6 extraído: Usuario no disponible
+2025-07-08 23:02:19,990 - INFO - Video 7 extraído: Usuario no disponible
+2025-07-08 23:02:21,442 - INFO - Video 8 extraído: Usuario no disponible
+2025-07-08 23:02:23,305 - INFO - Video 9 extraído: Usuario no disponible
+2025-07-08 23:02:25,185 - INFO - Video 10 extraído: Usuario no disponible
+2025-07-08 23:02:26,860 - INFO - Video 11 extraído: Usuario no disponible
+2025-07-08 23:02:28,415 - INFO - Video 12 extraído: Usuario no disponible
+2025-07-08 23:06:27,311 - INFO - Extrayendo comentarios del video 1
+2025-07-08 23:06:27,356 - ERROR - Error al extraer comentarios: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2025-07-08 23:06:27,362 - INFO - Comentarios guardados en: comentarios/video_1_Usuario no disponible.txt
+2025-07-08 23:06:34,706 - INFO - Extrayendo comentarios del video 2
+2025-07-08 23:06:39,537 - INFO - Driver cerrado
+2025-07-08 23:22:28,315 - INFO - Iniciando scraping para 'turismo' con 20 videos
+2025-07-08 23:22:31,279 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-08 23:22:33,106 - INFO - Driver configurado exitosamente con undetected-chromedriver
+2025-07-08 23:22:33,106 - INFO - Navegando a página principal de TikTok...
+2025-07-08 23:22:51,474 - INFO - Buscando videos con palabra clave: turismo
+2025-07-08 23:23:01,572 - INFO - Cargando videos con scroll gradual...
+2025-07-08 23:23:07,466 - INFO - Scroll 1 completado
+2025-07-08 23:23:12,316 - INFO - Scroll 2 completado
+2025-07-08 23:23:18,080 - INFO - Scroll 3 completado
+2025-07-08 23:23:24,468 - INFO - Scroll 4 completado
+2025-07-08 23:23:29,437 - INFO - Scroll 5 completado
+2025-07-08 23:23:34,853 - INFO - Scroll 6 completado
+2025-07-08 23:23:40,504 - INFO - Scroll 7 completado
+2025-07-08 23:23:40,658 - INFO - Selector 'div[data-e2e="search-video-item"]': 0 elementos encontrados
+2025-07-08 23:23:40,686 - INFO - Selector 'div[data-e2e="search_top-item"]': 35 elementos encontrados
+2025-07-08 23:23:41,840 - INFO - Encontrados 35 videos válidos
+2025-07-08 23:23:42,212 - INFO - Video 1 extraído: Usuario no disponible
+2025-07-08 23:23:43,734 - INFO - Video 2 extraído: Usuario no disponible
+2025-07-08 23:23:45,661 - INFO - Video 3 extraído: Usuario no disponible
+2025-07-08 23:23:47,823 - INFO - Video 4 extraído: Usuario no disponible
+2025-07-08 23:23:49,741 - INFO - Video 5 extraído: Usuario no disponible
+2025-07-08 23:23:52,735 - INFO - Video 6 extraído: Usuario no disponible
+2025-07-08 23:23:55,274 - INFO - Video 7 extraído: Usuario no disponible
+2025-07-08 23:23:58,053 - INFO - Video 8 extraído: Usuario no disponible
+2025-07-08 23:23:59,328 - INFO - Video 9 extraído: Usuario no disponible
+2025-07-08 23:24:01,895 - INFO - Video 10 extraído: Usuario no disponible
+2025-07-08 23:24:03,589 - INFO - Video 11 extraído: Usuario no disponible
+2025-07-08 23:24:05,203 - INFO - Video 12 extraído: Usuario no disponible
+2025-07-08 23:24:07,915 - INFO - Video 13 extraído: Usuario no disponible
+2025-07-08 23:24:10,459 - INFO - Video 14 extraído: Usuario no disponible
+2025-07-08 23:24:12,647 - INFO - Video 15 extraído: Usuario no disponible
+2025-07-08 23:24:14,698 - INFO - Video 16 extraído: Usuario no disponible
+2025-07-08 23:24:16,130 - INFO - Video 17 extraído: Usuario no disponible
+2025-07-08 23:24:18,428 - INFO - Video 18 extraído: Usuario no disponible
+2025-07-08 23:24:21,563 - INFO - Video 19 extraído: Usuario no disponible
+2025-07-08 23:24:24,796 - INFO - Video 20 extraído: Usuario no disponible
+2025-07-08 23:42:26,058 - INFO - Extrayendo comentarios del video 1
+2025-07-08 23:42:36,608 - INFO - Video pausado con tecla SPACE
+2025-07-08 23:42:45,051 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 23:42:45,054 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 23:42:45,057 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 23:43:05,918 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 23:43:15,814 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 23:43:15,815 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-08 23:43:15,815 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 23:43:36,782 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 23:43:44,988 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 23:43:44,989 - WARNING - CAPTCHA detectado. Intento 3/3
+2025-07-08 23:43:44,989 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 23:44:10,149 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 23:44:21,074 - ERROR - No se pudo superar CAPTCHA al cargar video
+2025-07-08 23:44:21,111 - INFO - Comentarios guardados en: comentarios/video_1_Usuario no disponible.txt
+2025-07-08 23:44:30,682 - INFO - Extrayendo comentarios del video 2
+2025-07-08 23:44:37,656 - INFO - Video pausado con tecla SPACE
+2025-07-08 23:44:43,749 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 23:44:43,749 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 23:44:43,749 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 23:44:58,124 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 23:45:39,177 - INFO - Extraídos 0 comentarios del video 2
+2025-07-08 23:45:39,181 - INFO - Comentarios guardados en: comentarios/video_2_Usuario no disponible.txt
+2025-07-08 23:45:47,557 - INFO - Extrayendo comentarios del video 3
+2025-07-08 23:45:54,943 - INFO - Video pausado con tecla SPACE
+2025-07-08 23:46:01,949 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 23:46:01,951 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 23:46:01,951 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 23:46:14,547 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 23:46:54,293 - INFO - Extraídos 0 comentarios del video 3
+2025-07-08 23:46:54,295 - INFO - Comentarios guardados en: comentarios/video_3_Usuario no disponible.txt
+2025-07-08 23:47:00,038 - INFO - Extrayendo comentarios del video 4
+2025-07-08 23:47:07,511 - INFO - Video pausado con tecla SPACE
+2025-07-08 23:47:18,225 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 23:47:18,225 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 23:47:18,225 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 23:47:34,826 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 23:48:13,795 - INFO - Extraídos 0 comentarios del video 4
+2025-07-08 23:48:13,798 - INFO - Comentarios guardados en: comentarios/video_4_Usuario no disponible.txt
+2025-07-08 23:48:22,558 - INFO - Extrayendo comentarios del video 5
+2025-07-08 23:48:31,473 - INFO - Video pausado con tecla SPACE
+2025-07-08 23:48:41,286 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 23:48:41,286 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 23:48:41,286 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 23:48:53,909 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 23:49:32,179 - INFO - Extraídos 0 comentarios del video 5
+2025-07-08 23:49:32,182 - INFO - Comentarios guardados en: comentarios/video_5_Usuario no disponible.txt
+2025-07-08 23:49:38,527 - INFO - Extrayendo comentarios del video 6
+2025-07-08 23:49:46,270 - INFO - Video pausado con tecla SPACE
+2025-07-08 23:49:57,078 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 23:49:57,079 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 23:49:57,080 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 23:50:10,160 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 23:50:44,368 - INFO - Extraídos 0 comentarios del video 6
+2025-07-08 23:50:44,371 - INFO - Comentarios guardados en: comentarios/video_6_Usuario no disponible.txt
+2025-07-08 23:50:49,669 - INFO - Extrayendo comentarios del video 7
+2025-07-08 23:50:58,144 - INFO - Video pausado con tecla SPACE
+2025-07-08 23:51:09,172 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 23:51:09,172 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 23:51:09,172 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 23:51:21,932 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 23:51:57,925 - INFO - Extraídos 0 comentarios del video 7
+2025-07-08 23:51:57,928 - INFO - Comentarios guardados en: comentarios/video_7_Usuario no disponible.txt
+2025-07-08 23:52:05,782 - INFO - Extrayendo comentarios del video 8
+2025-07-08 23:52:14,459 - INFO - Video pausado con tecla SPACE
+2025-07-08 23:52:25,072 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 23:52:25,072 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 23:52:25,072 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 23:52:39,454 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 23:53:15,470 - INFO - Extraídos 0 comentarios del video 8
+2025-07-08 23:53:15,471 - INFO - Comentarios guardados en: comentarios/video_8_Usuario no disponible.txt
+2025-07-08 23:53:24,647 - INFO - Extrayendo comentarios del video 9
+2025-07-08 23:53:33,294 - INFO - Video pausado con tecla SPACE
+2025-07-08 23:53:43,037 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 23:53:43,038 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 23:53:43,039 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 23:53:56,002 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 23:54:34,583 - INFO - Extraídos 0 comentarios del video 9
+2025-07-08 23:54:34,599 - INFO - Comentarios guardados en: comentarios/video_9_Usuario no disponible.txt
+2025-07-08 23:54:43,313 - INFO - Extrayendo comentarios del video 10
+2025-07-08 23:54:53,138 - INFO - Video pausado con tecla SPACE
+2025-07-08 23:55:01,754 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 23:55:01,754 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 23:55:01,754 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 23:55:21,892 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 23:55:31,730 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 23:55:31,731 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-08 23:55:31,732 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 23:55:49,574 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 23:55:58,803 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 23:55:58,804 - WARNING - CAPTCHA detectado. Intento 3/3
+2025-07-08 23:55:58,804 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 23:56:18,101 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 23:56:28,407 - ERROR - No se pudo superar CAPTCHA al cargar video
+2025-07-08 23:56:28,409 - INFO - Comentarios guardados en: comentarios/video_10_Usuario no disponible.txt
+2025-07-08 23:56:36,143 - INFO - Extrayendo comentarios del video 11
+2025-07-08 23:56:45,315 - INFO - Video pausado con tecla SPACE
+2025-07-08 23:56:53,531 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 23:56:53,531 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 23:56:53,532 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 23:57:07,704 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 23:57:47,859 - INFO - Extraídos 0 comentarios del video 11
+2025-07-08 23:57:47,863 - INFO - Comentarios guardados en: comentarios/video_11_Usuario no disponible.txt
+2025-07-08 23:57:53,108 - INFO - Extrayendo comentarios del video 12
+2025-07-08 23:58:01,143 - INFO - Video pausado con tecla SPACE
+2025-07-08 23:58:10,950 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 23:58:10,951 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 23:58:10,952 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 23:58:28,492 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-08 23:59:07,131 - INFO - Extraídos 0 comentarios del video 12
+2025-07-08 23:59:07,133 - INFO - Comentarios guardados en: comentarios/video_12_Usuario no disponible.txt
+2025-07-08 23:59:13,834 - INFO - Extrayendo comentarios del video 13
+2025-07-08 23:59:20,891 - INFO - Video pausado con tecla SPACE
+2025-07-08 23:59:31,042 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-08 23:59:31,043 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-08 23:59:31,043 - INFO - Intentando manejar CAPTCHA...
+2025-07-08 23:59:51,790 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:00:29,009 - INFO - Extraídos 0 comentarios del video 13
+2025-07-09 00:00:29,011 - INFO - Comentarios guardados en: comentarios/video_13_Usuario no disponible.txt
+2025-07-09 00:00:35,898 - INFO - Extrayendo comentarios del video 14
+2025-07-09 00:00:41,977 - INFO - Video pausado con tecla SPACE
+2025-07-09 00:00:49,824 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:00:49,826 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:00:49,826 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:01:07,727 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:01:45,481 - INFO - Extraídos 0 comentarios del video 14
+2025-07-09 00:01:45,483 - INFO - Comentarios guardados en: comentarios/video_14_Usuario no disponible.txt
+2025-07-09 00:01:51,086 - INFO - Extrayendo comentarios del video 15
+2025-07-09 00:01:58,687 - INFO - Video pausado con tecla SPACE
+2025-07-09 00:02:07,010 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:02:07,011 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:02:07,011 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:02:21,461 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:02:57,962 - INFO - Extraídos 0 comentarios del video 15
+2025-07-09 00:02:57,965 - INFO - Comentarios guardados en: comentarios/video_15_Usuario no disponible.txt
+2025-07-09 00:03:07,010 - INFO - Extrayendo comentarios del video 16
+2025-07-09 00:03:15,217 - INFO - Video pausado con tecla SPACE
+2025-07-09 00:03:26,138 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:03:26,139 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:03:26,139 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:03:44,948 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:04:20,468 - INFO - Extraídos 0 comentarios del video 16
+2025-07-09 00:04:20,471 - INFO - Comentarios guardados en: comentarios/video_16_Usuario no disponible.txt
+2025-07-09 00:04:28,040 - INFO - Extrayendo comentarios del video 17
+2025-07-09 00:04:35,563 - INFO - Video pausado con tecla SPACE
+2025-07-09 00:04:42,478 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:04:42,479 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:04:42,479 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:04:58,117 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:05:35,758 - INFO - Extraídos 0 comentarios del video 17
+2025-07-09 00:05:35,772 - INFO - Comentarios guardados en: comentarios/video_17_Usuario no disponible.txt
+2025-07-09 00:05:43,184 - INFO - Extrayendo comentarios del video 18
+2025-07-09 00:05:48,503 - INFO - Video pausado con tecla SPACE
+2025-07-09 00:05:55,156 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:05:55,156 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:05:55,157 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:06:14,904 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:06:52,129 - INFO - Extraídos 0 comentarios del video 18
+2025-07-09 00:06:52,132 - INFO - Comentarios guardados en: comentarios/video_18_Usuario no disponible.txt
+2025-07-09 00:07:01,193 - INFO - Extrayendo comentarios del video 19
+2025-07-09 00:07:05,699 - INFO - Video pausado con tecla SPACE
+2025-07-09 00:07:12,430 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:07:12,431 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:07:12,431 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:07:34,400 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:08:12,024 - INFO - Extraídos 0 comentarios del video 19
+2025-07-09 00:08:12,026 - INFO - Comentarios guardados en: comentarios/video_19_Usuario no disponible.txt
+2025-07-09 00:08:19,637 - INFO - Extrayendo comentarios del video 20
+2025-07-09 00:08:26,240 - INFO - Video pausado con tecla SPACE
+2025-07-09 00:08:34,798 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:08:34,799 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:08:34,799 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:08:56,099 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdc44a3+62419]
+	GetHandleVerifier [0x0xdc44e4+62484]
+	(No symbol) [0x0xc01f90]
+	(No symbol) [0x0xc98f51]
+	(No symbol) [0x0xc6f46c]
+	(No symbol) [0x0xc9087a]
+	(No symbol) [0x0xc6f266]
+	(No symbol) [0x0xc3e852]
+	(No symbol) [0x0xc3f6f4]
+	GetHandleVerifier [0x0x1034793+2619075]
+	GetHandleVerifier [0x0x102fbaa+2599642]
+	GetHandleVerifier [0x0xdeb04a+221050]
+	GetHandleVerifier [0x0xddb2c8+156152]
+	GetHandleVerifier [0x0xde1c7d+183213]
+	GetHandleVerifier [0x0xdcc388+94904]
+	GetHandleVerifier [0x0xdcc512+95298]
+	GetHandleVerifier [0x0xdb766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:09:38,215 - INFO - Extraídos 0 comentarios del video 20
+2025-07-09 00:09:38,218 - INFO - Comentarios guardados en: comentarios/video_20_Usuario no disponible.txt
+2025-07-09 00:09:46,194 - INFO - Resultados guardados en CSV: resultados/tiktok_scraping_turismo_20250709_000946.csv
+2025-07-09 00:09:46,197 - INFO - Scraping completado exitosamente
+2025-07-09 00:09:46,986 - INFO - Driver cerrado
+2025-07-09 00:24:35,566 - INFO - Iniciando scraping para 'turismo' con 10 videos
+2025-07-09 00:24:39,517 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-09 00:24:41,526 - INFO - Driver configurado exitosamente con undetected-chromedriver
+2025-07-09 00:24:41,526 - INFO - Navegando a página principal de TikTok...
+2025-07-09 00:25:01,275 - INFO - Buscando videos con palabra clave: turismo
+2025-07-09 00:25:10,543 - INFO - Cargando videos con scroll gradual...
+2025-07-09 00:25:15,273 - INFO - Scroll 1 completado
+2025-07-09 00:25:21,431 - INFO - Scroll 2 completado
+2025-07-09 00:25:27,683 - INFO - Scroll 3 completado
+2025-07-09 00:25:32,602 - INFO - Scroll 4 completado
+2025-07-09 00:25:36,983 - INFO - Scroll 5 completado
+2025-07-09 00:25:41,609 - INFO - Scroll 6 completado
+2025-07-09 00:25:48,034 - INFO - Scroll 7 completado
+2025-07-09 00:25:48,128 - INFO - Selector 'div[data-e2e="search-video-item"]': 0 elementos encontrados
+2025-07-09 00:25:48,152 - INFO - Selector 'div[data-e2e="search_top-item"]': 36 elementos encontrados
+2025-07-09 00:25:49,137 - INFO - Encontrados 36 videos válidos
+2025-07-09 00:25:49,455 - INFO - Video 1 extraído: Usuario no disponible
+2025-07-09 00:25:51,321 - INFO - Video 2 extraído: Usuario no disponible
+2025-07-09 00:25:53,970 - INFO - Video 3 extraído: Usuario no disponible
+2025-07-09 00:25:56,546 - INFO - Video 4 extraído: Usuario no disponible
+2025-07-09 00:25:58,550 - INFO - Video 5 extraído: Usuario no disponible
+2025-07-09 00:26:01,220 - INFO - Video 6 extraído: Usuario no disponible
+2025-07-09 00:26:02,682 - INFO - Video 7 extraído: Usuario no disponible
+2025-07-09 00:26:03,864 - INFO - Video 8 extraído: Usuario no disponible
+2025-07-09 00:26:06,057 - INFO - Video 9 extraído: Usuario no disponible
+2025-07-09 00:26:07,569 - INFO - Video 10 extraído: Usuario no disponible
+2025-07-09 00:26:57,965 - INFO - Extrayendo comentarios del video 1
+2025-07-09 00:27:05,857 - INFO - Video pausado con tecla SPACE
+2025-07-09 00:27:16,175 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:27:16,176 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:27:16,176 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:27:33,025 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:27:50,748 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:27:50,784 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:27:50,786 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:27:50,786 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:28:04,116 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:28:13,846 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:28:13,847 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-09 00:28:13,847 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:28:32,753 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:29:04,836 - INFO - Extraídos 0 comentarios del video 1
+2025-07-09 00:29:04,837 - INFO - Comentarios guardados en: comentarios/video_1_Usuario no disponible.txt
+2025-07-09 00:29:09,879 - INFO - Extrayendo comentarios del video 2
+2025-07-09 00:29:15,580 - INFO - Video pausado con tecla SPACE
+2025-07-09 00:29:24,924 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:29:24,925 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:29:24,926 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:29:43,077 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:29:59,193 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:29:59,225 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:29:59,226 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:29:59,227 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:30:17,014 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:30:29,559 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:30:29,559 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-09 00:30:29,560 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:30:50,286 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:31:23,120 - INFO - Extraídos 0 comentarios del video 2
+2025-07-09 00:31:23,123 - INFO - Comentarios guardados en: comentarios/video_2_Usuario no disponible.txt
+2025-07-09 00:31:29,628 - INFO - Extrayendo comentarios del video 3
+2025-07-09 00:31:34,900 - INFO - Video pausado con tecla SPACE
+2025-07-09 00:31:41,122 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:31:41,122 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:31:41,123 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:32:03,383 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:32:20,882 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:32:20,903 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:32:20,904 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:32:20,904 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:32:39,140 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:32:49,628 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:32:49,629 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-09 00:32:49,629 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:33:02,289 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:33:38,557 - INFO - Extraídos 0 comentarios del video 3
+2025-07-09 00:33:38,559 - INFO - Comentarios guardados en: comentarios/video_3_Usuario no disponible.txt
+2025-07-09 00:33:45,895 - INFO - Extrayendo comentarios del video 4
+2025-07-09 00:33:49,666 - INFO - Video pausado con tecla SPACE
+2025-07-09 00:33:57,747 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:33:57,748 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:33:57,748 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:34:14,009 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:34:52,994 - INFO - Extraídos 0 comentarios del video 4
+2025-07-09 00:34:52,995 - INFO - Comentarios guardados en: comentarios/video_4_Usuario no disponible.txt
+2025-07-09 00:35:00,761 - INFO - Extrayendo comentarios del video 5
+2025-07-09 00:35:03,059 - INFO - Video pausado con tecla SPACE
+2025-07-09 00:35:12,451 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:35:12,451 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:35:12,452 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:35:24,925 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:35:42,414 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:35:42,439 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:35:42,439 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:35:42,440 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:35:59,857 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:36:12,732 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:36:12,732 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-09 00:36:12,733 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:36:25,244 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:36:58,727 - INFO - Extraídos 0 comentarios del video 5
+2025-07-09 00:36:58,729 - INFO - Comentarios guardados en: comentarios/video_5_Usuario no disponible.txt
+2025-07-09 00:37:04,792 - INFO - Extrayendo comentarios del video 6
+2025-07-09 00:37:08,270 - INFO - Video pausado con tecla SPACE
+2025-07-09 00:37:16,895 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:37:16,896 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:37:16,897 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:37:38,014 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:37:53,559 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:37:53,585 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:37:53,586 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:37:53,586 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:38:07,072 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:38:17,683 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:38:17,683 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-09 00:38:17,684 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:38:31,054 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:39:09,107 - INFO - Extraídos 0 comentarios del video 6
+2025-07-09 00:39:09,111 - INFO - Comentarios guardados en: comentarios/video_6_Usuario no disponible.txt
+2025-07-09 00:39:16,807 - INFO - Extrayendo comentarios del video 7
+2025-07-09 00:39:19,669 - INFO - Video pausado con tecla SPACE
+2025-07-09 00:39:26,346 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:39:26,347 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:39:26,347 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:39:44,884 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:39:59,916 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:39:59,951 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:39:59,952 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:39:59,952 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:40:19,827 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:40:54,010 - INFO - Extraídos 0 comentarios del video 7
+2025-07-09 00:40:54,011 - INFO - Comentarios guardados en: comentarios/video_7_Usuario no disponible.txt
+2025-07-09 00:41:01,290 - INFO - Extrayendo comentarios del video 8
+2025-07-09 00:41:07,674 - INFO - Video pausado con tecla SPACE
+2025-07-09 00:41:17,767 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:41:17,768 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:41:17,768 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:41:30,543 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:41:39,785 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:41:39,786 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-09 00:41:39,787 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:41:56,217 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:42:04,425 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:42:04,425 - WARNING - CAPTCHA detectado. Intento 3/3
+2025-07-09 00:42:04,426 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:42:21,731 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:42:32,021 - ERROR - No se pudo superar CAPTCHA al cargar video
+2025-07-09 00:42:32,025 - INFO - Comentarios guardados en: comentarios/video_8_Usuario no disponible.txt
+2025-07-09 00:42:38,439 - INFO - Extrayendo comentarios del video 9
+2025-07-09 00:42:46,621 - INFO - Video pausado con tecla SPACE
+2025-07-09 00:42:52,823 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:42:52,823 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:42:52,824 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:43:11,669 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:43:48,731 - INFO - Extraídos 0 comentarios del video 9
+2025-07-09 00:43:48,735 - INFO - Comentarios guardados en: comentarios/video_9_Usuario no disponible.txt
+2025-07-09 00:43:55,422 - INFO - Extrayendo comentarios del video 10
+2025-07-09 00:44:04,996 - INFO - Video pausado con tecla SPACE
+2025-07-09 00:44:14,034 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 00:44:14,034 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 00:44:14,035 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 00:44:35,050 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x6244a3+62419]
+	GetHandleVerifier [0x0x6244e4+62484]
+	(No symbol) [0x0x461f90]
+	(No symbol) [0x0x4f8f51]
+	(No symbol) [0x0x4cf46c]
+	(No symbol) [0x0x4f087a]
+	(No symbol) [0x0x4cf266]
+	(No symbol) [0x0x49e852]
+	(No symbol) [0x0x49f6f4]
+	GetHandleVerifier [0x0x894793+2619075]
+	GetHandleVerifier [0x0x88fbaa+2599642]
+	GetHandleVerifier [0x0x64b04a+221050]
+	GetHandleVerifier [0x0x63b2c8+156152]
+	GetHandleVerifier [0x0x641c7d+183213]
+	GetHandleVerifier [0x0x62c388+94904]
+	GetHandleVerifier [0x0x62c512+95298]
+	GetHandleVerifier [0x0x61766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 00:45:17,323 - INFO - Extraídos 0 comentarios del video 10
+2025-07-09 00:45:17,325 - INFO - Comentarios guardados en: comentarios/video_10_Usuario no disponible.txt
+2025-07-09 00:45:25,270 - INFO - Resultados guardados en CSV: resultados/tiktok_scraping_turismo_20250709_004525.csv
+2025-07-09 00:45:25,272 - INFO - Scraping completado exitosamente
+2025-07-09 00:45:26,400 - INFO - Driver cerrado
+2025-07-09 08:40:41,126 - INFO - Iniciando scraping para 'turismo' con 20 videos
+2025-07-09 08:40:42,677 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-09 08:40:44,568 - INFO - Driver configurado exitosamente con undetected-chromedriver
+2025-07-09 08:40:44,568 - INFO - Navegando a página principal de TikTok...
+2025-07-09 08:41:01,649 - INFO - Buscando videos con palabra clave: turismo
+2025-07-09 08:41:19,765 - INFO - Cargando videos con scroll gradual...
+2025-07-09 08:41:25,526 - INFO - Scroll 1 completado
+2025-07-09 08:41:31,465 - INFO - Scroll 2 completado
+2025-07-09 08:41:36,474 - INFO - Scroll 3 completado
+2025-07-09 08:41:40,829 - INFO - Scroll 4 completado
+2025-07-09 08:41:46,303 - INFO - Scroll 5 completado
+2025-07-09 08:41:51,703 - INFO - Scroll 6 completado
+2025-07-09 08:41:57,856 - INFO - Scroll 7 completado
+2025-07-09 08:41:57,995 - INFO - Selector 'div[data-e2e="search-video-item"]': 0 elementos encontrados
+2025-07-09 08:41:58,017 - INFO - Selector 'div[data-e2e="search_top-item"]': 12 elementos encontrados
+2025-07-09 08:41:58,558 - INFO - Encontrados 12 videos válidos
+2025-07-09 08:41:58,879 - INFO - Video 1 extraído: Usuario no disponible
+2025-07-09 08:42:00,940 - INFO - Video 2 extraído: Usuario no disponible
+2025-07-09 08:42:03,730 - INFO - Video 3 extraído: Usuario no disponible
+2025-07-09 08:42:05,283 - INFO - Video 4 extraído: Usuario no disponible
+2025-07-09 08:42:07,300 - INFO - Video 5 extraído: Usuario no disponible
+2025-07-09 08:42:09,888 - INFO - Video 6 extraído: Usuario no disponible
+2025-07-09 08:42:12,557 - INFO - Video 7 extraído: Usuario no disponible
+2025-07-09 08:42:14,847 - INFO - Video 8 extraído: Usuario no disponible
+2025-07-09 08:42:16,284 - INFO - Video 9 extraído: Usuario no disponible
+2025-07-09 08:42:18,693 - INFO - Video 10 extraído: Usuario no disponible
+2025-07-09 08:42:20,203 - INFO - Video 11 extraído: Usuario no disponible
+2025-07-09 08:42:22,708 - INFO - Video 12 extraído: Usuario no disponible
+2025-07-09 08:46:59,619 - INFO - Extrayendo comentarios del video 1
+2025-07-09 08:47:05,142 - INFO - Video pausado con tecla SPACE
+2025-07-09 08:47:12,362 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 08:47:12,363 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 08:47:12,363 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 08:47:33,241 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x11f44a3+62419]
+	GetHandleVerifier [0x0x11f44e4+62484]
+	(No symbol) [0x0x1031f90]
+	(No symbol) [0x0x10c8f51]
+	(No symbol) [0x0x109f46c]
+	(No symbol) [0x0x10c087a]
+	(No symbol) [0x0x109f266]
+	(No symbol) [0x0x106e852]
+	(No symbol) [0x0x106f6f4]
+	GetHandleVerifier [0x0x1464793+2619075]
+	GetHandleVerifier [0x0x145fbaa+2599642]
+	GetHandleVerifier [0x0x121b04a+221050]
+	GetHandleVerifier [0x0x120b2c8+156152]
+	GetHandleVerifier [0x0x1211c7d+183213]
+	GetHandleVerifier [0x0x11fc388+94904]
+	GetHandleVerifier [0x0x11fc512+95298]
+	GetHandleVerifier [0x0x11e766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 08:48:14,326 - INFO - Extraídos 0 comentarios del video 1
+2025-07-09 08:48:14,334 - INFO - Comentarios guardados en: comentarios/video_1_Usuario no disponible.txt
+2025-07-09 08:48:23,081 - INFO - Extrayendo comentarios del video 2
+2025-07-09 08:48:31,719 - INFO - Video pausado con tecla SPACE
+2025-07-09 08:48:42,358 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 08:48:42,360 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 08:48:42,360 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 08:48:56,209 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x11f44a3+62419]
+	GetHandleVerifier [0x0x11f44e4+62484]
+	(No symbol) [0x0x1031f90]
+	(No symbol) [0x0x10c8f51]
+	(No symbol) [0x0x109f46c]
+	(No symbol) [0x0x10c087a]
+	(No symbol) [0x0x109f266]
+	(No symbol) [0x0x106e852]
+	(No symbol) [0x0x106f6f4]
+	GetHandleVerifier [0x0x1464793+2619075]
+	GetHandleVerifier [0x0x145fbaa+2599642]
+	GetHandleVerifier [0x0x121b04a+221050]
+	GetHandleVerifier [0x0x120b2c8+156152]
+	GetHandleVerifier [0x0x1211c7d+183213]
+	GetHandleVerifier [0x0x11fc388+94904]
+	GetHandleVerifier [0x0x11fc512+95298]
+	GetHandleVerifier [0x0x11e766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 08:49:36,525 - INFO - Extraídos 0 comentarios del video 2
+2025-07-09 08:49:36,528 - INFO - Comentarios guardados en: comentarios/video_2_Usuario no disponible.txt
+2025-07-09 08:49:42,241 - INFO - Extrayendo comentarios del video 3
+2025-07-09 08:49:49,955 - INFO - Video pausado con tecla SPACE
+2025-07-09 08:49:59,449 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 08:49:59,450 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 08:49:59,450 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 08:50:16,345 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x11f44a3+62419]
+	GetHandleVerifier [0x0x11f44e4+62484]
+	(No symbol) [0x0x1031f90]
+	(No symbol) [0x0x10c8f51]
+	(No symbol) [0x0x109f46c]
+	(No symbol) [0x0x10c087a]
+	(No symbol) [0x0x109f266]
+	(No symbol) [0x0x106e852]
+	(No symbol) [0x0x106f6f4]
+	GetHandleVerifier [0x0x1464793+2619075]
+	GetHandleVerifier [0x0x145fbaa+2599642]
+	GetHandleVerifier [0x0x121b04a+221050]
+	GetHandleVerifier [0x0x120b2c8+156152]
+	GetHandleVerifier [0x0x1211c7d+183213]
+	GetHandleVerifier [0x0x11fc388+94904]
+	GetHandleVerifier [0x0x11fc512+95298]
+	GetHandleVerifier [0x0x11e766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 08:50:53,371 - INFO - Extraídos 0 comentarios del video 3
+2025-07-09 08:50:53,376 - INFO - Comentarios guardados en: comentarios/video_3_Usuario no disponible.txt
+2025-07-09 08:51:00,432 - INFO - Extrayendo comentarios del video 4
+2025-07-09 08:51:07,651 - INFO - Video pausado con tecla SPACE
+2025-07-09 08:51:18,680 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 08:51:18,681 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 08:51:18,681 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 08:51:36,561 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x11f44a3+62419]
+	GetHandleVerifier [0x0x11f44e4+62484]
+	(No symbol) [0x0x1031f90]
+	(No symbol) [0x0x10c8f51]
+	(No symbol) [0x0x109f46c]
+	(No symbol) [0x0x10c087a]
+	(No symbol) [0x0x109f266]
+	(No symbol) [0x0x106e852]
+	(No symbol) [0x0x106f6f4]
+	GetHandleVerifier [0x0x1464793+2619075]
+	GetHandleVerifier [0x0x145fbaa+2599642]
+	GetHandleVerifier [0x0x121b04a+221050]
+	GetHandleVerifier [0x0x120b2c8+156152]
+	GetHandleVerifier [0x0x1211c7d+183213]
+	GetHandleVerifier [0x0x11fc388+94904]
+	GetHandleVerifier [0x0x11fc512+95298]
+	GetHandleVerifier [0x0x11e766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 08:52:03,927 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 08:52:03,953 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 08:52:03,954 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 08:52:03,954 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 08:52:18,428 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x11f44a3+62419]
+	GetHandleVerifier [0x0x11f44e4+62484]
+	(No symbol) [0x0x1031f90]
+	(No symbol) [0x0x10c8f51]
+	(No symbol) [0x0x109f46c]
+	(No symbol) [0x0x10c087a]
+	(No symbol) [0x0x109f266]
+	(No symbol) [0x0x106e852]
+	(No symbol) [0x0x106f6f4]
+	GetHandleVerifier [0x0x1464793+2619075]
+	GetHandleVerifier [0x0x145fbaa+2599642]
+	GetHandleVerifier [0x0x121b04a+221050]
+	GetHandleVerifier [0x0x120b2c8+156152]
+	GetHandleVerifier [0x0x1211c7d+183213]
+	GetHandleVerifier [0x0x11fc388+94904]
+	GetHandleVerifier [0x0x11fc512+95298]
+	GetHandleVerifier [0x0x11e766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 08:52:31,182 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 08:52:31,183 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-09 08:52:31,183 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 08:52:48,350 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x11f44a3+62419]
+	GetHandleVerifier [0x0x11f44e4+62484]
+	(No symbol) [0x0x1031f90]
+	(No symbol) [0x0x10c8f51]
+	(No symbol) [0x0x109f46c]
+	(No symbol) [0x0x10c087a]
+	(No symbol) [0x0x109f266]
+	(No symbol) [0x0x106e852]
+	(No symbol) [0x0x106f6f4]
+	GetHandleVerifier [0x0x1464793+2619075]
+	GetHandleVerifier [0x0x145fbaa+2599642]
+	GetHandleVerifier [0x0x121b04a+221050]
+	GetHandleVerifier [0x0x120b2c8+156152]
+	GetHandleVerifier [0x0x1211c7d+183213]
+	GetHandleVerifier [0x0x11fc388+94904]
+	GetHandleVerifier [0x0x11fc512+95298]
+	GetHandleVerifier [0x0x11e766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 08:53:12,134 - INFO - Extraídos 0 comentarios del video 4
+2025-07-09 08:53:12,137 - INFO - Comentarios guardados en: comentarios/video_4_Usuario no disponible.txt
+2025-07-09 08:53:19,884 - INFO - Extrayendo comentarios del video 5
+2025-07-09 08:53:26,474 - INFO - Video pausado con tecla SPACE
+2025-07-09 08:53:37,386 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 08:53:37,386 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 08:53:37,387 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 08:53:57,206 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x11f44a3+62419]
+	GetHandleVerifier [0x0x11f44e4+62484]
+	(No symbol) [0x0x1031f90]
+	(No symbol) [0x0x10c8f51]
+	(No symbol) [0x0x109f46c]
+	(No symbol) [0x0x10c087a]
+	(No symbol) [0x0x109f266]
+	(No symbol) [0x0x106e852]
+	(No symbol) [0x0x106f6f4]
+	GetHandleVerifier [0x0x1464793+2619075]
+	GetHandleVerifier [0x0x145fbaa+2599642]
+	GetHandleVerifier [0x0x121b04a+221050]
+	GetHandleVerifier [0x0x120b2c8+156152]
+	GetHandleVerifier [0x0x1211c7d+183213]
+	GetHandleVerifier [0x0x11fc388+94904]
+	GetHandleVerifier [0x0x11fc512+95298]
+	GetHandleVerifier [0x0x11e766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 08:54:38,486 - INFO - Extraídos 0 comentarios del video 5
+2025-07-09 08:54:38,491 - INFO - Comentarios guardados en: comentarios/video_5_Usuario no disponible.txt
+2025-07-09 08:54:46,656 - INFO - Extrayendo comentarios del video 6
+2025-07-09 08:54:54,781 - INFO - Video pausado con tecla SPACE
+2025-07-09 08:55:01,388 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 08:55:01,388 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 08:55:01,389 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 08:55:21,837 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x11f44a3+62419]
+	GetHandleVerifier [0x0x11f44e4+62484]
+	(No symbol) [0x0x1031f90]
+	(No symbol) [0x0x10c8f51]
+	(No symbol) [0x0x109f46c]
+	(No symbol) [0x0x10c087a]
+	(No symbol) [0x0x109f266]
+	(No symbol) [0x0x106e852]
+	(No symbol) [0x0x106f6f4]
+	GetHandleVerifier [0x0x1464793+2619075]
+	GetHandleVerifier [0x0x145fbaa+2599642]
+	GetHandleVerifier [0x0x121b04a+221050]
+	GetHandleVerifier [0x0x120b2c8+156152]
+	GetHandleVerifier [0x0x1211c7d+183213]
+	GetHandleVerifier [0x0x11fc388+94904]
+	GetHandleVerifier [0x0x11fc512+95298]
+	GetHandleVerifier [0x0x11e766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 08:55:30,237 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 08:55:30,237 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-09 08:55:30,238 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 08:55:52,285 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x11f44a3+62419]
+	GetHandleVerifier [0x0x11f44e4+62484]
+	(No symbol) [0x0x1031f90]
+	(No symbol) [0x0x10c8f51]
+	(No symbol) [0x0x109f46c]
+	(No symbol) [0x0x10c087a]
+	(No symbol) [0x0x109f266]
+	(No symbol) [0x0x106e852]
+	(No symbol) [0x0x106f6f4]
+	GetHandleVerifier [0x0x1464793+2619075]
+	GetHandleVerifier [0x0x145fbaa+2599642]
+	GetHandleVerifier [0x0x121b04a+221050]
+	GetHandleVerifier [0x0x120b2c8+156152]
+	GetHandleVerifier [0x0x1211c7d+183213]
+	GetHandleVerifier [0x0x11fc388+94904]
+	GetHandleVerifier [0x0x11fc512+95298]
+	GetHandleVerifier [0x0x11e766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 08:56:02,582 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 08:56:02,583 - WARNING - CAPTCHA detectado. Intento 3/3
+2025-07-09 08:56:02,584 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 08:56:22,805 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x11f44a3+62419]
+	GetHandleVerifier [0x0x11f44e4+62484]
+	(No symbol) [0x0x1031f90]
+	(No symbol) [0x0x10c8f51]
+	(No symbol) [0x0x109f46c]
+	(No symbol) [0x0x10c087a]
+	(No symbol) [0x0x109f266]
+	(No symbol) [0x0x106e852]
+	(No symbol) [0x0x106f6f4]
+	GetHandleVerifier [0x0x1464793+2619075]
+	GetHandleVerifier [0x0x145fbaa+2599642]
+	GetHandleVerifier [0x0x121b04a+221050]
+	GetHandleVerifier [0x0x120b2c8+156152]
+	GetHandleVerifier [0x0x1211c7d+183213]
+	GetHandleVerifier [0x0x11fc388+94904]
+	GetHandleVerifier [0x0x11fc512+95298]
+	GetHandleVerifier [0x0x11e766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 08:56:32,571 - ERROR - No se pudo superar CAPTCHA al cargar video
+2025-07-09 08:56:32,572 - INFO - Comentarios guardados en: comentarios/video_6_Usuario no disponible.txt
+2025-07-09 08:56:42,499 - INFO - Extrayendo comentarios del video 7
+2025-07-09 08:56:49,403 - INFO - Video pausado con tecla SPACE
+2025-07-09 08:57:00,311 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 08:57:00,314 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 08:57:00,315 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 08:57:17,246 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x11f44a3+62419]
+	GetHandleVerifier [0x0x11f44e4+62484]
+	(No symbol) [0x0x1031f90]
+	(No symbol) [0x0x10c8f51]
+	(No symbol) [0x0x109f46c]
+	(No symbol) [0x0x10c087a]
+	(No symbol) [0x0x109f266]
+	(No symbol) [0x0x106e852]
+	(No symbol) [0x0x106f6f4]
+	GetHandleVerifier [0x0x1464793+2619075]
+	GetHandleVerifier [0x0x145fbaa+2599642]
+	GetHandleVerifier [0x0x121b04a+221050]
+	GetHandleVerifier [0x0x120b2c8+156152]
+	GetHandleVerifier [0x0x1211c7d+183213]
+	GetHandleVerifier [0x0x11fc388+94904]
+	GetHandleVerifier [0x0x11fc512+95298]
+	GetHandleVerifier [0x0x11e766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 08:57:53,432 - INFO - Extraídos 0 comentarios del video 7
+2025-07-09 08:57:53,437 - INFO - Comentarios guardados en: comentarios/video_7_Usuario no disponible.txt
+2025-07-09 08:58:02,955 - INFO - Extrayendo comentarios del video 8
+2025-07-09 08:58:10,597 - INFO - Video pausado con tecla SPACE
+2025-07-09 08:58:17,003 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 08:58:17,004 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 08:58:17,004 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 08:58:32,719 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x11f44a3+62419]
+	GetHandleVerifier [0x0x11f44e4+62484]
+	(No symbol) [0x0x1031f90]
+	(No symbol) [0x0x10c8f51]
+	(No symbol) [0x0x109f46c]
+	(No symbol) [0x0x10c087a]
+	(No symbol) [0x0x109f266]
+	(No symbol) [0x0x106e852]
+	(No symbol) [0x0x106f6f4]
+	GetHandleVerifier [0x0x1464793+2619075]
+	GetHandleVerifier [0x0x145fbaa+2599642]
+	GetHandleVerifier [0x0x121b04a+221050]
+	GetHandleVerifier [0x0x120b2c8+156152]
+	GetHandleVerifier [0x0x1211c7d+183213]
+	GetHandleVerifier [0x0x11fc388+94904]
+	GetHandleVerifier [0x0x11fc512+95298]
+	GetHandleVerifier [0x0x11e766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 08:59:13,189 - INFO - Extraídos 0 comentarios del video 8
+2025-07-09 08:59:13,191 - INFO - Comentarios guardados en: comentarios/video_8_Usuario no disponible.txt
+2025-07-09 08:59:18,863 - INFO - Extrayendo comentarios del video 9
+2025-07-09 08:59:25,622 - INFO - Video pausado con tecla SPACE
+2025-07-09 08:59:34,341 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 08:59:34,341 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 08:59:34,341 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 08:59:49,614 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x11f44a3+62419]
+	GetHandleVerifier [0x0x11f44e4+62484]
+	(No symbol) [0x0x1031f90]
+	(No symbol) [0x0x10c8f51]
+	(No symbol) [0x0x109f46c]
+	(No symbol) [0x0x10c087a]
+	(No symbol) [0x0x109f266]
+	(No symbol) [0x0x106e852]
+	(No symbol) [0x0x106f6f4]
+	GetHandleVerifier [0x0x1464793+2619075]
+	GetHandleVerifier [0x0x145fbaa+2599642]
+	GetHandleVerifier [0x0x121b04a+221050]
+	GetHandleVerifier [0x0x120b2c8+156152]
+	GetHandleVerifier [0x0x1211c7d+183213]
+	GetHandleVerifier [0x0x11fc388+94904]
+	GetHandleVerifier [0x0x11fc512+95298]
+	GetHandleVerifier [0x0x11e766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 09:00:26,183 - INFO - Extraídos 0 comentarios del video 9
+2025-07-09 09:00:26,184 - INFO - Comentarios guardados en: comentarios/video_9_Usuario no disponible.txt
+2025-07-09 09:00:33,820 - INFO - Extrayendo comentarios del video 10
+2025-07-09 09:00:42,133 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:00:50,463 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 09:00:50,464 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 09:00:50,465 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 09:01:11,363 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x11f44a3+62419]
+	GetHandleVerifier [0x0x11f44e4+62484]
+	(No symbol) [0x0x1031f90]
+	(No symbol) [0x0x10c8f51]
+	(No symbol) [0x0x109f46c]
+	(No symbol) [0x0x10c087a]
+	(No symbol) [0x0x109f266]
+	(No symbol) [0x0x106e852]
+	(No symbol) [0x0x106f6f4]
+	GetHandleVerifier [0x0x1464793+2619075]
+	GetHandleVerifier [0x0x145fbaa+2599642]
+	GetHandleVerifier [0x0x121b04a+221050]
+	GetHandleVerifier [0x0x120b2c8+156152]
+	GetHandleVerifier [0x0x1211c7d+183213]
+	GetHandleVerifier [0x0x11fc388+94904]
+	GetHandleVerifier [0x0x11fc512+95298]
+	GetHandleVerifier [0x0x11e766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 09:01:48,983 - INFO - Extraídos 0 comentarios del video 10
+2025-07-09 09:01:48,986 - INFO - Comentarios guardados en: comentarios/video_10_Usuario no disponible.txt
+2025-07-09 09:01:54,862 - INFO - Extrayendo comentarios del video 11
+2025-07-09 09:02:02,298 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:02:10,439 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 09:02:10,439 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 09:02:10,440 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 09:02:27,865 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x11f44a3+62419]
+	GetHandleVerifier [0x0x11f44e4+62484]
+	(No symbol) [0x0x1031f90]
+	(No symbol) [0x0x10c8f51]
+	(No symbol) [0x0x109f46c]
+	(No symbol) [0x0x10c087a]
+	(No symbol) [0x0x109f266]
+	(No symbol) [0x0x106e852]
+	(No symbol) [0x0x106f6f4]
+	GetHandleVerifier [0x0x1464793+2619075]
+	GetHandleVerifier [0x0x145fbaa+2599642]
+	GetHandleVerifier [0x0x121b04a+221050]
+	GetHandleVerifier [0x0x120b2c8+156152]
+	GetHandleVerifier [0x0x1211c7d+183213]
+	GetHandleVerifier [0x0x11fc388+94904]
+	GetHandleVerifier [0x0x11fc512+95298]
+	GetHandleVerifier [0x0x11e766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 09:03:08,692 - INFO - Extraídos 0 comentarios del video 11
+2025-07-09 09:03:08,694 - INFO - Comentarios guardados en: comentarios/video_11_Usuario no disponible.txt
+2025-07-09 09:03:15,737 - INFO - Extrayendo comentarios del video 12
+2025-07-09 09:03:22,681 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:03:31,296 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 09:03:31,296 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 09:03:31,296 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 09:03:49,838 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0x11f44a3+62419]
+	GetHandleVerifier [0x0x11f44e4+62484]
+	(No symbol) [0x0x1031f90]
+	(No symbol) [0x0x10c8f51]
+	(No symbol) [0x0x109f46c]
+	(No symbol) [0x0x10c087a]
+	(No symbol) [0x0x109f266]
+	(No symbol) [0x0x106e852]
+	(No symbol) [0x0x106f6f4]
+	GetHandleVerifier [0x0x1464793+2619075]
+	GetHandleVerifier [0x0x145fbaa+2599642]
+	GetHandleVerifier [0x0x121b04a+221050]
+	GetHandleVerifier [0x0x120b2c8+156152]
+	GetHandleVerifier [0x0x1211c7d+183213]
+	GetHandleVerifier [0x0x11fc388+94904]
+	GetHandleVerifier [0x0x11fc512+95298]
+	GetHandleVerifier [0x0x11e766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 09:04:31,111 - INFO - Extraídos 0 comentarios del video 12
+2025-07-09 09:04:31,113 - INFO - Comentarios guardados en: comentarios/video_12_Usuario no disponible.txt
+2025-07-09 09:04:40,046 - INFO - Resultados guardados en CSV: resultados/tiktok_scraping_turismo_20250709_090440.csv
+2025-07-09 09:04:40,048 - INFO - Scraping completado exitosamente
+2025-07-09 09:04:40,890 - INFO - Driver cerrado
+2025-07-09 09:05:05,633 - INFO - Iniciando scraping para 'turismo' con 20 videos
+2025-07-09 09:05:07,740 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-09 09:05:09,620 - INFO - Driver configurado exitosamente con undetected-chromedriver
+2025-07-09 09:05:09,621 - INFO - Navegando a página principal de TikTok...
+2025-07-09 09:05:23,908 - INFO - Buscando videos con palabra clave: turismo
+2025-07-09 09:05:34,484 - INFO - Cargando videos con scroll gradual...
+2025-07-09 09:05:39,318 - INFO - Scroll 1 completado
+2025-07-09 09:05:43,952 - INFO - Scroll 2 completado
+2025-07-09 09:05:50,671 - INFO - Scroll 3 completado
+2025-07-09 09:05:56,183 - INFO - Scroll 4 completado
+2025-07-09 09:06:01,719 - INFO - Scroll 5 completado
+2025-07-09 09:06:06,121 - INFO - Scroll 6 completado
+2025-07-09 09:06:12,229 - INFO - Scroll 7 completado
+2025-07-09 09:06:12,300 - INFO - Selector 'div[data-e2e="search-video-item"]': 0 elementos encontrados
+2025-07-09 09:06:12,321 - INFO - Selector 'div[data-e2e="search_top-item"]': 35 elementos encontrados
+2025-07-09 09:06:13,059 - INFO - Encontrados 35 videos válidos
+2025-07-09 09:06:13,262 - INFO - Video 1 extraído: Usuario no disponible
+2025-07-09 09:06:16,378 - INFO - Video 2 extraído: Usuario no disponible
+2025-07-09 09:06:18,984 - INFO - Video 3 extraído: Usuario no disponible
+2025-07-09 09:06:21,223 - INFO - Video 4 extraído: Usuario no disponible
+2025-07-09 09:06:23,883 - INFO - Video 5 extraído: Usuario no disponible
+2025-07-09 09:06:25,439 - INFO - Video 6 extraído: Usuario no disponible
+2025-07-09 09:06:28,105 - INFO - Video 7 extraído: Usuario no disponible
+2025-07-09 09:06:30,165 - INFO - Video 8 extraído: Usuario no disponible
+2025-07-09 09:06:31,466 - INFO - Video 9 extraído: Usuario no disponible
+2025-07-09 09:06:33,120 - INFO - Video 10 extraído: Usuario no disponible
+2025-07-09 09:06:34,437 - INFO - Video 11 extraído: Usuario no disponible
+2025-07-09 09:06:37,131 - INFO - Video 12 extraído: Usuario no disponible
+2025-07-09 09:06:39,020 - INFO - Video 13 extraído: Usuario no disponible
+2025-07-09 09:06:41,047 - INFO - Video 14 extraído: Usuario no disponible
+2025-07-09 09:06:42,445 - INFO - Video 15 extraído: Usuario no disponible
+2025-07-09 09:06:45,530 - INFO - Video 16 extraído: Usuario no disponible
+2025-07-09 09:06:47,841 - INFO - Video 17 extraído: Usuario no disponible
+2025-07-09 09:06:49,733 - INFO - Video 18 extraído: Usuario no disponible
+2025-07-09 09:06:52,317 - INFO - Video 19 extraído: Usuario no disponible
+2025-07-09 09:06:54,128 - INFO - Video 20 extraído: Usuario no disponible
+2025-07-09 09:08:24,567 - INFO - Extrayendo comentarios del video 1
+2025-07-09 09:08:29,182 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:09:06,006 - INFO - Encontrados 20 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-09 09:09:06,245 - INFO - Extraídos 20 comentarios del video 1
+2025-07-09 09:09:06,249 - INFO - Comentarios guardados en: comentarios/video_1_Usuario no disponible.txt
+2025-07-09 09:09:14,004 - INFO - Extrayendo comentarios del video 2
+2025-07-09 09:09:21,559 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:10:00,275 - INFO - Encontrados 20 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-09 09:10:00,599 - INFO - Extraídos 20 comentarios del video 2
+2025-07-09 09:10:00,601 - INFO - Comentarios guardados en: comentarios/video_2_Usuario no disponible.txt
+2025-07-09 09:10:08,293 - INFO - Extrayendo comentarios del video 3
+2025-07-09 09:10:16,344 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:10:56,386 - INFO - Extraídos 0 comentarios del video 3
+2025-07-09 09:10:56,388 - INFO - Comentarios guardados en: comentarios/video_3_Usuario no disponible.txt
+2025-07-09 09:11:05,444 - INFO - Extrayendo comentarios del video 4
+2025-07-09 09:11:14,613 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:11:51,563 - INFO - Encontrados 20 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-09 09:11:51,906 - INFO - Extraídos 17 comentarios del video 4
+2025-07-09 09:11:51,914 - INFO - Comentarios guardados en: comentarios/video_4_Usuario no disponible.txt
+2025-07-09 09:11:59,594 - INFO - Extrayendo comentarios del video 5
+2025-07-09 09:12:12,661 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:12:47,956 - INFO - Encontrados 20 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-09 09:12:48,338 - INFO - Extraídos 20 comentarios del video 5
+2025-07-09 09:12:48,341 - INFO - Comentarios guardados en: comentarios/video_5_Usuario no disponible.txt
+2025-07-09 09:12:54,756 - INFO - Extrayendo comentarios del video 6
+2025-07-09 09:12:57,831 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:13:33,103 - INFO - Encontrados 20 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-09 09:13:33,355 - INFO - Extraídos 20 comentarios del video 6
+2025-07-09 09:13:33,357 - INFO - Comentarios guardados en: comentarios/video_6_Usuario no disponible.txt
+2025-07-09 09:13:43,006 - INFO - Extrayendo comentarios del video 7
+2025-07-09 09:13:45,458 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:14:20,939 - INFO - Encontrados 19 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-09 09:14:21,449 - INFO - Extraídos 19 comentarios del video 7
+2025-07-09 09:14:21,454 - INFO - Comentarios guardados en: comentarios/video_7_Usuario no disponible.txt
+2025-07-09 09:14:29,714 - INFO - Extrayendo comentarios del video 8
+2025-07-09 09:14:37,217 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:15:17,052 - INFO - Encontrados 20 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-09 09:15:17,414 - INFO - Extraídos 11 comentarios del video 8
+2025-07-09 09:15:17,416 - INFO - Comentarios guardados en: comentarios/video_8_Usuario no disponible.txt
+2025-07-09 09:15:24,869 - INFO - Extrayendo comentarios del video 9
+2025-07-09 09:15:33,521 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:16:09,811 - INFO - Encontrados 20 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-09 09:16:10,157 - INFO - Extraídos 7 comentarios del video 9
+2025-07-09 09:16:10,159 - INFO - Comentarios guardados en: comentarios/video_9_Usuario no disponible.txt
+2025-07-09 09:16:17,739 - INFO - Extrayendo comentarios del video 10
+2025-07-09 09:16:26,644 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:17:03,333 - INFO - Encontrados 20 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-09 09:17:03,896 - INFO - Extraídos 2 comentarios del video 10
+2025-07-09 09:17:03,898 - INFO - Comentarios guardados en: comentarios/video_10_Usuario no disponible.txt
+2025-07-09 09:17:13,720 - INFO - Extrayendo comentarios del video 11
+2025-07-09 09:17:23,386 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:18:00,452 - INFO - Encontrados 20 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-09 09:18:00,860 - INFO - Extraídos 8 comentarios del video 11
+2025-07-09 09:18:00,867 - INFO - Comentarios guardados en: comentarios/video_11_Usuario no disponible.txt
+2025-07-09 09:18:07,806 - INFO - Extrayendo comentarios del video 12
+2025-07-09 09:18:16,729 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:18:52,242 - INFO - Encontrados 5 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-09 09:18:52,445 - INFO - Extraídos 2 comentarios del video 12
+2025-07-09 09:18:52,449 - INFO - Comentarios guardados en: comentarios/video_12_Usuario no disponible.txt
+2025-07-09 09:19:01,647 - INFO - Extrayendo comentarios del video 13
+2025-07-09 09:19:10,557 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:19:18,748 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 09:19:18,750 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 09:19:18,752 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 09:19:40,859 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xa244a3+62419]
+	GetHandleVerifier [0x0xa244e4+62484]
+	(No symbol) [0x0x861f90]
+	(No symbol) [0x0x8f8f51]
+	(No symbol) [0x0x8cf46c]
+	(No symbol) [0x0x8f087a]
+	(No symbol) [0x0x8cf266]
+	(No symbol) [0x0x89e852]
+	(No symbol) [0x0x89f6f4]
+	GetHandleVerifier [0x0xc94793+2619075]
+	GetHandleVerifier [0x0xc8fbaa+2599642]
+	GetHandleVerifier [0x0xa4b04a+221050]
+	GetHandleVerifier [0x0xa3b2c8+156152]
+	GetHandleVerifier [0x0xa41c7d+183213]
+	GetHandleVerifier [0x0xa2c388+94904]
+	GetHandleVerifier [0x0xa2c512+95298]
+	GetHandleVerifier [0x0xa1766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 09:20:19,803 - INFO - Extraídos 0 comentarios del video 13
+2025-07-09 09:20:19,805 - INFO - Comentarios guardados en: comentarios/video_13_Usuario no disponible.txt
+2025-07-09 09:20:28,170 - INFO - Extrayendo comentarios del video 14
+2025-07-09 09:20:37,279 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:20:45,190 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 09:20:45,191 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 09:20:45,191 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 09:21:02,216 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xa244a3+62419]
+	GetHandleVerifier [0x0xa244e4+62484]
+	(No symbol) [0x0x861f90]
+	(No symbol) [0x0x8f8f51]
+	(No symbol) [0x0x8cf46c]
+	(No symbol) [0x0x8f087a]
+	(No symbol) [0x0x8cf266]
+	(No symbol) [0x0x89e852]
+	(No symbol) [0x0x89f6f4]
+	GetHandleVerifier [0x0xc94793+2619075]
+	GetHandleVerifier [0x0xc8fbaa+2599642]
+	GetHandleVerifier [0x0xa4b04a+221050]
+	GetHandleVerifier [0x0xa3b2c8+156152]
+	GetHandleVerifier [0x0xa41c7d+183213]
+	GetHandleVerifier [0x0xa2c388+94904]
+	GetHandleVerifier [0x0xa2c512+95298]
+	GetHandleVerifier [0x0xa1766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 09:21:41,178 - INFO - Extraídos 0 comentarios del video 14
+2025-07-09 09:21:41,179 - INFO - Comentarios guardados en: comentarios/video_14_Usuario no disponible.txt
+2025-07-09 09:21:47,799 - INFO - Extrayendo comentarios del video 15
+2025-07-09 09:21:57,012 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:22:03,632 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 09:22:03,632 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 09:22:03,633 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 09:22:25,116 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xa244a3+62419]
+	GetHandleVerifier [0x0xa244e4+62484]
+	(No symbol) [0x0x861f90]
+	(No symbol) [0x0x8f8f51]
+	(No symbol) [0x0x8cf46c]
+	(No symbol) [0x0x8f087a]
+	(No symbol) [0x0x8cf266]
+	(No symbol) [0x0x89e852]
+	(No symbol) [0x0x89f6f4]
+	GetHandleVerifier [0x0xc94793+2619075]
+	GetHandleVerifier [0x0xc8fbaa+2599642]
+	GetHandleVerifier [0x0xa4b04a+221050]
+	GetHandleVerifier [0x0xa3b2c8+156152]
+	GetHandleVerifier [0x0xa41c7d+183213]
+	GetHandleVerifier [0x0xa2c388+94904]
+	GetHandleVerifier [0x0xa2c512+95298]
+	GetHandleVerifier [0x0xa1766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 09:23:05,843 - INFO - Extraídos 0 comentarios del video 15
+2025-07-09 09:23:05,846 - INFO - Comentarios guardados en: comentarios/video_15_Usuario no disponible.txt
+2025-07-09 09:23:14,074 - INFO - Extrayendo comentarios del video 16
+2025-07-09 09:23:24,096 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:23:31,919 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 09:23:31,919 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 09:23:31,919 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 09:23:52,702 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xa244a3+62419]
+	GetHandleVerifier [0x0xa244e4+62484]
+	(No symbol) [0x0x861f90]
+	(No symbol) [0x0x8f8f51]
+	(No symbol) [0x0x8cf46c]
+	(No symbol) [0x0x8f087a]
+	(No symbol) [0x0x8cf266]
+	(No symbol) [0x0x89e852]
+	(No symbol) [0x0x89f6f4]
+	GetHandleVerifier [0x0xc94793+2619075]
+	GetHandleVerifier [0x0xc8fbaa+2599642]
+	GetHandleVerifier [0x0xa4b04a+221050]
+	GetHandleVerifier [0x0xa3b2c8+156152]
+	GetHandleVerifier [0x0xa41c7d+183213]
+	GetHandleVerifier [0x0xa2c388+94904]
+	GetHandleVerifier [0x0xa2c512+95298]
+	GetHandleVerifier [0x0xa1766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 09:24:34,531 - INFO - Extraídos 0 comentarios del video 16
+2025-07-09 09:24:34,546 - INFO - Comentarios guardados en: comentarios/video_16_Usuario no disponible.txt
+2025-07-09 09:24:40,981 - INFO - Extrayendo comentarios del video 17
+2025-07-09 09:24:51,427 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:25:02,033 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 09:25:02,033 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 09:25:02,034 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 09:25:28,715 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xa244a3+62419]
+	GetHandleVerifier [0x0xa244e4+62484]
+	(No symbol) [0x0x861f90]
+	(No symbol) [0x0x8f8f51]
+	(No symbol) [0x0x8cf46c]
+	(No symbol) [0x0x8f087a]
+	(No symbol) [0x0x8cf266]
+	(No symbol) [0x0x89e852]
+	(No symbol) [0x0x89f6f4]
+	GetHandleVerifier [0x0xc94793+2619075]
+	GetHandleVerifier [0x0xc8fbaa+2599642]
+	GetHandleVerifier [0x0xa4b04a+221050]
+	GetHandleVerifier [0x0xa3b2c8+156152]
+	GetHandleVerifier [0x0xa41c7d+183213]
+	GetHandleVerifier [0x0xa2c388+94904]
+	GetHandleVerifier [0x0xa2c512+95298]
+	GetHandleVerifier [0x0xa1766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 09:26:09,202 - INFO - Extraídos 0 comentarios del video 17
+2025-07-09 09:26:09,204 - INFO - Comentarios guardados en: comentarios/video_17_Usuario no disponible.txt
+2025-07-09 09:26:15,078 - INFO - Extrayendo comentarios del video 18
+2025-07-09 09:26:24,659 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:26:33,446 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 09:26:33,446 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 09:26:33,446 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 09:26:53,570 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xa244a3+62419]
+	GetHandleVerifier [0x0xa244e4+62484]
+	(No symbol) [0x0x861f90]
+	(No symbol) [0x0x8f8f51]
+	(No symbol) [0x0x8cf46c]
+	(No symbol) [0x0x8f087a]
+	(No symbol) [0x0x8cf266]
+	(No symbol) [0x0x89e852]
+	(No symbol) [0x0x89f6f4]
+	GetHandleVerifier [0x0xc94793+2619075]
+	GetHandleVerifier [0x0xc8fbaa+2599642]
+	GetHandleVerifier [0x0xa4b04a+221050]
+	GetHandleVerifier [0x0xa3b2c8+156152]
+	GetHandleVerifier [0x0xa41c7d+183213]
+	GetHandleVerifier [0x0xa2c388+94904]
+	GetHandleVerifier [0x0xa2c512+95298]
+	GetHandleVerifier [0x0xa1766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 09:27:28,835 - INFO - Extraídos 0 comentarios del video 18
+2025-07-09 09:27:28,837 - INFO - Comentarios guardados en: comentarios/video_18_Usuario no disponible.txt
+2025-07-09 09:27:37,185 - INFO - Extrayendo comentarios del video 19
+2025-07-09 09:27:45,586 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:27:53,410 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 09:27:53,410 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 09:27:53,410 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 09:28:07,967 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xa244a3+62419]
+	GetHandleVerifier [0x0xa244e4+62484]
+	(No symbol) [0x0x861f90]
+	(No symbol) [0x0x8f8f51]
+	(No symbol) [0x0x8cf46c]
+	(No symbol) [0x0x8f087a]
+	(No symbol) [0x0x8cf266]
+	(No symbol) [0x0x89e852]
+	(No symbol) [0x0x89f6f4]
+	GetHandleVerifier [0x0xc94793+2619075]
+	GetHandleVerifier [0x0xc8fbaa+2599642]
+	GetHandleVerifier [0x0xa4b04a+221050]
+	GetHandleVerifier [0x0xa3b2c8+156152]
+	GetHandleVerifier [0x0xa41c7d+183213]
+	GetHandleVerifier [0x0xa2c388+94904]
+	GetHandleVerifier [0x0xa2c512+95298]
+	GetHandleVerifier [0x0xa1766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 09:28:50,929 - INFO - Extraídos 0 comentarios del video 19
+2025-07-09 09:28:50,931 - INFO - Comentarios guardados en: comentarios/video_19_Usuario no disponible.txt
+2025-07-09 09:28:56,047 - INFO - Extrayendo comentarios del video 20
+2025-07-09 09:29:03,961 - INFO - Video pausado con tecla SPACE
+2025-07-09 09:29:14,508 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 09:29:14,509 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 09:29:14,509 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 09:29:26,779 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xa244a3+62419]
+	GetHandleVerifier [0x0xa244e4+62484]
+	(No symbol) [0x0x861f90]
+	(No symbol) [0x0x8f8f51]
+	(No symbol) [0x0x8cf46c]
+	(No symbol) [0x0x8f087a]
+	(No symbol) [0x0x8cf266]
+	(No symbol) [0x0x89e852]
+	(No symbol) [0x0x89f6f4]
+	GetHandleVerifier [0x0xc94793+2619075]
+	GetHandleVerifier [0x0xc8fbaa+2599642]
+	GetHandleVerifier [0x0xa4b04a+221050]
+	GetHandleVerifier [0x0xa3b2c8+156152]
+	GetHandleVerifier [0x0xa41c7d+183213]
+	GetHandleVerifier [0x0xa2c388+94904]
+	GetHandleVerifier [0x0xa2c512+95298]
+	GetHandleVerifier [0x0xa1766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 09:30:08,354 - INFO - Extraídos 0 comentarios del video 20
+2025-07-09 09:30:08,355 - INFO - Comentarios guardados en: comentarios/video_20_Usuario no disponible.txt
+2025-07-09 09:30:14,139 - INFO - Resultados guardados en CSV: resultados/tiktok_scraping_turismo_20250709_093014.csv
+2025-07-09 09:30:14,140 - INFO - Scraping completado exitosamente
+2025-07-09 09:30:14,868 - INFO - Driver cerrado
