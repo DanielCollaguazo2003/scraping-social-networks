@@ -1,2 +1,8 @@
 selenium
 beautifulsoup4
+playwright
+jmespath
+scrapfly-sdk
+pandas
+fake_useragent
+webdriver_manager
