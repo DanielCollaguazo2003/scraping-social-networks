@@ -220,7 +220,7 @@ def main():
     driver = None
     
     try:
-        search_term = "#cuenca, comida, restaurantes, delincuencia, protestas, turismo, accidentes"
+        search_term = "cuenca (comida OR restaurantes OR delincuencia OR protestas OR turismo OR accidentes) since:2025-04-01"
         max_tweets = 15
         max_workers = 5
         
