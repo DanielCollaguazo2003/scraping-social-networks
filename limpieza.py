@@ -5,20 +5,20 @@ import csv
 
 # Palabras clave turísticas
 KEYWORDS_TURISMO = [
-    "tour", "paseo", "guía", "viaje", "turismo", "excursión",
-    "precio", "costo", "horario", "información", "visita", "lugar",
+    "tour", "paseo", "guia", "viaje", "turismo", "excursion",
+    "precio", "costo", "horario", "informacion", "visita", "lugar",
     "sitio", "hermoso", "bonito", "recomiendo", "destino", "agencia",
-    "hotel", "hospedaje", "transporte", "ruta", "conocer", "termales", "playa", "montaña"
+    "hotel", "hospedaje", "transporte", "ruta", "conocer", "termales", "playa", "montana"
 ]
 
 # Palabras ofensivas
 PALABRAS_FEAS = [
     "mierda", "puta", "puto", "maldito", "idiota", "pendejo", "coño", "culero",
-    "estúpido", "imbécil", "marica", "hijueputa", "cabron", "hdp", "perra"
+    "estupido", "imbecil", "marica", "hijueputa", "cabron", "hdp", "perra"
 ]
 
 # Expresiones regulares
-REGEX_EMOJIS = re.compile("["
+REGEX_EMOJIS = re.compile("[" 
     "\U0001F600-\U0001F64F"  # emoticons
     "\U0001F300-\U0001F5FF"
     "\U0001F680-\U0001F6FF"
@@ -43,7 +43,8 @@ def limpiar_texto(texto: str) -> str:
 
 def detectar_keywords(texto_limpio: str):
     palabras = texto_limpio.lower().split()
-    return sorted(set(p for p in palabras if p in KEYWORDS_TURISMO))
+    keywords = sorted(set(p for p in palabras if p in KEYWORDS_TURISMO))
+    return keywords if keywords else ["no_relacionado"]
 
 def limpiar_archivo(origen_path, destino_path, csv_writer):
     with open(origen_path, "r", encoding="utf-8") as f:
@@ -63,12 +64,11 @@ def limpiar_archivo(origen_path, destino_path, csv_writer):
 
             # Detectar keywords turísticas
             keywords = detectar_keywords(limpio)
-            if keywords:
-                csv_writer.writerow({
-                    'usuario': usuario,
-                    'comentario': limpio,
-                    'keywords_detectadas': ", ".join(keywords)
-                })
+            csv_writer.writerow({
+                'usuario': usuario,
+                'comentario': limpio,
+                'keywords_detectadas': ", ".join(keywords)
+            })
         else:
             nuevas_lineas.append(linea)
 
