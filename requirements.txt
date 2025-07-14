@@ -10,3 +10,8 @@ fastapi
 uvicorn
 aiohttp
 pydantic
+transformers
+openai
+aiofiles
+httpx
+textblob
