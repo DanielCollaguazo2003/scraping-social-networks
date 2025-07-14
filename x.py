@@ -175,9 +175,11 @@ def scrape_tweet(url: str) -> dict:
         logger.error(f"Error scrapeando tweet {url}: {e}")
         return {"url": url, "text": None, "error": str(e)}
 
-def process_tweet_batch(tweet_links, max_workers=3):
-    """Procesar tweets en lotes con threading"""
+def process_tweet_batch(tweet_links, max_workers=3, progress_callback=None):
+    """Procesar tweets en lotes con threading y callback de progreso"""
     all_data = []
+    completed = 0
+    total = len(tweet_links)
     
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = {executor.submit(scrape_tweet, link): idx for idx, link in enumerate(tweet_links)}
@@ -187,6 +189,11 @@ def process_tweet_batch(tweet_links, max_workers=3):
             logger.info(f"Procesando tweet {idx + 1}/{len(tweet_links)}")
             result = future.result()
             all_data.append(result)
+            completed += 1
+            
+            # Llamar callback de progreso si existe
+            if progress_callback:
+                progress_callback(completed, total)
             
     return all_data
 
@@ -214,6 +221,45 @@ def save_to_json(data, filename='tweets_data.json'):
         logger.info(f"Backup JSON guardado en {filename}")
     except Exception as e:
         logger.error(f"Error guardando JSON: {e}")
+
+def scrape(query: str, max_results: int = 15, max_workers: int = 15):
+    """
+    Función principal para scrapeo de Twitter
+    """
+    driver = None
+    
+    try:
+        driver = get_headless_chrome_driver()
+        logger.info("Driver inicializado en modo headless")
+        
+        open_twitter_login(driver)
+        go_to_explore(driver)
+        search_keyword(driver, query)
+        
+        tweet_links = get_tweet_links(driver, max_results, extra_scrolls=20)
+        
+        if not tweet_links:
+            logger.warning("No se encontraron enlaces de tweets")
+            return []
+
+        logger.info(f"Procesando {len(tweet_links)} tweets...")
+        all_data = process_tweet_batch(tweet_links, max_workers)
+
+        save_to_csv(all_data)
+        save_to_json(all_data)
+
+        successful_tweets = len([d for d in all_data if d.get('text')])
+        logger.info(f"Tweets procesados exitosamente: {successful_tweets}/{len(all_data)}")
+
+        return all_data
+        
+    except Exception as e:
+        logger.error(f"Error en scrapeo: {e}")
+        
+    finally:
+        if driver:
+            driver.quit()
+            logger.info("Driver cerrado")
 
 def main():
     """Función principal optimizada"""
@@ -245,6 +291,8 @@ def main():
 
         successful_tweets = len([d for d in all_data if d.get('text')])
         logger.info(f"Tweets procesados exitosamente: {successful_tweets}/{len(all_data)}")
+
+        return all_data
         
     except Exception as e:
         logger.error(f"Error en función principal: {e}")

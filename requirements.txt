@@ -6,3 +6,7 @@ scrapfly-sdk
 pandas
 fake_useragent
 webdriver_manager
+fastapi
+uvicorn
+aiohttp
+pydantic
