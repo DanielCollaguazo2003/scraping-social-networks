@@ -1,88 +1,273 @@
 === COMENTARIOS DEL VIDEO 1 ===
 Usuario: Usuario perdido
 Descripción: Descripción no disponible
-URL: https://www.tiktok.com/@animalparkec/video/7520384944108096773
-Fecha de extracción: 2025-07-14 10:58:24
-Total de comentarios: 20
+URL: https://www.tiktok.com/@tecuentolaplenaliveec/video/7314767946381872390
+Fecha de extracción: 2025-07-14 15:07:34
+Total de comentarios: 44
 ==================================================
 
 COMENTARIO 1:
-Texto: es mejor "Aqua River Park "
-Timestamp: 2025-07-14T10:58:23.752834
+Texto: ya pues cristian zamora ponte las pilas eso no puede pasar en nuestra ciudad o q opine el pueblo
+Autor: cuencaciudad
+Likes: 1
+Timestamp: 2025-07-14T15:07:33.199699
 ------------------------------
 COMENTARIO 2:
-Texto: De q ciudad son
-Timestamp: 2025-07-14T10:58:23.771663
+Texto: De cuando es la noticia
+Autor: gloriasalazar1127
+Likes: 1
+Timestamp: 2025-07-14T15:07:33.199699
 ------------------------------
 COMENTARIO 3:
-Texto: buenos dias disculpe que bus van para alla desde Sangolqui muchas gracias por la informacion
-Timestamp: 2025-07-14T10:58:23.788799
+Texto: Que esperan los Cuenca nos...
+Autor: hyunsookt
+Likes: 5
+Timestamp: 2025-07-14T15:07:33.199699
 ------------------------------
 COMENTARIO 4:
-Texto: Es realmente Lindo Estube hay
-Timestamp: 2025-07-14T10:58:23.801782
+Texto: dios viene pronto
+Autor: zorig38
+Likes: 1
+Timestamp: 2025-07-14T15:07:33.199699
 ------------------------------
 COMENTARIO 5:
-Texto: la informacion esta incompleta en que provincia costa sierra ooriente o region insular
-Timestamp: 2025-07-14T10:58:23.818718
+Texto: Dios bendiga
+Autor: rociomartinez2974
+Likes: 1
+Timestamp: 2025-07-14T15:07:33.199699
 ------------------------------
 COMENTARIO 6:
-Texto: No se puede entrar con mascotas y si quieres entrar tienes que pagar extra para dejar a tu mascota en una JAULA que estan al fondo de los parqueaderos en un rincon oscuro
-Timestamp: 2025-07-14T10:58:23.838664
+Texto: yo pensava irme a vivir ay pero ya no mejor me quedo aqui mismo no no ecuador no se puede
+Autor: mangomen00
+Likes: 1
+Timestamp: 2025-07-14T15:07:33.199699
 ------------------------------
 COMENTARIO 7:
-Texto: amiga me ayudas aver un zapato de bebe es q mi sobrino lo boto es un zapato de Mickey azul
-Timestamp: 2025-07-14T10:58:23.857705
+Texto: cuenca despierta no permitan esto
+Autor: veronica.aldaz
+Likes: 1
+Timestamp: 2025-07-14T15:07:33.199699
 ------------------------------
 COMENTARIO 8:
-Texto: y si quiero ir en helicoptero??
-Timestamp: 2025-07-14T10:58:23.886271
+Texto: y q hacen la policia
+Autor: lauragobzales80
+Likes: 1
+Timestamp: 2025-07-14T15:07:33.199699
 ------------------------------
 COMENTARIO 9:
-Texto: no ay capibarad
-Timestamp: 2025-07-14T10:58:23.918273
+Texto: Que hacen la policia o militares y las autoridades
+Autor: pologuallpa
+Likes: 2
+Timestamp: 2025-07-14T15:07:33.199699
 ------------------------------
 COMENTARIO 10:
-Texto: Cobran por cada atraccion? O solo se paga la entrada
-Timestamp: 2025-07-14T10:58:23.932271
+Texto: ay Dios asta donde yegamos
+Autor: luisguachichulca3
+Likes: 1
+Timestamp: 2025-07-14T15:07:33.199699
 ------------------------------
 COMENTARIO 11:
-Texto: yo estuve ahi
-Timestamp: 2025-07-14T10:58:23.969852
+Texto: hasta cuando
+Autor: xc20220624
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.199699
 ------------------------------
 COMENTARIO 12:
-Texto: la verdad, que supero mis expectativas!!
-Timestamp: 2025-07-14T10:58:23.996837
+Texto: pero el alcalde dice otra cosa
+Autor: henrypacheco12
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.199699
 ------------------------------
 COMENTARIO 13:
-Texto: donde esta ubicado
-Timestamp: 2025-07-14T10:58:24.197278
+Texto: jajajajaja jajaja
+Autor: nick_farachio_23
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.199699
 ------------------------------
 COMENTARIO 14:
-Texto: don esta quito o guayaquil
-Timestamp: 2025-07-14T10:58:24.209440
+Texto: 
+Autor: nick_farachio_23
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.199699
 ------------------------------
 COMENTARIO 15:
-Texto: en donde se ubica
-Timestamp: 2025-07-14T10:58:24.222439
+Texto: 
+Autor: rafael.coello
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.199699
 ------------------------------
 COMENTARIO 16:
-Texto: La atencion es de todos los dias???
-Timestamp: 2025-07-14T10:58:24.231440
+Texto: 
+Autor: tierrafirme_alexandrag
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.199699
 ------------------------------
 COMENTARIO 17:
-Texto: es lindo recomendasimo es la mejor opcion para pasar unas vacaciones extraordinarias
-Timestamp: 2025-07-14T10:58:24.238441
+Texto: 
+Autor: nathyycristhiian
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.199699
 ------------------------------
 COMENTARIO 18:
-Texto: buen dia me interesa ubicacion en Quito Ecuador
-Timestamp: 2025-07-14T10:58:24.245443
+Texto: 
+Autor: nathyycristhiian
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.199699
 ------------------------------
 COMENTARIO 19:
-Texto: por donde
-Timestamp: 2025-07-14T10:58:24.256480
+Texto: 
+Autor: eugenio.cordero152
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.199699
 ------------------------------
 COMENTARIO 20:
-Texto: si puedo ir en caballo
-Timestamp: 2025-07-14T10:58:24.278034
+Texto: 
+Autor: lourdescueva51
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.690111
+------------------------------
+COMENTARIO 21:
+Texto: 
+Autor: user40650189
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.690111
+------------------------------
+COMENTARIO 22:
+Texto: Voz del Tomebamba
+Autor: dvila.fabin
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.690111
+------------------------------
+COMENTARIO 23:
+Texto: 
+Autor: luisa.sacaquirin0
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.690111
+------------------------------
+COMENTARIO 24:
+Texto: 
+Autor: josefernandobalas
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.690111
+------------------------------
+COMENTARIO 25:
+Texto: y donde esta la fiscal buscando a correistas
+Autor: mateo.josue7
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.690111
+------------------------------
+COMENTARIO 26:
+Texto: pinche gobierno vale verg ya pues que haga algo
+Autor: luisbueno96
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.691360
+------------------------------
+COMENTARIO 27:
+Texto: esos venezolano
+Autor: leticiagonzabay3407
+Likes: 1
+Timestamp: 2025-07-14T15:07:33.691360
+------------------------------
+COMENTARIO 28:
+Texto: No que el alcalde se llena de boca yo pienso que todos son cumpleces o se hacen de la vista gorda
+Autor: user7390909407919
+Likes: 1
+Timestamp: 2025-07-14T15:07:33.691360
+------------------------------
+COMENTARIO 29:
+Texto: Esto es obra del CORREISMO, que quiere destruir la buena fama de Cuenca.
+Autor: carlos.pacheco4084
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.691360
+------------------------------
+COMENTARIO 30:
+Texto: 
+Autor: lauramagdalenamolinaveg1
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.691360
+------------------------------
+COMENTARIO 31:
+Texto: todo esto es verdad las personas de Cuenca se estan lamentando
+Autor: janettpalacios818
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.691360
+------------------------------
+COMENTARIO 32:
+Texto: deberia deportar todos los venezolanos
+Autor: srzbambino593
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.691360
+------------------------------
+COMENTARIO 33:
+Texto: 
+Autor: juliazhizhin
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.691360
+------------------------------
+COMENTARIO 34:
+Texto: correa ahi esta las leynes dejo
+Autor: cristinanarvaez230
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.691360
+------------------------------
+COMENTARIO 35:
+Texto: Que podemos esperar si las misma autoridades son los cabecillas de toda la mafia delincuencia y sicariato cuando ellos deberian dar seguridad
+Autor: tomastepan
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.691360
+------------------------------
+COMENTARIO 36:
+Texto: Y en donde esta el alcalde ? Es hora de levantar el pueblo no se puede permitir que malandros extranjeros vengan a aduenar de la ciudad
+Autor: worldtech.llc
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.691360
+------------------------------
+COMENTARIO 37:
+Texto: El pais necesita un Bukele
+Autor: user2191697677666
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.691360
+------------------------------
+COMENTARIO 38:
+Texto: Fuera venezolanos saquen a todos estos venezolanos
+Autor: ayp44
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.691360
+------------------------------
+COMENTARIO 39:
+Texto: Al Gobierno no se le caera la cara de la verguenza
+Cuenca es Patrimoño Mundial
+Autor: darwinguevara319
+Likes: 0
+Timestamp: 2025-07-14T15:07:33.691360
+------------------------------
+COMENTARIO 40:
+Texto: ECUATORIANO PORQUE NO SE LEVANTAN NO SE DEJEN SALGAN ALAS CALLES A PEPEAR DIOS ASTA CUANDO
+Autor: mangomen00
+Likes: 0
+Timestamp: 2025-07-14T15:07:34.284904
+------------------------------
+COMENTARIO 41:
+Texto: Nacional del Ecuador
+Autor: impermeabilizaciones33
+Likes: 0
+Timestamp: 2025-07-14T15:07:34.284904
+------------------------------
+COMENTARIO 42:
+Texto: Senor narrador porque no da respuestas a estos problemas de la sociedad en vez de actualizar a la delincuencia.
+Autor: mariahuebla
+Likes: 0
+Timestamp: 2025-07-14T15:07:34.284904
+------------------------------
+COMENTARIO 43:
+Texto: BIEN ELLOS MISMO ELIGIERON AL PRESIDENTE DEL CAR Y ON
+Autor: maria.zoila28
+Likes: 0
+Timestamp: 2025-07-14T15:07:34.284904
+------------------------------
+COMENTARIO 44:
+Texto: Que pena pobre pais en manos de delincuentes
+Autor: patlatina4ever
+Likes: 0
+Timestamp: 2025-07-14T15:07:34.284904
 ------------------------------

@@ -17,10 +17,13 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException,
 from urllib.parse import quote
 import logging
 import undetected_chromedriver as uc
+import asyncio
+from TikTokApi import TikTokApi
 
 class TikTokScraper:
     def __init__(self):
         self.driver = None
+        self.tiktok_api = None
         self.setup_logging()
         self.setup_directories()
         self.user_agents = [
@@ -109,12 +112,27 @@ class TikTokScraper:
             
             self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
             self.driver.execute_script("Object.defineProperty(navigator, 'plugins', {get: () => [1, 2, 3, 4, 5]})")
-            self.driver.execute_script("Object.defineProperty(navigator, 'languages', {get: () => ['en-US', 'en']})")
             
             self.logger.info("Driver configurado exitosamente con undetected-chromedriver")
             
         except Exception as e:
             self.logger.error(f"Error al configurar el driver: {e}")
+            raise
+    
+    async def setup_tiktok_api(self):
+        """Configura la API de TikTok"""
+        try:
+            self.tiktok_api = TikTokApi()
+            ms_token = "bfAPdiUYH7YeBS9binkc2hmtymBjQj38mbno2JXG-Xsk5s4zq_WVznCiBRLXtej1qOnNZpDz4xbAgL5jQfhZ_EoxdOGZZgZ1T0lvpLLROA6xv6I6iRLVkaNfh79tWKf87-7PS7mQoaaFjvFkFG5A73X3Hw=="
+            await self.tiktok_api.create_sessions(
+                ms_tokens=[ms_token],
+                num_sessions=1,
+                headless=True,
+                timeout=60000
+                )
+            self.logger.info("API de TikTok configurada exitosamente")
+        except Exception as e:
+            self.logger.error(f"Error al configurar la API de TikTok: {e}")
             raise
     
     def human_like_scroll(self, duration=3, direction='down'):
@@ -133,131 +151,20 @@ class TikTokScraper:
         except Exception as e:
             self.logger.warning(f"Error en scroll humano: {e}")
     
-    def random_mouse_movement(self):
-        """Simula movimientos aleatorios del mouse"""
-        try:
-            action = ActionChains(self.driver)
-            
-            window_size = self.driver.get_window_size()
-            width = window_size['width']
-            height = window_size['height']
-            
-            for _ in range(3):
-                x = random.randint(0, width)
-                y = random.randint(0, height)
-                action.move_by_offset(x, y)
-                time.sleep(random.uniform(0.5, 1.0))
-                
-            action.perform()
-            
-        except Exception as e:
-            self.logger.warning(f"Error en movimiento del mouse: {e}")
-    
-    def detect_captcha(self):
-        """Detecta si hay un CAPTCHA presente"""
-        captcha_selectors = [
-            '#captcha-verify-container',
-            '#captcha-verify-container-main-page',
-            '.captcha-verify-container',
-            '[data-testid="captcha"]',
-            '.secsdk-captcha-drag-icon'
-        ]
-        
-        for selector in captcha_selectors:
-            try:
-                elements = self.driver.find_elements(By.CSS_SELECTOR, selector)
-                if elements:
-                    self.logger.warning(f"CAPTCHA detectado con selector: {selector}")
-                    return True
-            except:
-                continue
-        
-        return False
-    
-    def handle_captcha(self):
-        """Maneja el CAPTCHA cuando aparece"""
-        self.logger.info("Intentando manejar CAPTCHA...")
-        
-        time.sleep(random.uniform(10, 20))
-        
-        self.random_mouse_movement()
-        
-        try:
-            close_button = self.driver.find_element(By.ID, 'captcha_close_button')
-            if close_button:
-                close_button.click()
-                time.sleep(3)
-                return True
-        except:
-            pass
-        
-        try:
-            refresh_button = self.driver.find_element(By.ID, 'captcha_refresh_button')
-            if refresh_button:
-                refresh_button.click()
-                time.sleep(5)
-                return True
-        except:
-            pass
-        
-        self.logger.info("Navegando a página principal para evitar CAPTCHA...")
-        self.driver.get('https://www.tiktok.com')
-
-        time.sleep(random.uniform(5, 10))
-        
-        self.human_like_scroll(duration=5)
-        
-        return False
-    
-    def wait_and_retry(self, max_retries=3):
-        """Espera y reintenta si hay CAPTCHA"""
-        for attempt in range(max_retries):
-            if self.detect_captcha():
-                self.logger.warning(f"CAPTCHA detectado. Intento {attempt + 1}/{max_retries}")
-                if self.handle_captcha():
-                    time.sleep(random.uniform(5, 10))
-                    continue
-                else:
-                    wait_time = random.uniform(30, 60) * (attempt + 1)
-                    self.logger.info(f"Esperando {wait_time:.1f} segundos antes del siguiente intento...")
-                    time.sleep(wait_time)
-            else:
-                return True
-        
-        return False
-    
     def search_videos(self, keyword, num_videos=5):
-        """Busca videos en TikTok con medidas anti-CAPTCHA"""
+        """Busca videos en TikTok directamente por búsqueda"""
         try:
-            self.logger.info("Navegando a página principal de TikTok...")
-            self.driver.get('https://www.tiktok.com')
-            time.sleep(random.uniform(5, 10))
-            
-            if not self.wait_and_retry():
-                self.logger.error("No se pudo superar el CAPTCHA inicial")
-                return []
-            
-            self.human_like_scroll(duration=3)
-            
             search_url = f"https://www.tiktok.com/search?q={quote(keyword)}"
             self.logger.info(f"Buscando videos con palabra clave: {keyword}")
             
             self.driver.get(search_url)
             time.sleep(random.uniform(8, 15))
             
-            if not self.wait_and_retry():
-                self.logger.error("No se pudo superar el CAPTCHA en búsqueda")
-                return []
-            
             self.logger.info("Cargando videos con scroll gradual...")
-            for i in range(7):
+            for i in range(5):
                 self.human_like_scroll(duration=2)
                 time.sleep(random.uniform(2, 4))
                 self.logger.info(f"Scroll {i+1} completado")
-                
-                if self.detect_captcha():
-                    if not self.wait_and_retry():
-                        break
             
             videos_data = []
             
@@ -384,70 +291,51 @@ class TikTokScraper:
             self.logger.error(f"Error al extraer información del video: {e}")
             return None
     
-    def extract_comments(self, video_url, video_num):
-        """Extrae comentarios con protección anti-CAPTCHA"""
+    def extract_video_id_from_url(self, video_url):
+        """Extrae el ID del video desde la URL"""
         try:
-            self.logger.info(f"Extrayendo comentarios del video {video_num}")
-            self.driver.get(video_url)
-            try:
-                body = self.driver.find_element(By.TAG_NAME, 'body')
-                body.send_keys(Keys.SPACE)
-                self.logger.info("Video pausado con tecla SPACE")
-                time.sleep(1)
-            except Exception as e:
-                self.logger.warning(f"No se pudo pausar el video: {e}")
-
-            time.sleep(random.uniform(5, 10))
+            import re
+            match = re.search(r'/video/(\d+)', video_url)
+            if match:
+                return match.group(1)
+            return None
+        except Exception as e:
+            self.logger.error(f"Error al extraer ID del video: {e}")
+            return None
+    
+    async def extract_comments_with_api(self, video_url, video_num):
+        """Extrae comentarios usando la API de TikTok"""
+        try:
+            self.logger.info(f"Extrayendo comentarios del video {video_num} con API")
             
-            if not self.wait_and_retry():
-                self.logger.error("No se pudo superar CAPTCHA al cargar video")
+            video_id = self.extract_video_id_from_url(video_url)
+            if not video_id:
+                self.logger.error(f"No se pudo extraer ID del video: {video_url}")
                 return []
             
-            for i in range(5):
-                self.human_like_scroll(duration=2)
-                time.sleep(random.uniform(2, 4))
-                
-                if self.detect_captcha():
-                    if not self.wait_and_retry():
-                        break
-            
-            comment_selectors = [
-                'p[data-e2e="comment-level-1"]',
-                'span[data-e2e="comment-level-1"]',
-                'div[data-e2e="comment-level-1"]',
-                'p[class*="comment"]',
-                'span[class*="comment"]'
-            ]
-            
+            video = self.tiktok_api.video(id=video_id)
             comments = []
-            for selector in comment_selectors:
-                try:
-                    comment_elements = self.driver.find_elements(By.CSS_SELECTOR, selector)
-                    if comment_elements:
-                        self.logger.info(f"Encontrados {len(comment_elements)} comentarios con selector: {selector}")
-                        break
-                except:
-                    continue
             
-            for i, comment_element in enumerate(comment_elements):
-                try:
-                    comment_text = comment_element.text.strip()
-                    if comment_text and len(comment_text) > 2:
-                        comments.append({
-                            'numero': i + 1,
-                            'texto': comment_text,
-                            'timestamp': datetime.now().isoformat()
-                        })
-                    
-                except Exception as e:
-                    self.logger.warning(f"Error al extraer comentario {i+1}: {e}")
-                    continue
+            comment_count = 0
+            async for comment in video.comments(count=100):
+                comment_count += 1
+                comments.append({
+                    'numero': comment_count,
+                    'texto': comment.text,
+                    'autor': comment.author.username if hasattr(comment.author, 'username') else 'Usuario desconocido',
+                    'likes': comment.likes_count,
+                    'timestamp': datetime.now().isoformat()
+                })
+                
+                # Limitar a 100 comentarios por video
+                if comment_count >= 100:
+                    break
             
-            self.logger.info(f"Extraídos {len(comments)} comentarios del video {video_num}")
+            self.logger.info(f"Extraídos {len(comments)} comentarios del video {video_num} con API")
             return comments
             
         except Exception as e:
-            self.logger.error(f"Error al extraer comentarios: {e}")
+            self.logger.error(f"Error al extraer comentarios con API: {e}")
             return []
     
     def save_comments_to_txt(self, comments, video_data):
@@ -468,6 +356,8 @@ class TikTokScraper:
                 for comment in comments:
                     f.write(f"COMENTARIO {comment['numero']}:\n")
                     f.write(f"Texto: {comment['texto']}\n")
+                    f.write(f"Autor: {comment.get('autor', 'Usuario desconocido')}\n")
+                    f.write(f"Likes: {comment.get('likes', 0)}\n")
                     f.write(f"Timestamp: {comment['timestamp']}\n")
                     f.write("-" * 30 + "\n")
             
@@ -592,29 +482,33 @@ class TikTokScraper:
         self.logger.info(f"📊 CSV generado: {csv_filename}")
         self.logger.info(f"🗂️ JSON generado: {json_filename}")
     
-    def run_scraping(self, keyword, num_videos=5):
+    async def run_scraping(self, keyword, num_videos=5):
         """Ejecuta el proceso completo de scraping con limpieza automática"""
         try:
             self.logger.info(f"Iniciando scraping para '{keyword}' con {num_videos} videos")
             
+            # Configurar driver y API
             self.setup_driver()
+            await self.setup_tiktok_api()
             
+            # Buscar videos
             videos_data = self.search_videos(keyword, num_videos)
             
             if not videos_data:
                 self.logger.warning("No se encontraron videos")
                 return
             
-            self.logger.info(f"Encontrados {len(videos_data)} videos, extrayendo comentarios de todos...")
+            self.logger.info(f"Encontrados {len(videos_data)} videos, extrayendo comentarios con API...")
             
-            # Extraer comentarios de todos los videos automáticamente
+            # Extraer comentarios usando la API
             for video_data in videos_data:
-                comments = self.extract_comments(video_data['url'], video_data['numero'])
+                comments = await self.extract_comments_with_api(video_data['url'], video_data['numero'])
                 video_data['total_comentarios'] = len(comments)
                 
                 self.save_comments_to_txt(comments, video_data)
                 
-                time.sleep(random.uniform(5, 10))
+                # Pausa entre extracciones
+                await asyncio.sleep(random.uniform(2, 5))
             
             self.save_results_to_csv(videos_data, keyword)
             
@@ -638,9 +532,9 @@ class TikTokScraper:
 
 def main():
     """Función principal simplificada"""
-    print("🤖 TikTok Scraper con Limpieza Automática")
+    print("🤖 TikTok Scraper con API y Limpieza Automática")
     print("=" * 50)
-    print("NOTA: Este scraper incluye medidas anti-CAPTCHA y limpieza automática")
+    print("NOTA: Este scraper usa la API oficial de TikTok para extraer comentarios")
     print("Se extraerán comentarios de TODOS los videos encontrados")
     print("=" * 50)
     
@@ -662,7 +556,9 @@ def main():
         print("⚠️ Valor inválido, establecido a 5 videos")
     
     scraper = TikTokScraper()
-    scraper.run_scraping(keyword, num_videos)
+    
+    # Ejecutar el scraping de forma asíncrona
+    asyncio.run(scraper.run_scraping(keyword, num_videos))
 
 if __name__ == "__main__":
     main()

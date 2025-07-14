@@ -3677,3 +3677,149 @@ Stacktrace:
 2025-07-14 10:59:58,089 - INFO - Scraping completado, iniciando limpieza...
 2025-07-14 10:59:58,618 - INFO - Proceso completo finalizado exitosamente
 2025-07-14 10:59:59,413 - INFO - Driver cerrado
+2025-07-14 11:21:22,720 - INFO - Iniciando scraping para 'turismo' con 2 videos
+2025-07-14 11:21:24,367 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-14 11:21:25,548 - INFO - Driver configurado exitosamente con undetected-chromedriver
+2025-07-14 11:21:38,754 - INFO - API de TikTok configurada exitosamente
+2025-07-14 11:21:38,755 - INFO - Buscando videos con palabra clave: turismo
+2025-07-14 11:21:50,563 - INFO - Cargando videos con scroll gradual...
+2025-07-14 11:21:56,467 - INFO - Scroll 1 completado
+2025-07-14 11:22:01,988 - INFO - Scroll 2 completado
+2025-07-14 11:22:07,856 - INFO - Scroll 3 completado
+2025-07-14 11:22:13,074 - INFO - Scroll 4 completado
+2025-07-14 11:22:18,248 - INFO - Scroll 5 completado
+2025-07-14 11:22:18,268 - INFO - Selector 'div[data-e2e="search-video-item"]': 0 elementos encontrados
+2025-07-14 11:22:18,287 - INFO - Selector 'div[data-e2e="search_top-item"]': 12 elementos encontrados
+2025-07-14 11:22:18,559 - INFO - Encontrados 12 videos válidos
+2025-07-14 11:22:18,784 - INFO - Video 1 extraído: Usuario perdido
+2025-07-14 11:22:22,212 - INFO - Video 2 extraído: Usuario perdido
+2025-07-14 11:22:23,545 - INFO - Encontrados 2 videos, extrayendo comentarios con API...
+2025-07-14 11:22:23,545 - INFO - Extrayendo comentarios del video 1 con API
+2025-07-14 11:22:23,784 - ERROR - Error al extraer comentarios con API: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-14 11:22:23,785 - INFO - Comentarios guardados en: comentarios/video_1_Usuario perdido.txt
+2025-07-14 11:22:28,761 - INFO - Extrayendo comentarios del video 2 con API
+2025-07-14 11:22:28,905 - ERROR - Error al extraer comentarios con API: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-14 11:22:28,907 - INFO - Comentarios guardados en: comentarios/video_2_Usuario perdido.txt
+2025-07-14 11:22:32,078 - INFO - Resultados guardados en CSV: resultados/tiktok_scraping_turismo_20250714_112232.csv
+2025-07-14 11:22:32,078 - INFO - Scraping completado, iniciando limpieza...
+2025-07-14 11:22:32,242 - INFO - Proceso completo finalizado exitosamente
+2025-07-14 11:22:32,488 - INFO - Driver cerrado
+2025-07-14 14:55:43,672 - INFO - Iniciando scraping para 'Turismo' con 2 videos
+2025-07-14 14:55:46,400 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-14 14:55:48,003 - INFO - Driver configurado exitosamente con undetected-chromedriver
+2025-07-14 14:56:34,059 - ERROR - Failed to create session: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.tiktok.com/", waiting until "load"
+
+2025-07-14 14:56:34,437 - ERROR - Error al configurar la API de TikTok: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.tiktok.com/", waiting until "load"
+
+2025-07-14 14:56:34,438 - ERROR - Error durante el scraping: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.tiktok.com/", waiting until "load"
+
+2025-07-14 14:56:34,921 - INFO - Driver cerrado
+2025-07-14 14:57:07,050 - INFO - Iniciando scraping para 'Turismo' con 2 videos
+2025-07-14 14:57:09,253 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-14 14:57:10,539 - INFO - Driver configurado exitosamente con undetected-chromedriver
+2025-07-14 14:57:42,288 - ERROR - Failed to create session: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.tiktok.com/", waiting until "load"
+
+2025-07-14 14:57:42,591 - ERROR - Error al configurar la API de TikTok: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.tiktok.com/", waiting until "load"
+
+2025-07-14 14:57:42,591 - ERROR - Error durante el scraping: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.tiktok.com/", waiting until "load"
+
+2025-07-14 14:57:42,865 - INFO - Driver cerrado
+2025-07-14 14:58:10,632 - INFO - Iniciando scraping para 'ddas' con 2 videos
+2025-07-14 14:58:12,967 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-14 14:58:14,368 - INFO - Driver configurado exitosamente con undetected-chromedriver
+2025-07-14 14:58:48,829 - INFO - API de TikTok configurada exitosamente
+2025-07-14 14:58:48,829 - INFO - Buscando videos con palabra clave: ddas
+2025-07-14 14:58:59,071 - INFO - Driver cerrado
+2025-07-14 15:00:06,866 - INFO - Iniciando scraping para 'Turismo' con 2 videos
+2025-07-14 15:00:09,568 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-14 15:00:10,967 - INFO - Driver configurado exitosamente con undetected-chromedriver
+2025-07-14 15:00:43,772 - ERROR - Failed to create session: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.tiktok.com/", waiting until "load"
+
+2025-07-14 15:00:44,183 - ERROR - Error al configurar la API de TikTok: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.tiktok.com/", waiting until "load"
+
+2025-07-14 15:00:44,184 - ERROR - Error durante el scraping: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.tiktok.com/", waiting until "load"
+
+2025-07-14 15:00:44,503 - INFO - Driver cerrado
+2025-07-14 15:04:02,478 - INFO - Iniciando scraping para 'fsd' con 2 videos
+2025-07-14 15:04:05,500 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-14 15:04:07,053 - INFO - Driver configurado exitosamente con undetected-chromedriver
+2025-07-14 15:04:49,411 - INFO - API de TikTok configurada exitosamente
+2025-07-14 15:04:49,411 - INFO - Buscando videos con palabra clave: fsd
+2025-07-14 15:04:59,026 - INFO - Driver cerrado
+2025-07-14 15:05:37,541 - INFO - Iniciando scraping para 'Cuenca delincuencia' con 10 videos
+2025-07-14 15:05:40,785 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-14 15:05:44,014 - INFO - Driver configurado exitosamente con undetected-chromedriver
+2025-07-14 15:06:23,682 - INFO - API de TikTok configurada exitosamente
+2025-07-14 15:06:23,682 - INFO - Buscando videos con palabra clave: Cuenca delincuencia
+2025-07-14 15:06:39,774 - INFO - Cargando videos con scroll gradual...
+2025-07-14 15:06:44,450 - INFO - Scroll 1 completado
+2025-07-14 15:06:49,566 - INFO - Scroll 2 completado
+2025-07-14 15:06:55,887 - INFO - Scroll 3 completado
+2025-07-14 15:07:02,075 - INFO - Scroll 4 completado
+2025-07-14 15:07:06,688 - INFO - Scroll 5 completado
+2025-07-14 15:07:06,775 - INFO - Selector 'div[data-e2e="search-video-item"]': 0 elementos encontrados
+2025-07-14 15:07:06,812 - INFO - Selector 'div[data-e2e="search_top-item"]': 11 elementos encontrados
+2025-07-14 15:07:07,396 - INFO - Encontrados 11 videos válidos
+2025-07-14 15:07:07,697 - INFO - Video 1 extraído: Usuario perdido
+2025-07-14 15:07:09,574 - INFO - Video 2 extraído: Usuario perdido
+2025-07-14 15:07:11,901 - INFO - Video 3 extraído: Usuario perdido
+2025-07-14 15:07:14,491 - INFO - Video 4 extraído: Usuario perdido
+2025-07-14 15:07:17,127 - INFO - Video 5 extraído: Usuario perdido
+2025-07-14 15:07:20,377 - INFO - Video 6 extraído: Usuario perdido
+2025-07-14 15:07:22,409 - INFO - Video 7 extraído: Usuario perdido
+2025-07-14 15:07:25,078 - INFO - Video 8 extraído: Usuario perdido
+2025-07-14 15:07:26,397 - INFO - Video 9 extraído: Usuario perdido
+2025-07-14 15:07:29,197 - INFO - Video 10 extraído: Usuario perdido
+2025-07-14 15:07:32,181 - INFO - Encontrados 10 videos, extrayendo comentarios con API...
+2025-07-14 15:07:32,181 - INFO - Extrayendo comentarios del video 1 con API
+2025-07-14 15:07:34,284 - INFO - Extraídos 44 comentarios del video 1 con API
+2025-07-14 15:07:34,291 - INFO - Comentarios guardados en: comentarios/video_1_Usuario perdido.txt
+2025-07-14 15:07:36,849 - INFO - Extrayendo comentarios del video 2 con API
+2025-07-14 15:07:37,423 - INFO - Extraídos 5 comentarios del video 2 con API
+2025-07-14 15:07:37,430 - INFO - Comentarios guardados en: comentarios/video_2_Usuario perdido.txt
+2025-07-14 15:07:42,116 - INFO - Extrayendo comentarios del video 3 con API
+2025-07-14 15:07:42,695 - INFO - Extraídos 2 comentarios del video 3 con API
+2025-07-14 15:07:42,699 - INFO - Comentarios guardados en: comentarios/video_3_Usuario perdido.txt
+2025-07-14 15:07:45,957 - INFO - Extrayendo comentarios del video 4 con API
+2025-07-14 15:07:47,478 - INFO - Extraídos 40 comentarios del video 4 con API
+2025-07-14 15:07:47,479 - INFO - Comentarios guardados en: comentarios/video_4_Usuario perdido.txt
+2025-07-14 15:07:52,379 - INFO - Extrayendo comentarios del video 5 con API
+2025-07-14 15:07:53,423 - INFO - Extraídos 38 comentarios del video 5 con API
+2025-07-14 15:07:53,430 - INFO - Comentarios guardados en: comentarios/video_5_Usuario perdido.txt
+2025-07-14 15:07:55,981 - INFO - Extrayendo comentarios del video 6 con API
+2025-07-14 15:07:56,405 - INFO - Extraídos 8 comentarios del video 6 con API
+2025-07-14 15:07:56,409 - INFO - Comentarios guardados en: comentarios/video_6_Usuario perdido.txt
+2025-07-14 15:08:01,346 - INFO - Extrayendo comentarios del video 7 con API
+2025-07-14 15:08:03,878 - INFO - Extraídos 38 comentarios del video 7 con API
+2025-07-14 15:08:03,882 - INFO - Comentarios guardados en: comentarios/video_7_Usuario perdido.txt
+2025-07-14 15:08:08,297 - INFO - Extrayendo comentarios del video 8 con API
+2025-07-14 15:08:10,725 - INFO - Extraídos 61 comentarios del video 8 con API
+2025-07-14 15:08:10,728 - INFO - Comentarios guardados en: comentarios/video_8_Usuario perdido.txt
+2025-07-14 15:08:13,170 - INFO - Extrayendo comentarios del video 9 con API
+2025-07-14 15:08:13,712 - INFO - Extraídos 4 comentarios del video 9 con API
+2025-07-14 15:08:13,714 - INFO - Comentarios guardados en: comentarios/video_9_Usuario perdido.txt
+2025-07-14 15:08:16,081 - INFO - Extrayendo comentarios del video 10 con API
+2025-07-14 15:08:16,686 - INFO - Extraídos 19 comentarios del video 10 con API
+2025-07-14 15:08:16,688 - INFO - Comentarios guardados en: comentarios/video_10_Usuario perdido.txt
+2025-07-14 15:08:19,257 - INFO - Resultados guardados en CSV: resultados/tiktok_scraping_Cuenca delincuencia_20250714_150819.csv
+2025-07-14 15:08:19,258 - INFO - Scraping completado, iniciando limpieza...
+2025-07-14 15:08:20,662 - INFO - Proceso completo finalizado exitosamente
+2025-07-14 15:08:21,133 - INFO - Driver cerrado
