@@ -3823,3 +3823,92 @@ Call log:
 2025-07-14 15:08:19,258 - INFO - Scraping completado, iniciando limpieza...
 2025-07-14 15:08:20,662 - INFO - Proceso completo finalizado exitosamente
 2025-07-14 15:08:21,133 - INFO - Driver cerrado
+2025-07-14 15:18:03,190 - MainThread - INFO - Creando pool de 4 drivers...
+2025-07-14 15:18:07,755 - ThreadPoolExecutor-0_2 - ERROR - Error al crear driver: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\colla\\appdata\\roaming\\undetected_chromedriver\\undetected\\chromedriver-win32\\chromedriver.exe' -> 'C:\\Users\\colla\\appdata\\roaming\\undetected_chromedriver\\undetected_chromedriver.exe'
+2025-07-14 15:18:07,756 - ThreadPoolExecutor-0_0 - ERROR - Error al crear driver: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\colla\\appdata\\roaming\\undetected_chromedriver\\undetected\\chromedriver-win32\\chromedriver.exe' -> 'C:\\Users\\colla\\appdata\\roaming\\undetected_chromedriver\\undetected_chromedriver.exe'
+2025-07-14 15:18:07,785 - ThreadPoolExecutor-0_3 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-14 15:18:10,630 - ThreadPoolExecutor-0_1 - ERROR - Error al crear driver: [WinError 183] Cannot create a file when that file already exists: 'C:\\Users\\colla\\appdata\\roaming\\undetected_chromedriver\\undetected\\chromedriver-win32\\chromedriver.exe' -> 'C:\\Users\\colla\\appdata\\roaming\\undetected_chromedriver\\undetected_chromedriver.exe'
+2025-07-14 15:18:10,632 - MainThread - INFO - Pool de drivers creado: 1 drivers disponibles
+2025-07-14 15:18:10,632 - MainThread - INFO - Creando pool de 3 APIs...
+2025-07-14 15:18:44,017 - MainThread - ERROR - Failed to create session: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.tiktok.com/", waiting until "load"
+
+2025-07-14 15:18:44,031 - MainThread - ERROR - Failed to create session: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.tiktok.com/", waiting until "load"
+
+2025-07-14 15:18:44,037 - MainThread - ERROR - Failed to create session: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.tiktok.com/", waiting until "load"
+
+2025-07-14 15:18:44,165 - MainThread - ERROR - Error al crear API de TikTok: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.tiktok.com/", waiting until "load"
+
+2025-07-14 15:18:44,195 - MainThread - ERROR - Error al crear API de TikTok: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.tiktok.com/", waiting until "load"
+
+2025-07-14 15:18:44,248 - MainThread - ERROR - Error al crear API de TikTok: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.tiktok.com/", waiting until "load"
+
+2025-07-14 15:18:44,249 - MainThread - INFO - Pool de APIs creado: 0 APIs disponibles
+2025-07-14 15:18:44,249 - MainThread - ERROR - No se pudieron crear APIs
+2025-07-14 15:36:23,775 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-14 15:36:25,408 - INFO - Driver configurado exitosamente en modo headless
+2025-07-14 15:37:03,238 - INFO - API de TikTok configurada con 2 sesiones paralelas
+2025-07-14 15:37:03,239 - INFO - Buscando videos con palabra clave: Turismo
+2025-07-14 15:37:11,980 - INFO - Cargando videos con scroll optimizado...
+2025-07-14 15:37:21,707 - INFO - Encontrados 36 videos válidos
+2025-07-14 15:37:22,173 - INFO - Video 1 extraído: Usuario perdido
+2025-07-14 15:37:22,241 - INFO - Video 3 extraído: Usuario perdido
+2025-07-14 15:37:22,267 - INFO - Video 2 extraído: Usuario perdido
+2025-07-14 15:37:22,291 - INFO - Video 4 extraído: Usuario perdido
+2025-07-14 15:37:22,649 - INFO - Video 5 extraído: Usuario perdido
+2025-07-14 15:37:22,685 - INFO - Video 6 extraído: Usuario perdido
+2025-07-14 15:37:22,721 - INFO - Video 7 extraído: Usuario perdido
+2025-07-14 15:37:22,753 - INFO - Video 8 extraído: Usuario perdido
+2025-07-14 15:37:23,063 - INFO - Video 9 extraído: Usuario perdido
+2025-07-14 15:37:23,093 - INFO - Video 10 extraído: Usuario perdido
+2025-07-14 15:37:23,125 - INFO - Video 11 extraído: Usuario perdido
+2025-07-14 15:37:23,158 - INFO - Video 12 extraído: Usuario perdido
+2025-07-14 15:37:23,168 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-14 15:37:23,395 - INFO - Video 13 extraído: Usuario perdido
+2025-07-14 15:37:23,404 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-14 15:37:23,415 - INFO - Video 14 extraído: Usuario perdido
+2025-07-14 15:37:23,426 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-14 15:37:23,427 - INFO - Video 15 extraído: Usuario perdido
+2025-07-14 15:37:23,873 - ERROR - Error al extraer comentarios del video 3: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-14 15:37:23,876 - ERROR - Error al extraer comentarios del video 2: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-14 15:37:23,876 - ERROR - Error al extraer comentarios del video 1: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-14 15:37:23,892 - INFO - Comentarios guardados en: comentarios/video_1_Usuario perdido.txt
+2025-07-14 15:37:23,894 - INFO - Comentarios guardados en: comentarios/video_3_Usuario perdido.txt
+2025-07-14 15:37:23,895 - INFO - Comentarios guardados en: comentarios/video_2_Usuario perdido.txt
+2025-07-14 15:37:25,684 - ERROR - Error al extraer comentarios del video 4: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-14 15:37:25,685 - ERROR - Error al extraer comentarios del video 5: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-14 15:37:25,685 - ERROR - Error al extraer comentarios del video 6: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-14 15:37:25,687 - INFO - Comentarios guardados en: comentarios/video_4_Usuario perdido.txt
+2025-07-14 15:37:25,691 - INFO - Comentarios guardados en: comentarios/video_5_Usuario perdido.txt
+2025-07-14 15:37:25,693 - INFO - Comentarios guardados en: comentarios/video_6_Usuario perdido.txt
+2025-07-14 15:37:27,347 - ERROR - Error al extraer comentarios del video 7: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-14 15:37:27,355 - ERROR - Error al extraer comentarios del video 8: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-14 15:37:27,525 - ERROR - Error al extraer comentarios del video 9: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-14 15:37:27,537 - INFO - Comentarios guardados en: comentarios/video_7_Usuario perdido.txt
+2025-07-14 15:37:27,540 - INFO - Comentarios guardados en: comentarios/video_8_Usuario perdido.txt
+2025-07-14 15:37:27,543 - INFO - Comentarios guardados en: comentarios/video_9_Usuario perdido.txt
+2025-07-14 15:37:28,952 - ERROR - Error al extraer comentarios del video 10: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-14 15:37:28,968 - ERROR - Error al extraer comentarios del video 12: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-14 15:37:28,968 - ERROR - Error al extraer comentarios del video 11: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-14 15:37:28,974 - INFO - Comentarios guardados en: comentarios/video_10_Usuario perdido.txt
+2025-07-14 15:37:28,976 - INFO - Comentarios guardados en: comentarios/video_11_Usuario perdido.txt
+2025-07-14 15:37:28,977 - INFO - Comentarios guardados en: comentarios/video_12_Usuario perdido.txt
+2025-07-14 15:37:30,302 - ERROR - Error al extraer comentarios del video 13: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-14 15:37:30,328 - ERROR - Error al extraer comentarios del video 14: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-14 15:37:30,343 - ERROR - Error al extraer comentarios del video 15: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-14 15:37:30,345 - INFO - Comentarios guardados en: comentarios/video_13_Usuario perdido.txt
+2025-07-14 15:37:30,347 - INFO - Comentarios guardados en: comentarios/video_14_Usuario perdido.txt
+2025-07-14 15:37:30,349 - INFO - Comentarios guardados en: comentarios/video_15_Usuario perdido.txt
+2025-07-14 15:37:30,352 - INFO - Resultados guardados en CSV: resultados/tiktok_scraping_Turismo_20250714_153730.csv
+2025-07-14 15:37:30,865 - INFO - Driver cerrado

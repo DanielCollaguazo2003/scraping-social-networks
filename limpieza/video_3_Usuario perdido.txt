@@ -1,20 +1,8 @@
 === COMENTARIOS DEL VIDEO 3 ===
 Usuario: Usuario perdido
 Descripción: Descripción no disponible
-URL: https://www.tiktok.com/@likenoticiascuenca/video/7523962021209984262
-Fecha de extracción: 2025-07-14 15:07:42
-Total de comentarios: 2
+URL: https://www.tiktok.com/@infinitytravelcol/video/7441271048303250744
+Fecha de extracción: 2025-07-14 15:37:23
+Total de comentarios: 0
 ==================================================
 
-COMENTARIO 1:
-Texto: Se necesita mas control policial. Y en ese sector hay full
-Autor: mapare037
-Likes: 4
-Timestamp: 2025-07-14T15:07:42.695493
-------------------------------
-COMENTARIO 2:
-Texto: ESAS CAMARAS PASAN BOTADAS EN MANOS DE GENTE Q PASA DURMIENDO Y COMIENDO EN EL PUESTO DE TRABAJO .....
-Autor: falg_75
-Likes: 5
-Timestamp: 2025-07-14T15:07:42.695493
-------------------------------
