@@ -3454,3 +3454,226 @@ Stacktrace:
 2025-07-09 09:30:14,139 - INFO - Resultados guardados en CSV: resultados/tiktok_scraping_turismo_20250709_093014.csv
 2025-07-09 09:30:14,140 - INFO - Scraping completado exitosamente
 2025-07-09 09:30:14,868 - INFO - Driver cerrado
+2025-07-09 15:12:37,152 - INFO - Iniciando scraping para 'turismo cuenca' con 5 videos
+2025-07-09 15:12:43,065 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-09 15:12:46,742 - INFO - Driver configurado exitosamente con undetected-chromedriver
+2025-07-09 15:12:46,742 - INFO - Navegando a página principal de TikTok...
+2025-07-09 15:13:26,863 - INFO - Buscando videos con palabra clave: turismo cuenca
+2025-07-09 15:13:43,235 - INFO - Cargando videos con scroll gradual...
+2025-07-09 15:13:47,727 - INFO - Scroll 1 completado
+2025-07-09 15:13:54,047 - INFO - Scroll 2 completado
+2025-07-09 15:14:00,394 - INFO - Scroll 3 completado
+2025-07-09 15:14:06,071 - INFO - Scroll 4 completado
+2025-07-09 15:14:11,088 - INFO - Scroll 5 completado
+2025-07-09 15:14:17,035 - INFO - Scroll 6 completado
+2025-07-09 15:14:23,525 - INFO - Scroll 7 completado
+2025-07-09 15:14:23,667 - INFO - Selector 'div[data-e2e="search-video-item"]': 0 elementos encontrados
+2025-07-09 15:14:23,708 - INFO - Selector 'div[data-e2e="search_top-item"]': 36 elementos encontrados
+2025-07-09 15:14:25,277 - INFO - Encontrados 36 videos válidos
+2025-07-09 15:14:25,739 - INFO - Video 1 extraído: Usuario no disponible
+2025-07-09 15:14:28,264 - INFO - Video 2 extraído: Usuario no disponible
+2025-07-09 15:14:30,373 - INFO - Video 3 extraído: Usuario no disponible
+2025-07-09 15:14:33,222 - INFO - Video 4 extraído: Usuario no disponible
+2025-07-09 15:14:36,492 - INFO - Video 5 extraído: Usuario no disponible
+2025-07-09 15:14:43,415 - INFO - Extrayendo comentarios del video 1
+2025-07-09 15:14:52,088 - INFO - Video pausado con tecla SPACE
+2025-07-09 15:15:02,963 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 15:15:02,963 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 15:15:02,965 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 15:15:17,889 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xca44a3+62419]
+	GetHandleVerifier [0x0xca44e4+62484]
+	(No symbol) [0x0xae1f90]
+	(No symbol) [0x0xb78f51]
+	(No symbol) [0x0xb4f46c]
+	(No symbol) [0x0xb7087a]
+	(No symbol) [0x0xb4f266]
+	(No symbol) [0x0xb1e852]
+	(No symbol) [0x0xb1f6f4]
+	GetHandleVerifier [0x0xf14793+2619075]
+	GetHandleVerifier [0x0xf0fbaa+2599642]
+	GetHandleVerifier [0x0xccb04a+221050]
+	GetHandleVerifier [0x0xcbb2c8+156152]
+	GetHandleVerifier [0x0xcc1c7d+183213]
+	GetHandleVerifier [0x0xcac388+94904]
+	GetHandleVerifier [0x0xcac512+95298]
+	GetHandleVerifier [0x0xc9766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 15:15:27,939 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 15:15:27,947 - WARNING - CAPTCHA detectado. Intento 2/3
+2025-07-09 15:15:27,949 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 15:15:43,372 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xca44a3+62419]
+	GetHandleVerifier [0x0xca44e4+62484]
+	(No symbol) [0x0xae1f90]
+	(No symbol) [0x0xb78f51]
+	(No symbol) [0x0xb4f46c]
+	(No symbol) [0x0xb7087a]
+	(No symbol) [0x0xb4f266]
+	(No symbol) [0x0xb1e852]
+	(No symbol) [0x0xb1f6f4]
+	GetHandleVerifier [0x0xf14793+2619075]
+	GetHandleVerifier [0x0xf0fbaa+2599642]
+	GetHandleVerifier [0x0xccb04a+221050]
+	GetHandleVerifier [0x0xcbb2c8+156152]
+	GetHandleVerifier [0x0xcc1c7d+183213]
+	GetHandleVerifier [0x0xcac388+94904]
+	GetHandleVerifier [0x0xcac512+95298]
+	GetHandleVerifier [0x0xc9766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 15:16:17,238 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 15:16:17,320 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-09 15:16:17,321 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-09 15:16:17,321 - INFO - Intentando manejar CAPTCHA...
+2025-07-09 15:16:33,310 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xca44a3+62419]
+	GetHandleVerifier [0x0xca44e4+62484]
+	(No symbol) [0x0xae1f90]
+	(No symbol) [0x0xb78f51]
+	(No symbol) [0x0xb4f46c]
+	(No symbol) [0x0xb7087a]
+	(No symbol) [0x0xb4f266]
+	(No symbol) [0x0xb1e852]
+	(No symbol) [0x0xb1f6f4]
+	GetHandleVerifier [0x0xf14793+2619075]
+	GetHandleVerifier [0x0xf0fbaa+2599642]
+	GetHandleVerifier [0x0xccb04a+221050]
+	GetHandleVerifier [0x0xcbb2c8+156152]
+	GetHandleVerifier [0x0xcc1c7d+183213]
+	GetHandleVerifier [0x0xcac388+94904]
+	GetHandleVerifier [0x0xcac512+95298]
+	GetHandleVerifier [0x0xc9766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 15:16:33,429 - INFO - Navegando a página principal para evitar CAPTCHA...
+2025-07-09 15:16:47,395 - WARNING - Error en scroll humano: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xca44a3+62419]
+	GetHandleVerifier [0x0xca44e4+62484]
+	(No symbol) [0x0xae2133]
+	(No symbol) [0x0xad1b40]
+	(No symbol) [0x0xaef912]
+	(No symbol) [0x0xb55d6c]
+	(No symbol) [0x0xb70159]
+	(No symbol) [0x0xb4f266]
+	(No symbol) [0x0xb1e852]
+	(No symbol) [0x0xb1f6f4]
+	GetHandleVerifier [0x0xf14793+2619075]
+	GetHandleVerifier [0x0xf0fbaa+2599642]
+	GetHandleVerifier [0x0xccb04a+221050]
+	GetHandleVerifier [0x0xcbb2c8+156152]
+	GetHandleVerifier [0x0xcc1c7d+183213]
+	GetHandleVerifier [0x0xcac388+94904]
+	GetHandleVerifier [0x0xcac512+95298]
+	GetHandleVerifier [0x0xc9766a+9626]
+	BaseThreadInitThunk [0x0x77845d49+25]
+	RtlInitializeExceptionChain [0x0x77a8d09b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77a8d021+561]
+
+2025-07-09 15:16:47,401 - INFO - Esperando 48.5 segundos antes del siguiente intento...
+2025-07-09 15:16:50,499 - INFO - Driver cerrado
+2025-07-14 10:54:52,561 - INFO - Iniciando scraping para 'turismo' con 2 videos
+2025-07-14 10:54:54,619 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-14 10:54:56,104 - INFO - Driver configurado exitosamente con undetected-chromedriver
+2025-07-14 10:54:56,105 - INFO - Navegando a página principal de TikTok...
+2025-07-14 10:55:08,001 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-14 10:55:08,002 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-14 10:55:08,003 - INFO - Intentando manejar CAPTCHA...
+2025-07-14 10:55:31,246 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdd44a3+62419]
+	GetHandleVerifier [0x0xdd44e4+62484]
+	(No symbol) [0x0xc11f90]
+	(No symbol) [0x0xca8f51]
+	(No symbol) [0x0xc7f46c]
+	(No symbol) [0x0xca087a]
+	(No symbol) [0x0xc7f266]
+	(No symbol) [0x0xc4e852]
+	(No symbol) [0x0xc4f6f4]
+	GetHandleVerifier [0x0x1044793+2619075]
+	GetHandleVerifier [0x0x103fbaa+2599642]
+	GetHandleVerifier [0x0xdfb04a+221050]
+	GetHandleVerifier [0x0xdeb2c8+156152]
+	GetHandleVerifier [0x0xdf1c7d+183213]
+	GetHandleVerifier [0x0xddc388+94904]
+	GetHandleVerifier [0x0xddc512+95298]
+	GetHandleVerifier [0x0xdc766a+9626]
+	BaseThreadInitThunk [0x0x76ed5d49+25]
+	RtlInitializeExceptionChain [0x0x77e9d1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77e9d131+561]
+
+2025-07-14 10:55:31,291 - INFO - Navegando a página principal para evitar CAPTCHA...
+2025-07-14 10:55:46,547 - INFO - Esperando 56.2 segundos antes del siguiente intento...
+2025-07-14 10:56:46,656 - INFO - Buscando videos con palabra clave: turismo
+2025-07-14 10:57:01,126 - INFO - Cargando videos con scroll gradual...
+2025-07-14 10:57:06,780 - INFO - Scroll 1 completado
+2025-07-14 10:57:13,135 - INFO - Scroll 2 completado
+2025-07-14 10:57:19,394 - INFO - Scroll 3 completado
+2025-07-14 10:57:24,473 - INFO - Scroll 4 completado
+2025-07-14 10:57:30,249 - INFO - Scroll 5 completado
+2025-07-14 10:57:35,944 - INFO - Scroll 6 completado
+2025-07-14 10:57:40,511 - INFO - Scroll 7 completado
+2025-07-14 10:57:40,585 - INFO - Selector 'div[data-e2e="search-video-item"]': 0 elementos encontrados
+2025-07-14 10:57:40,603 - INFO - Selector 'div[data-e2e="search_top-item"]': 48 elementos encontrados
+2025-07-14 10:57:41,324 - INFO - Encontrados 48 videos válidos
+2025-07-14 10:57:41,448 - INFO - Video 1 extraído: Usuario perdido
+2025-07-14 10:57:43,236 - INFO - Video 2 extraído: Usuario perdido
+2025-07-14 10:57:45,937 - INFO - Encontrados 2 videos, extrayendo comentarios de todos...
+2025-07-14 10:57:45,937 - INFO - Extrayendo comentarios del video 1
+2025-07-14 10:57:48,941 - INFO - Video pausado con tecla SPACE
+2025-07-14 10:58:23,729 - INFO - Encontrados 20 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-14 10:58:24,278 - INFO - Extraídos 20 comentarios del video 1
+2025-07-14 10:58:24,280 - INFO - Comentarios guardados en: comentarios/video_1_Usuario perdido.txt
+2025-07-14 10:58:33,478 - INFO - Extrayendo comentarios del video 2
+2025-07-14 10:58:41,979 - INFO - Video pausado con tecla SPACE
+2025-07-14 10:58:51,678 - WARNING - CAPTCHA detectado con selector: #captcha-verify-container-main-page
+2025-07-14 10:58:51,679 - WARNING - CAPTCHA detectado. Intento 1/3
+2025-07-14 10:58:51,679 - INFO - Intentando manejar CAPTCHA...
+2025-07-14 10:59:10,369 - WARNING - Error en movimiento del mouse: Message: move target out of bounds
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+	GetHandleVerifier [0x0xdd44a3+62419]
+	GetHandleVerifier [0x0xdd44e4+62484]
+	(No symbol) [0x0xc11f90]
+	(No symbol) [0x0xca8f51]
+	(No symbol) [0x0xc7f46c]
+	(No symbol) [0x0xca087a]
+	(No symbol) [0x0xc7f266]
+	(No symbol) [0x0xc4e852]
+	(No symbol) [0x0xc4f6f4]
+	GetHandleVerifier [0x0x1044793+2619075]
+	GetHandleVerifier [0x0x103fbaa+2599642]
+	GetHandleVerifier [0x0xdfb04a+221050]
+	GetHandleVerifier [0x0xdeb2c8+156152]
+	GetHandleVerifier [0x0xdf1c7d+183213]
+	GetHandleVerifier [0x0xddc388+94904]
+	GetHandleVerifier [0x0xddc512+95298]
+	GetHandleVerifier [0x0xdc766a+9626]
+	BaseThreadInitThunk [0x0x76ed5d49+25]
+	RtlInitializeExceptionChain [0x0x77e9d1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x77e9d131+561]
+
+2025-07-14 10:59:50,218 - INFO - Encontrados 20 comentarios con selector: span[data-e2e="comment-level-1"]
+2025-07-14 10:59:50,585 - INFO - Extraídos 20 comentarios del video 2
+2025-07-14 10:59:50,588 - INFO - Comentarios guardados en: comentarios/video_2_Usuario perdido.txt
+2025-07-14 10:59:58,088 - INFO - Resultados guardados en CSV: resultados/tiktok_scraping_turismo_20250714_105958.csv
+2025-07-14 10:59:58,089 - INFO - Scraping completado, iniciando limpieza...
+2025-07-14 10:59:58,618 - INFO - Proceso completo finalizado exitosamente
+2025-07-14 10:59:59,413 - INFO - Driver cerrado

@@ -1,7 +1,10 @@
 import os
 import time
 import csv
+import json
 import random
+import re
+import unicodedata
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -27,6 +30,32 @@ class TikTokScraper:
             'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/121.0'
         ]
         
+        # Configuración para limpieza de texto
+        self.keywords_turismo = [
+            "tour", "paseo", "guia", "viaje", "turismo", "excursion",
+            "precio", "costo", "horario", "informacion", "visita", "lugar",
+            "sitio", "hermoso", "bonito", "recomiendo", "destino", "agencia",
+            "hotel", "hospedaje", "transporte", "ruta", "conocer", "termales", "playa", "montana"
+        ]
+        
+        self.palabras_feas = [
+            "mierda", "puta", "puto", "maldito", "idiota", "pendejo", "coño", "culero",
+            "estupido", "imbecil", "marica", "hijueputa", "cabron", "hdp", "perra"
+        ]
+        
+        self.regex_emojis = re.compile("[" 
+            "\U0001F600-\U0001F64F"  # emoticons
+            "\U0001F300-\U0001F5FF"
+            "\U0001F680-\U0001F6FF"
+            "\U0001F1E0-\U0001F1FF"
+            "\U00002500-\U00002BEF"
+            "\U00002702-\U000027B0"
+            "\U000024C2-\U0001F251"
+            "]+", flags=re.UNICODE)
+        
+        self.regex_url = re.compile(r'https?://\S+|www\.\S+')
+        self.regex_mencion = re.compile(r'@\w+')
+        
     def setup_logging(self):
         """Configura el sistema de logging"""
         logging.basicConfig(
@@ -41,7 +70,7 @@ class TikTokScraper:
     
     def setup_directories(self):
         """Crea los directorios necesarios"""
-        directories = ['comentarios', 'resultados']
+        directories = ['comentarios', 'resultados', 'limpieza']
         for directory in directories:
             if not os.path.exists(directory):
                 os.makedirs(directory)
@@ -69,7 +98,7 @@ class TikTokScraper:
             prefs = {
                 "profile.default_content_setting_values.notifications": 2,
                 "profile.default_content_settings.popups": 0,
-                "profile.managed_default_content_settings.images": 1,  # Cargar imágenes
+                "profile.managed_default_content_settings.images": 1,
                 "profile.default_content_setting_values.media_stream_mic": 2,
                 "profile.default_content_setting_values.media_stream_camera": 2,
                 "profile.default_content_setting_values.geolocation": 2,
@@ -301,7 +330,7 @@ class TikTokScraper:
             if not video_url or 'tiktok.com' not in video_url:
                 return None
             
-            usuario = "Usuario no disponible"
+            usuario = "Usuario perdido"
             user_selectors = [
                 'span[data-e2e="search-card-user-unique-id"]',
                 'span[data-e2e="browse-video-owner"]',
@@ -364,7 +393,7 @@ class TikTokScraper:
                 body = self.driver.find_element(By.TAG_NAME, 'body')
                 body.send_keys(Keys.SPACE)
                 self.logger.info("Video pausado con tecla SPACE")
-                time.sleep(1)  # Leve pausa tras la tecla
+                time.sleep(1)
             except Exception as e:
                 self.logger.warning(f"No se pudo pausar el video: {e}")
 
@@ -465,8 +494,106 @@ class TikTokScraper:
         except Exception as e:
             self.logger.error(f"Error al guardar CSV: {e}")
     
+    # Métodos para limpieza de texto
+    def limpiar_texto(self, texto: str) -> str:
+        """Limpia el texto eliminando emojis, URLs, menciones y palabras ofensivas"""
+        texto = self.regex_emojis.sub('', texto)
+        texto = self.regex_url.sub('', texto)
+        texto = self.regex_mencion.sub('', texto)
+        texto = unicodedata.normalize("NFD", texto)
+        texto = texto.encode("ascii", "ignore").decode("utf-8")
+        palabras = texto.split()
+        limpio = [p for p in palabras if p.lower() not in self.palabras_feas]
+        return " ".join(limpio)
+
+    def detectar_keywords(self, texto_limpio: str):
+        """Detecta keywords turísticas en el texto"""
+        palabras = texto_limpio.lower().split()
+        keywords = sorted(set(p for p in palabras if p in self.keywords_turismo))
+        return keywords if keywords else ["no_relacionado"]
+
+    def limpiar_archivo(self, origen_path, destino_path, csv_writer):
+        """Limpia un archivo de comentarios individual"""
+        with open(origen_path, "r", encoding="utf-8") as f:
+            lineas = f.readlines()
+
+        nuevas_lineas = []
+        usuario = "Usuario desconocido"
+        url = ""
+        descripcion = ""
+        comentarios_limpios = []
+
+        for linea in lineas:
+            if linea.startswith("Usuario:"):
+                usuario = linea.replace("Usuario:", "").strip()
+                nuevas_lineas.append(linea)
+            elif linea.startswith("URL:"):
+                url = linea.replace("URL:", "").strip()
+                nuevas_lineas.append(linea)
+            elif linea.startswith("Descripción:"):
+                descripcion = linea.replace("Descripción:", "").strip()
+                nuevas_lineas.append(linea)
+            elif linea.startswith("Texto:"):
+                original = linea.replace("Texto:", "").strip()
+                limpio = self.limpiar_texto(original)
+                nuevas_lineas.append(f"Texto: {limpio}\n")
+                comentarios_limpios.append(limpio)
+
+                # Detectar keywords turísticas
+                keywords = self.detectar_keywords(limpio)
+                csv_writer.writerow({
+                    'usuario': usuario,
+                    'comentario': limpio,
+                    'keywords_detectadas': ", ".join(keywords)
+                })
+            else:
+                nuevas_lineas.append(linea)
+
+        with open(destino_path, "w", encoding="utf-8") as f:
+            f.writelines(nuevas_lineas)
+        
+        # Retornar datos para JSON
+        return {
+            'url': url,
+            'content': " ".join(comentarios_limpios)
+        }
+
+    def procesar_limpieza(self, keyword):
+        """Procesa todos los archivos de comentarios y genera archivos limpios"""
+        carpeta_origen = "comentarios"
+        carpeta_destino = "limpieza"
+        
+        csv_filename = f"turismo_keywords_{keyword}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+        json_filename = f"videos_content_{keyword}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        
+        videos_json_data = []
+        
+        with open(csv_filename, "w", newline='', encoding="utf-8") as csvfile:
+            fieldnames = ["usuario", "comentario", "keywords_detectadas"]
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+
+            for archivo in os.listdir(carpeta_origen):
+                if archivo.endswith(".txt") and "video_" in archivo:
+                    origen = os.path.join(carpeta_origen, archivo)
+                    destino = os.path.join(carpeta_destino, archivo)
+                    self.logger.info(f"🧼 Limpiando y extrayendo de: {archivo}")
+                    
+                    video_data = self.limpiar_archivo(origen, destino, writer)
+                    if video_data['url'] and video_data['content']:
+                        videos_json_data.append(video_data)
+        
+        # Guardar JSON
+        with open(json_filename, 'w', encoding='utf-8') as json_file:
+            json.dump(videos_json_data, json_file, ensure_ascii=False, indent=2)
+        
+        self.logger.info(f"✅ Limpieza completada.")
+        self.logger.info(f"📁 Archivos limpiados en: {carpeta_destino}")
+        self.logger.info(f"📊 CSV generado: {csv_filename}")
+        self.logger.info(f"🗂️ JSON generado: {json_filename}")
+    
     def run_scraping(self, keyword, num_videos=5):
-        """Ejecuta el proceso completo de scraping con protección anti-CAPTCHA"""
+        """Ejecuta el proceso completo de scraping con limpieza automática"""
         try:
             self.logger.info(f"Iniciando scraping para '{keyword}' con {num_videos} videos")
             
@@ -478,33 +605,25 @@ class TikTokScraper:
                 self.logger.warning("No se encontraron videos")
                 return
             
-            print("\n🎬 Videos encontrados:\n")
-            for i, video in enumerate(videos_data):
-                print(f"[{i}] 👤 {video['usuario']} | 📄 {video['descripcion'][:60]}...")
-                print(f"     🔗 {video['url']}")
+            self.logger.info(f"Encontrados {len(videos_data)} videos, extrayendo comentarios de todos...")
             
-            try:
-                indices = input("\n🟢 Ingresa los índices de los videos a analizar (ej: 0,1,2) o 'todos': ")
-                if indices.lower() == 'todos':
-                    selected_indices = list(range(len(videos_data)))
-                else:
-                    selected_indices = [int(i.strip()) for i in indices.split(",") if i.strip().isdigit()]
-            except:
-                selected_indices = list(range(len(videos_data)))
-            
-            for idx in selected_indices:
-                if idx < len(videos_data):
-                    video_data = videos_data[idx]
-                    comments = self.extract_comments(video_data['url'], video_data['numero'])
-                    video_data['total_comentarios'] = len(comments)
-                    
-                    self.save_comments_to_txt(comments, video_data)
-                    
-                    time.sleep(random.uniform(5, 10))
+            # Extraer comentarios de todos los videos automáticamente
+            for video_data in videos_data:
+                comments = self.extract_comments(video_data['url'], video_data['numero'])
+                video_data['total_comentarios'] = len(comments)
+                
+                self.save_comments_to_txt(comments, video_data)
+                
+                time.sleep(random.uniform(5, 10))
             
             self.save_results_to_csv(videos_data, keyword)
             
-            self.logger.info("Scraping completado exitosamente")
+            self.logger.info("Scraping completado, iniciando limpieza...")
+            
+            # Procesar limpieza automáticamente
+            self.procesar_limpieza(keyword)
+            
+            self.logger.info("Proceso completo finalizado exitosamente")
             
         except Exception as e:
             self.logger.error(f"Error durante el scraping: {e}")
@@ -518,24 +637,32 @@ class TikTokScraper:
             self.logger.info("Driver cerrado")
 
 def main():
-    """Función principal con instrucciones mejoradas"""
-    print("🤖 TikTok Scraper Anti-CAPTCHA")
-    print("=" * 40)
-    print("NOTA: Este scraper incluye medidas anti-CAPTCHA")
-    print("Si aparece un CAPTCHA, el bot intentará manejarlo automáticamente")
-    print("=" * 40)
+    """Función principal simplificada"""
+    print("🤖 TikTok Scraper con Limpieza Automática")
+    print("=" * 50)
+    print("NOTA: Este scraper incluye medidas anti-CAPTCHA y limpieza automática")
+    print("Se extraerán comentarios de TODOS los videos encontrados")
+    print("=" * 50)
     
-    KEYWORD = input("Ingresa término de búsqueda: ")
+    keyword = input("Ingresa término de búsqueda: ").strip()
+    if not keyword:
+        print("❌ Debes ingresar un término de búsqueda")
+        return
+    
     try:
-        NUM_VIDEOS = int(input("¿Cuántos videos quieres listar? (máx 10 recomendado): "))
-        if NUM_VIDEOS > 20:
-            NUM_VIDEOS = 20
+        num_videos = int(input("¿Cuántos videos quieres analizar? (máx 10 recomendado): "))
+        if num_videos > 20:
+            num_videos = 20
             print("⚠️ Limitado a 20 videos máximo")
+        elif num_videos < 1:
+            num_videos = 5
+            print("⚠️ Mínimo 1 video, establecido a 5")
     except ValueError:
-        NUM_VIDEOS = 5
+        num_videos = 5
+        print("⚠️ Valor inválido, establecido a 5 videos")
     
     scraper = TikTokScraper()
-    scraper.run_scraping(KEYWORD, NUM_VIDEOS)
+    scraper.run_scraping(keyword, num_videos)
 
 if __name__ == "__main__":
     main()
