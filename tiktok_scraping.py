@@ -539,7 +539,7 @@ class TikTokScraper:
                         video_data = future.result()
                         if video_data['url'] and video_data['content']:
                             videos_json_data.append(video_data)
-                        self.logger.info(f"🧼 Limpieza completada: {archivo}")
+                        self.logger.info(f"Limpieza completada: {archivo}")
                     except Exception as e:
                         self.logger.error(f"Error procesando {archivo}: {e}")
         
@@ -547,15 +547,15 @@ class TikTokScraper:
         with open(json_filename, 'w', encoding='utf-8') as json_file:
             json.dump(videos_json_data, json_file, ensure_ascii=False, indent=2)
         
-        self.logger.info(f"✅ Limpieza paralela completada.")
-        self.logger.info(f"📁 Archivos limpiados en: {carpeta_destino}")
-        self.logger.info(f"📊 CSV generado: {csv_filename}")
-        self.logger.info(f"🗂️ JSON generado: {json_filename}")
+        self.logger.info(f"Limpieza paralela completada.")
+        self.logger.info(f"Archivos limpiados en: {carpeta_destino}")
+        self.logger.info(f"CSV generado: {csv_filename}")
+        self.logger.info(f"JSON generado: {json_filename}")
     
     async def run_scraping(self, keyword, num_videos=5):
         """Ejecuta el proceso completo de scraping con paralelización avanzada"""
         try:
-            self.logger.info(f"🚀 Iniciando scraping ultra-paralelo para '{keyword}' con {num_videos} videos")
+            self.logger.info(f"Iniciando scraping ultra-paralelo para '{keyword}' con {num_videos} videos")
             
             # Configurar driver y API
             self.setup_driver()
@@ -568,7 +568,7 @@ class TikTokScraper:
                 self.logger.warning("No se encontraron videos")
                 return
             
-            self.logger.info(f"✅ Encontrados {len(videos_data)} videos, procesando comentarios con paralelización avanzada...")
+            self.logger.info(f"Encontrados {len(videos_data)} videos, procesando comentarios con paralelización avanzada...")
             
             # Dividir videos en lotes para procesamiento óptimo
             batch_size = min(self.max_workers, 3)  # Lotes de 3 videos máximo
@@ -582,7 +582,7 @@ class TikTokScraper:
             all_processed_videos = []
             
             for batch_num, batch in enumerate(video_batches):
-                self.logger.info(f"🔄 Procesando lote {batch_num + 1}/{len(video_batches)} ({len(batch)} videos)")
+                self.logger.info(f"Procesando lote {batch_num + 1}/{len(video_batches)} ({len(batch)} videos)")
                 
                 # Preparar URLs para el lote
                 batch_urls = [(video['url'], video['numero']) for video in batch]
@@ -612,13 +612,13 @@ class TikTokScraper:
             # Guardar resultados
             self.save_results_to_csv(all_processed_videos, keyword)
             
-            self.logger.info("📊 Scraping completado, iniciando limpieza paralela...")
+            self.logger.info("Scraping completado, iniciando limpieza paralela...")
             
             # Ejecutar limpieza en paralelo usando ThreadPoolExecutor
             loop = asyncio.get_event_loop()
             await loop.run_in_executor(None, self.procesar_limpieza_paralela, keyword)
             
-            self.logger.info("🎉 Proceso completo finalizado exitosamente")
+            self.logger.info("Proceso completo finalizado exitosamente")
             
         except Exception as e:
             self.logger.error(f"Error durante el scraping: {e}")
@@ -642,40 +642,40 @@ class TikTokScraper:
 
 def main():
     """Función principal optimizada con información detallada"""
-    print("🚀 TikTok Scraper Ultra-Paralelo v2.0")
+    print("TikTok Scraper Ultra-Paralelo v2.0")
     print("=" * 60)
-    print("✅ Modo headless activado (ejecución invisible)")
-    print("⚡ Procesamiento paralelo por lotes")
-    print("🔥 Hasta 150 comentarios por video")
-    print("🛡️ Semáforos para control de rate limiting")
-    print("🤖 API oficial de TikTok multi-sesión")
-    print("📊 Limpieza automática paralela")
-    print("🧵 Optimizado para múltiples CPU cores")
+    print("Modo headless activado (ejecución invisible)")
+    print("Procesamiento paralelo por lotes")
+    print("Hasta 150 comentarios por video")
+    print("Semáforos para control de rate limiting")
+    print("API oficial de TikTok multi-sesión")
+    print("Limpieza automática paralela")
+    print("Optimizado para múltiples CPU cores")
     print("=" * 60)
     
     keyword = input("🔍 Ingresa término de búsqueda: ").strip()
     if not keyword:
-        print("❌ Debes ingresar un término de búsqueda")
+        print("Debes ingresar un término de búsqueda")
         return
     
     try:
         num_videos = int(input("📱 ¿Cuántos videos quieres analizar? (máx 15 recomendado): "))
         if num_videos > 20:
             num_videos = 20
-            print("⚠️ Limitado a 20 videos máximo para evitar bloqueos")
+            print("Limitado a 20 videos máximo para evitar bloqueos")
         elif num_videos < 1:
             num_videos = 5
-            print("⚠️ Mínimo 1 video, establecido a 5")
+            print("Mínimo 1 video, establecido a 5")
     except ValueError:
         num_videos = 5
-        print("⚠️ Valor inválido, establecido a 5 videos")
-    
-    print(f"\n🎯 Configuración:")
+        print("Valor inválido, establecido a 5 videos")
+
+    print(f"\nConfiguración:")
     print(f"   • Término: '{keyword}'")
     print(f"   • Videos: {num_videos}")
     print(f"   • Workers: {min(multiprocessing.cpu_count(), 4)}")
     print(f"   • Modo: Headless + Paralelo")
-    print("\n🚀 Iniciando scraping...\n")
+    print("\nIniciando scraping...\n")
     
     scraper = TikTokScraper()
     
