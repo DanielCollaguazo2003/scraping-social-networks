@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 
 # Importar módulos de scraping
 from x import scrape
-from tiktok_scraper import TikTokScraper  # Importar la clase TikTokScraper
+from tiktok_scraping import TikTokScraper  # Importar la clase TikTokScraper
 
 load_dotenv()
 

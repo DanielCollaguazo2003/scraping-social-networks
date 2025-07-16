@@ -15,3 +15,5 @@ openai
 aiofiles
 httpx
 textblob
+undetected-chromedriver
+TikTokApi
