@@ -13,6 +13,7 @@ from textblob import TextBlob
 import openai
 import os
 from dotenv import load_dotenv
+from analizador_texto import AnalizadorTexto
 
 # Importar módulos de scraping
 from x import scrape
@@ -117,80 +118,6 @@ class AIReportResponse(BaseModel):
 
 # Almacenamiento en memoria
 tasks_storage: Dict[str, TaskInfo] = {}
-
-class SentimentAnalyzer:
-    """Clase para análisis de sentimientos"""
-    
-    @staticmethod
-    def analyze_sentiment(text: str) -> SentimentAnalysis:
-        """Analiza el sentimiento de un texto usando TextBlob"""
-        if not text or text.strip() == "":
-            return SentimentAnalysis(
-                label=SentimentLabel.NEUTRAL,
-                score=0.0,
-                confidence=0.0
-            )
-        
-        try:
-            cleaned_text = SentimentAnalyzer.clean_text(text)
-            blob = TextBlob(cleaned_text)
-            polarity = blob.sentiment.polarity
-            subjectivity = blob.sentiment.subjectivity
-            
-            if polarity > 0.1:
-                label = SentimentLabel.POSITIVE
-            elif polarity < -0.1:
-                label = SentimentLabel.NEGATIVE
-            else:
-                label = SentimentLabel.NEUTRAL
-            
-            confidence = min(abs(polarity) + subjectivity, 1.0)
-            
-            return SentimentAnalysis(
-                label=label,
-                score=polarity,
-                confidence=confidence
-            )
-            
-        except Exception as e:
-            return SentimentAnalysis(
-                label=SentimentLabel.NEUTRAL,
-                score=0.0,
-                confidence=0.0
-            )
-    
-    @staticmethod
-    def clean_text(text: str) -> str:
-        """Limpia el texto para análisis"""
-        text = re.sub(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', '', text)
-        text = re.sub(r'@[A-Za-z0-9_]+', '', text)
-        text = re.sub(r'#([A-Za-z0-9_]+)', r'\1', text)
-        text = re.sub(r'[^\w\s]', ' ', text)
-        text = re.sub(r'\s+', ' ', text).strip()
-        return text
-    
-    @staticmethod
-    def extract_keywords(text: str, top_n: int = 5) -> List[str]:
-        """Extrae palabras clave del texto"""
-        if not text:
-            return []
-        
-        try:
-            cleaned_text = SentimentAnalyzer.clean_text(text)
-            blob = TextBlob(cleaned_text)
-            
-            words = [word.lower() for word in blob.words 
-                    if len(word) > 3 and word.isalpha()]
-            
-            word_freq = {}
-            for word in words:
-                word_freq[word] = word_freq.get(word, 0) + 1
-            
-            sorted_words = sorted(word_freq.items(), key=lambda x: x[1], reverse=True)
-            return [word for word, _ in sorted_words[:top_n]]
-            
-        except Exception:
-            return []
 
 class ProgressTracker:
     def __init__(self, task_id: str):
@@ -316,12 +243,10 @@ async def scrape_twitter_data(query: str, max_results: int, max_workers: int, pr
         
         post_data = []
         for result in results:
-            sentiment = None
-            keywords = None
+            llm = None
             
             if analyze_sentiment and result.get("text"):
-                sentiment = SentimentAnalyzer.analyze_sentiment(result["text"])
-                keywords = SentimentAnalyzer.extract_keywords(result["text"])
+                llm = AnalizadorTexto.analizar_texto_completo(result["text"])
             
             post_data.append(PostData(
                 platform="twitter",
@@ -331,8 +256,7 @@ async def scrape_twitter_data(query: str, max_results: int, max_workers: int, pr
                 created_at=result.get("created_at"),
                 retweet_count=result.get("retweet_count", 0),
                 favorite_count=result.get("favorite_count", 0),
-                sentiment=sentiment,
-                keywords=keywords,
+                llm=llm,
                 error=result.get("error")
             ))
         
@@ -373,13 +297,10 @@ async def scrape_tiktok_data(query: str, max_results: int, progress_callback, an
                 # Extraer comentarios usando la API
                 comments = await tiktok_scraper.extract_comments_with_api(video_data['url'], video_data['numero'])
                 
-                # Crear post principal del video
-                video_sentiment = None
-                video_keywords = None
+                llm = None
                 
                 if analyze_sentiment and video_data.get('descripcion'):
-                    video_sentiment = SentimentAnalyzer.analyze_sentiment(video_data['descripcion'])
-                    video_keywords = SentimentAnalyzer.extract_keywords(video_data['descripcion'])
+                    llm = AnalizadorTexto.analizar_texto_completo(video_data['descripcion'])
                 
                 video_post = PostData(
                     platform="tiktok",
@@ -387,8 +308,7 @@ async def scrape_tiktok_data(query: str, max_results: int, progress_callback, an
                     content=video_data['descripcion'],
                     user=video_data['usuario'],
                     created_at=datetime.now().isoformat(),
-                    sentiment=video_sentiment,
-                    keywords=video_keywords,
+                    llm = llm,
                     comments_count=len(comments)
                 )
                 
@@ -398,10 +318,10 @@ async def scrape_tiktok_data(query: str, max_results: int, progress_callback, an
                 for comment in comments:
                     comment_sentiment = None
                     comment_keywords = None
+                    comment_llm = None
                     
                     if analyze_sentiment and comment.get('texto'):
-                        comment_sentiment = SentimentAnalyzer.analyze_sentiment(comment['texto'])
-                        comment_keywords = SentimentAnalyzer.extract_keywords(comment['texto'])
+                        comment_llm = AnalizadorTexto.analizar_texto_completo(video_data['descripcion']) + " " + comment['texto']
                     
                     comment_post = PostData(
                         platform="tiktok",
@@ -411,6 +331,7 @@ async def scrape_tiktok_data(query: str, max_results: int, progress_callback, an
                         created_at=comment['timestamp'],
                         sentiment=comment_sentiment,
                         keywords=comment_keywords,
+                        llm = comment_llm,
                         likes=comment.get('likes', 0)
                     )
                     
