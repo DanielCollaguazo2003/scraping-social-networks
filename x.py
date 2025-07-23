@@ -15,9 +15,14 @@ logger = logging.getLogger(__name__)
 
 load_dotenv()
 
-EMAIL = os.getenv("EMAIL")
-USERNAME = os.getenv("USERNAME")
-PASSWORD = os.getenv("PASSWORD")
+EMAIL = "collaguazodaniel21@gmail.com"
+USERNAME = "Daniel805976894"
+PASSWORD = "DaniColla2003"
+
+print("Credenciales cargadas desde .env")
+print(f"Email: {EMAIL}")
+print(f"Username: {USERNAME}")
+print(f"Contraseña: {PASSWORD}")
 
 def get_headless_chrome_driver():
     """Obtener driver de Chrome en modo headless"""

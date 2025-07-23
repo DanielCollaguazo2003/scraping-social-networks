@@ -5,6 +5,11 @@ import os
 import unicodedata
 from datetime import datetime
 from playwright.async_api import async_playwright
+import logging
+
+# Configurar logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 def normalizar_texto(texto):
     """Normaliza el texto eliminando caracteres especiales y convirtiendo a ASCII cuando sea posible"""
@@ -127,31 +132,6 @@ def es_comentario_valido(texto):
     
     return True
 
-def cargar_datos_existentes(archivo):
-    if os.path.exists(archivo):
-        try:
-            with open(archivo, 'r', encoding='utf-8') as f:
-                datos = json.load(f)
-                return datos if isinstance(datos, list) else []
-        except (json.JSONDecodeError, IOError):
-            return []
-    return []
-
-def guardar_publicacion_inmediata(archivo, nueva_publicacion):
-    datos_existentes = cargar_datos_existentes(archivo)
-    datos_existentes.append(nueva_publicacion)
-    
-    try:
-        with open(archivo, 'w', encoding='utf-8') as f:
-            json.dump(datos_existentes, f, ensure_ascii=False, indent=2)
-        return True
-    except IOError:
-        return False
-
-def obtener_descripciones_existentes(archivo):
-    datos_existentes = cargar_datos_existentes(archivo)
-    return set(item.get('content', '') for item in datos_existentes)
-
 async def es_video_o_short(publicacion):
     indicadores_video = [
         "video", "div[data-testid='video-player']", "video[data-testid]",
@@ -249,10 +229,10 @@ async def extraer_descripcion_completa_de_modal(modal):
     
     return None
 
-async def extraer_comentarios_del_modal(modal, limite=20):
+async def extraer_comentarios_del_modal(modal, limite=10):
     comentarios_validos = []
     
-    await scroll_modal_comentarios(modal, 2)  # Reducido de 3 a 2
+    await scroll_modal_comentarios(modal, 2)
     
     selectores_comentarios = [
         "div[role='article']",
@@ -274,7 +254,7 @@ async def extraer_comentarios_del_modal(modal, limite=20):
         cantidad_elementos = await elementos_comentarios.count()
         comentarios_procesados = 0
         
-        for i in range(min(cantidad_elementos, limite * 2)):  # Reducido de limite * 3 a limite * 2
+        for i in range(min(cantidad_elementos, limite * 2)):
             if comentarios_procesados >= limite:
                 break
                 
@@ -307,23 +287,23 @@ async def extraer_comentarios_del_modal(modal, limite=20):
     
     return comentarios_validos
 
-async def scroll_modal_comentarios(modal, veces=2):  # Reducido de 3 a 2
+async def scroll_modal_comentarios(modal, veces=2):
     try:
         for i in range(veces):
             await modal.evaluate("(element) => element.scrollTop = element.scrollHeight")
-            await modal.page.wait_for_timeout(800)  # Reducido de 1500 a 800
+            await modal.page.wait_for_timeout(500)
     except:
         pass
 
 async def scroll_hasta_cargar_nuevas_publicaciones(page, publicaciones_actuales):
-    max_intentos = 8  # Reducido de 10 a 8
+    max_intentos = 5
     scroll_intensivo = 0
     
     while scroll_intensivo < max_intentos:
         scroll_anterior = await page.evaluate("window.pageYOffset")
         
         await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-        await page.wait_for_timeout(1500)  # Reducido de 3000 a 1500
+        await page.wait_for_timeout(1000)
         
         scroll_actual = await page.evaluate("window.pageYOffset")
         
@@ -335,128 +315,115 @@ async def scroll_hasta_cargar_nuevas_publicaciones(page, publicaciones_actuales)
         
         if scroll_actual == scroll_anterior:
             await page.evaluate("window.scrollBy(0, 1000)")
-            await page.wait_for_timeout(1000)  # Reducido de 2000 a 1000
+            await page.wait_for_timeout(1000)
         
         scroll_intensivo += 1
     
     return await nuevas_publicaciones.count()
 
-async def main():
-    # Solicitar parámetro de búsqueda
-    print("=== FACEBOOK SCRAPER OPTIMIZADO ===")
-    print("Ingresa el término de búsqueda:")
-    query = input("> ").strip()
-    
-    if not query:
-        print("Error: Debe ingresar un término de búsqueda válido")
-        return
-    
-    print(f"Iniciando scraping para: '{query}'")
-    
-    ARCHIVO_SALIDA = f"contenido_{query.replace(' ', '_')}.json"
-    DELAY_ENTRE_SOLICITUDES = 1  # Reducido de 3 a 1
-    
-    async with async_playwright() as p:
-        # Configuración optimizada para velocidad
-        browser = await p.chromium.launch(
-            headless=True,  # Sin interfaz gráfica
-            args=[
-                '--disable-blink-features=AutomationControlled',
-                '--disable-dev-shm-usage',
-                '--disable-gpu',
-                '--no-sandbox',
-                '--disable-extensions',
-                '--disable-plugins',
-                '--disable-images',  # No cargar imágenes para mayor velocidad
-                '--disable-javascript-harmony-shipping',
-                '--disable-background-timer-throttling',
-                '--disable-backgrounding-occluded-windows',
-                '--disable-renderer-backgrounding',
-                '--disable-features=VizDisplayCompositor'
-            ]
-        )
-        
-        context = await browser.new_context(
-            storage_state="facebook_session.json",
-            viewport={'width': 1280, 'height': 720}
-        )
-        
-        page = await context.new_page()
-        
-        # Bloquear recursos innecesarios para mayor velocidad
-        await page.route("**/*.{png,jpg,jpeg,gif,svg,css,woff,woff2}", lambda route: route.abort())
+class FacebookScraper:
+    def __init__(self):
+        self.logger = logger
 
-        await page.goto("https://www.facebook.com/")
-        await page.wait_for_timeout(2000)  # Reducido de 3000 a 2000
-
-        search_url = f"https://www.facebook.com/search/top?q={query.replace(' ', '%20')}"
-        await page.goto(search_url)
-        await page.wait_for_timeout(3000)  # Reducido de 5000 a 3000
-
-        await page.get_by_role("link", name="Publicaciones").click()
-        await page.wait_for_timeout(3000)  # Reducido de 5000 a 3000
-
-        descripciones_existentes = obtener_descripciones_existentes(ARCHIVO_SALIDA)
-        
-        print(f"Datos existentes: {len(descripciones_existentes)} publicaciones")
-        print(f"Archivo de salida: {ARCHIVO_SALIDA}")
-        print("Iniciando procesamiento...")
-
-        publicaciones_procesadas = 0
-        indice_actual = 0
-        
+    async def scrape_facebook_posts(self, query: str, max_results: int = 10):
+        """Función principal de scraping de Facebook"""
         try:
-            while True:
-                publicaciones = page.locator('div[role="feed"] > div[data-virtualized="false"]')
-                cantidad_actual = await publicaciones.count()
+            results = []
+            
+            async with async_playwright() as p:
+                browser = await p.chromium.launch(
+                    headless=True,
+                    args=[
+                        '--disable-blink-features=AutomationControlled',
+                        '--disable-dev-shm-usage',
+                        '--disable-gpu',
+                        '--no-sandbox',
+                        '--disable-extensions',
+                        '--disable-plugins',
+                        '--disable-images',
+                        '--disable-javascript-harmony-shipping',
+                        '--disable-background-timer-throttling',
+                        '--disable-backgrounding-occluded-windows',
+                        '--disable-renderer-backgrounding',
+                        '--disable-features=VizDisplayCompositor'
+                    ]
+                )
                 
-                if cantidad_actual <= indice_actual:
-                    nueva_cantidad = await scroll_hasta_cargar_nuevas_publicaciones(page, cantidad_actual)
-                    if nueva_cantidad <= cantidad_actual:
-                        await page.wait_for_timeout(2000)  # Reducido de 5000 a 2000
-                        continue
-                    cantidad_actual = nueva_cantidad
+                context = await browser.new_context(
+                    storage_state="facebook_session.json",
+                    viewport={'width': 1280, 'height': 720}
+                )
                 
-                while indice_actual < cantidad_actual:
+                page = await context.new_page()
+                
+                # Bloquear recursos innecesarios
+                await page.route("**/*.{png,jpg,jpeg,gif,svg,css,woff,woff2}", lambda route: route.abort())
+
+                await page.goto("https://www.facebook.com/")
+                await page.wait_for_timeout(2000)
+
+                search_url = f"https://www.facebook.com/search/top?q={query.replace(' ', '%20')}"
+                await page.goto(search_url)
+                await page.wait_for_timeout(3000)
+
+                await page.get_by_role("link", name="Publicaciones").click()
+                await page.wait_for_timeout(3000)
+
+                publicaciones_procesadas = 0
+                indice_actual = 0
+                
+                while publicaciones_procesadas < max_results:
+                    publicaciones = page.locator('div[role="feed"] > div[data-virtualized="false"]')
+                    cantidad_actual = await publicaciones.count()
+                    
+                    if cantidad_actual <= indice_actual:
+                        nueva_cantidad = await scroll_hasta_cargar_nuevas_publicaciones(page, cantidad_actual)
+                        if nueva_cantidad <= cantidad_actual:
+                            break  # No hay más publicaciones
+                        cantidad_actual = nueva_cantidad
+                    
+                    if indice_actual >= cantidad_actual:
+                        break
+                    
                     publicacion = publicaciones.nth(indice_actual)
                     
                     try:
                         await publicacion.scroll_into_view_if_needed()
-                        await page.wait_for_timeout(200)  # Reducido de 500 a 200
+                        await page.wait_for_timeout(200)
                         
                         if await es_video_o_short(publicacion):
-                            print(f"[{indice_actual + 1}] Video/short - OMITIDA")
+                            self.logger.info(f"[{indice_actual + 1}] Video/short - OMITIDA")
                             indice_actual += 1
                             continue
                         
                         if not await tiene_descripcion_suficiente(publicacion):
-                            print(f"[{indice_actual + 1}] Descripción insuficiente - OMITIDA")
+                            self.logger.info(f"[{indice_actual + 1}] Descripción insuficiente - OMITIDA")
                             indice_actual += 1
                             continue
                         
                         boton_comentar = await buscar_boton_comentar(publicacion)
                         
                         if not boton_comentar:
-                            print(f"[{indice_actual + 1}] Sin botón comentar - OMITIDA")
+                            self.logger.info(f"[{indice_actual + 1}] Sin botón comentar - OMITIDA")
                             indice_actual += 1
                             continue
                         
                         try:
-                            await boton_comentar.wait_for(state="visible", timeout=3000)  # Reducido de 5000 a 3000
+                            await boton_comentar.wait_for(state="visible", timeout=3000)
                             await boton_comentar.click()
-                            print(f"[{indice_actual + 1}] Modal abierto - PROCESANDO")
+                            self.logger.info(f"[{indice_actual + 1}] Modal abierto - PROCESANDO")
                         except Exception as e:
-                            print(f"[{indice_actual + 1}] Error al abrir modal - OMITIDA")
+                            self.logger.error(f"[{indice_actual + 1}] Error al abrir modal - OMITIDA")
                             indice_actual += 1
                             continue
                         
-                        await page.wait_for_timeout(2000)  # Reducido de 3000 a 2000
+                        await page.wait_for_timeout(2000)
                         
                         try:
                             modal = page.locator("div[role='dialog']")
-                            await modal.wait_for(timeout=5000)  # Reducido de 8000 a 5000
+                            await modal.wait_for(timeout=5000)
                         except:
-                            print(f"[{indice_actual + 1}] Modal no cargó - ERROR")
+                            self.logger.error(f"[{indice_actual + 1}] Modal no cargó - ERROR")
                             await page.keyboard.press("Escape")
                             indice_actual += 1
                             continue
@@ -464,7 +431,7 @@ async def main():
                         descripcion = await extraer_descripcion_completa_de_modal(modal)
                         
                         if descripcion:
-                            comentarios = await extraer_comentarios_del_modal(modal, limite=15)  # Reducido de 20 a 15
+                            comentarios = await extraer_comentarios_del_modal(modal, limite=10)
                             
                             # Combinar descripción y comentarios
                             contenido_completo = descripcion
@@ -473,28 +440,28 @@ async def main():
                             
                             contenido_completo = normalizar_texto(contenido_completo)
                             
-                            # Verificar duplicados
-                            if contenido_completo not in descripciones_existentes:
-                                resultado = {
-                                    "url": search_url,
-                                    "content": contenido_completo,
-                                }
-                                
-                                if guardar_publicacion_inmediata(ARCHIVO_SALIDA, resultado):
-                                    publicaciones_procesadas += 1
-                                    descripciones_existentes.add(contenido_completo)
-                                    print(f"[{indice_actual + 1}] GUARDADA: {len(contenido_completo.split())} palabras, {len(comentarios)} comentarios")
-                            else:
-                                print(f"[{indice_actual + 1}] Duplicado - OMITIDA")
+                            result = {
+                                "url": search_url,
+                                "text": contenido_completo,
+                                "user": "facebook_user",
+                                "created_at": datetime.now().isoformat(),
+                                "retweet_count": 0,
+                                "favorite_count": 0,
+                                "comment_count": len(comentarios)
+                            }
+                            
+                            results.append(result)
+                            publicaciones_procesadas += 1
+                            
+                            self.logger.info(f"[{indice_actual + 1}] GUARDADA: {len(contenido_completo.split())} palabras, {len(comentarios)} comentarios")
                         else:
-                            print(f"[{indice_actual + 1}] Sin descripción - OMITIDA")
+                            self.logger.info(f"[{indice_actual + 1}] Sin descripción - OMITIDA")
                         
                         await page.keyboard.press("Escape")
-                        await page.wait_for_timeout(200)  # Reducido de 500 a 200
-                        await page.wait_for_timeout(DELAY_ENTRE_SOLICITUDES * 1000)
+                        await page.wait_for_timeout(200)
                         
                     except Exception as e:
-                        print(f"[{indice_actual + 1}] Error: {str(e)}")
+                        self.logger.error(f"[{indice_actual + 1}] Error: {str(e)}")
                         try:
                             await page.keyboard.press("Escape")
                             await page.wait_for_timeout(200)
@@ -503,25 +470,24 @@ async def main():
                     
                     indice_actual += 1
                 
-                if publicaciones_procesadas % 10 == 0 and publicaciones_procesadas > 0:  # Reducido de 20 a 10
-                    total_datos = len(cargar_datos_existentes(ARCHIVO_SALIDA))
-                    print(f"PROGRESO: {publicaciones_procesadas} procesadas | {total_datos} totales en archivo")
-                
-        except KeyboardInterrupt:
-            print(f"\nDetenido por el usuario")
-        except Exception as e:
-            print(f"Error inesperado: {str(e)}")
-        finally:
-            try:
                 await browser.close()
-            except:
-                pass
-            
-            total_final = len(cargar_datos_existentes(ARCHIVO_SALIDA))
-            print(f"\n=== RESUMEN FINAL ===")
-            print(f"Término de búsqueda: {query}")
-            print(f"Total guardado: {total_final} publicaciones")
-            print(f"Archivo: {ARCHIVO_SALIDA}")
+                
+            return results
+                
+        except Exception as e:
+            self.logger.error(f"Error en scraping de Facebook: {str(e)}")
+            raise
 
-if __name__ == "__main__":
-    asyncio.run(main())
+# Función wrapper para usar en la API principal
+async def scrape_facebook(query: str, max_results: int = 10, max_workers: int = 3):
+    """Wrapper function to match the interface of other scrapers"""
+    scraper = FacebookScraper()
+    
+    # Ejecutar el scraping asíncrono
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    try:
+        results = await scraper.scrape_facebook_posts(query, max_results)
+        return results
+    finally:
+        loop.close()

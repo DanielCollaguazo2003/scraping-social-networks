@@ -5,3 +5,50 @@ tweets_data.json
 tweets_data.csv
 prueba2.py
 prueba.py
+turismo_keywords_cositas_20250722_230017.csv
+turismo_keywords_gatitos_20250722_231804.csv
+turismo_keywords_hola_20250722_221002.csv
+turismo_keywords_gatitos_20250722_233030.csv
+turismo_keywords_perritos_20250722_221436.csv
+turismo_keywords_perritos_20250722_221755.csv
+turismo_keywords_perritos_20250722_221940.csv
+turismo_keywords_turismo_20250722_233143.csv
+videos_content_cositas_20250722_230017.json
+videos_content_gatitos_20250722_231804.json
+videos_content_hola_20250722_221002.json
+videos_content_perritos_20250722_221436.json
+videos_content_gatitos_20250722_233030.json
+videos_content_perritos_20250722_221755.json
+videos_content_turismo_20250722_233143.json
+videos_content_perritos_20250722_221940.json
+__pycache__/analizador_texto.cpython-311.pyc
+__pycache__/facebook.cpython-311.pyc
+__pycache__/driver.cpython-311.pyc
+__pycache__/tiktok_scraping.cpython-311.pyc
+__pycache__/x.cpython-311.pyc
+limpieza/video_1_Usuario perdido.txt
+limpieza/video_1_Usuario perdido.txt
+limpieza/video_1_Usuario perdido.txt
+limpieza/video_1_Usuario perdido.txt
+limpieza/video_2_Usuario perdido.txt
+limpieza/video_3_Usuario perdido.txt
+limpieza/video_4_Usuario perdido.txt
+limpieza/video_5_Usuario perdido.txt
+limpieza/video_6_Usuario perdido.txt
+limpieza/video_7_Usuario perdido.txt
+limpieza/video_8_Usuario perdido.txt
+limpieza/video_9_Usuario perdido.txt
+limpieza/video_10_Usuario perdido.txt
+limpieza/video_11_Usuario perdido.txt
+limpieza/video_12_Usuario perdido.txt
+limpieza/video_13_Usuario perdido.txt
+limpieza/video_14_Usuario perdido.txt
+limpieza/video_15_Usuario perdido.txt
+limpieza/video_1_Usuario perdido.txt
+docker-compose.yml
+debug_login.png
+error.png
+dockerfile
+facebook2.py
+logged_in.png
+tiktok_scraper.log

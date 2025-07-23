@@ -3912,3 +3912,614 @@ Call log:
 2025-07-14 15:37:30,349 - INFO - Comentarios guardados en: comentarios/video_15_Usuario perdido.txt
 2025-07-14 15:37:30,352 - INFO - Resultados guardados en CSV: resultados/tiktok_scraping_Turismo_20250714_153730.csv
 2025-07-14 15:37:30,865 - INFO - Driver cerrado
+2025-07-22 22:09:22,005 - INFO - Iniciando scraping ultra-paralelo para 'hola' con 12 videos
+2025-07-22 22:09:23,605 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-22 22:09:26,197 - INFO - Driver configurado exitosamente en modo headless
+2025-07-22 22:09:38,595 - INFO - API de TikTok configurada con 2 sesiones paralelas
+2025-07-22 22:09:38,596 - INFO - Buscando videos con palabra clave: hola
+2025-07-22 22:09:46,053 - INFO - Cargando videos con scroll optimizado...
+2025-07-22 22:09:55,788 - INFO - Encontrados 39 videos válidos
+2025-07-22 22:09:56,115 - INFO - Video 1 extraído: Usuario perdido
+2025-07-22 22:09:56,123 - INFO - Video 2 extraído: Usuario perdido
+2025-07-22 22:09:56,140 - INFO - Video 3 extraído: Usuario perdido
+2025-07-22 22:09:56,165 - INFO - Video 4 extraído: Usuario perdido
+2025-07-22 22:09:56,416 - INFO - Video 5 extraído: Usuario perdido
+2025-07-22 22:09:56,425 - INFO - Video 6 extraído: Usuario perdido
+2025-07-22 22:09:56,441 - INFO - Video 7 extraído: Usuario perdido
+2025-07-22 22:09:56,465 - INFO - Video 8 extraído: Usuario perdido
+2025-07-22 22:09:56,751 - INFO - Video 9 extraído: Usuario perdido
+2025-07-22 22:09:56,760 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 22:09:56,760 - INFO - Video 10 extraído: Usuario perdido
+2025-07-22 22:09:56,767 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 22:09:56,777 - INFO - Video 11 extraído: Usuario perdido
+2025-07-22 22:09:56,787 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 22:09:56,788 - INFO - Video 12 extraído: Usuario perdido
+2025-07-22 22:09:56,788 - INFO - Encontrados 12 videos, procesando comentarios con paralelización avanzada...
+2025-07-22 22:09:56,789 - INFO - Procesando lote 1/4 (3 videos)
+2025-07-22 22:09:56,983 - ERROR - Error al extraer comentarios del video 1: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:09:56,989 - ERROR - Error al extraer comentarios del video 2: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:09:56,990 - ERROR - Error al extraer comentarios del video 3: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:09:56,992 - INFO - Comentarios guardados en: comentarios/video_1_Usuario perdido.txt
+2025-07-22 22:09:56,994 - INFO - Comentarios guardados en: comentarios/video_2_Usuario perdido.txt
+2025-07-22 22:09:56,995 - INFO - Comentarios guardados en: comentarios/video_3_Usuario perdido.txt
+2025-07-22 22:09:58,899 - INFO - Procesando lote 2/4 (3 videos)
+2025-07-22 22:09:59,057 - ERROR - Error al extraer comentarios del video 5: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:09:59,058 - ERROR - Error al extraer comentarios del video 4: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:09:59,077 - ERROR - Error al extraer comentarios del video 6: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:09:59,080 - INFO - Comentarios guardados en: comentarios/video_4_Usuario perdido.txt
+2025-07-22 22:09:59,082 - INFO - Comentarios guardados en: comentarios/video_5_Usuario perdido.txt
+2025-07-22 22:09:59,083 - INFO - Comentarios guardados en: comentarios/video_6_Usuario perdido.txt
+2025-07-22 22:10:00,337 - INFO - Procesando lote 3/4 (3 videos)
+2025-07-22 22:10:00,501 - ERROR - Error al extraer comentarios del video 7: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:10:00,515 - ERROR - Error al extraer comentarios del video 9: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:10:00,519 - ERROR - Error al extraer comentarios del video 8: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:10:00,521 - INFO - Comentarios guardados en: comentarios/video_7_Usuario perdido.txt
+2025-07-22 22:10:00,523 - INFO - Comentarios guardados en: comentarios/video_8_Usuario perdido.txt
+2025-07-22 22:10:00,524 - INFO - Comentarios guardados en: comentarios/video_9_Usuario perdido.txt
+2025-07-22 22:10:02,218 - INFO - Procesando lote 4/4 (3 videos)
+2025-07-22 22:10:02,386 - ERROR - Error al extraer comentarios del video 12: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:10:02,396 - ERROR - Error al extraer comentarios del video 10: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:10:02,435 - ERROR - Error al extraer comentarios del video 11: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:10:02,437 - INFO - Comentarios guardados en: comentarios/video_10_Usuario perdido.txt
+2025-07-22 22:10:02,439 - INFO - Comentarios guardados en: comentarios/video_11_Usuario perdido.txt
+2025-07-22 22:10:02,441 - INFO - Comentarios guardados en: comentarios/video_12_Usuario perdido.txt
+2025-07-22 22:10:02,442 - INFO - Resultados guardados en CSV: resultados/tiktok_scraping_hola_20250722_221002.csv
+2025-07-22 22:10:02,442 - INFO - Scraping completado, iniciando limpieza paralela...
+2025-07-22 22:10:02,461 - INFO - Limpieza completada: video_10_Usuario no disponible.txt
+2025-07-22 22:10:02,461 - INFO - Limpieza completada: video_11_Usuario no disponible.txt
+2025-07-22 22:10:02,462 - INFO - Limpieza completada: video_11_Usuario perdido.txt
+2025-07-22 22:10:02,463 - INFO - Limpieza completada: video_10_Usuario perdido.txt
+2025-07-22 22:10:02,475 - INFO - Limpieza completada: video_12_Usuario perdido.txt
+2025-07-22 22:10:02,475 - INFO - Limpieza completada: video_13_Usuario perdido.txt
+2025-07-22 22:10:02,477 - INFO - Limpieza completada: video_12_Usuario no disponible.txt
+2025-07-22 22:10:02,477 - INFO - Limpieza completada: video_13_Usuario no disponible.txt
+2025-07-22 22:10:02,490 - INFO - Limpieza completada: video_15_Usuario no disponible.txt
+2025-07-22 22:10:02,491 - INFO - Limpieza completada: video_14_Usuario perdido.txt
+2025-07-22 22:10:02,491 - INFO - Limpieza completada: video_14_Usuario no disponible.txt
+2025-07-22 22:10:02,492 - INFO - Limpieza completada: video_15_Usuario perdido.txt
+2025-07-22 22:10:02,505 - INFO - Limpieza completada: video_16_Usuario no disponible.txt
+2025-07-22 22:10:02,505 - INFO - Limpieza completada: video_17_Usuario no disponible.txt
+2025-07-22 22:10:02,506 - INFO - Limpieza completada: video_18_Usuario no disponible.txt
+2025-07-22 22:10:02,506 - INFO - Limpieza completada: video_19_Usuario no disponible.txt
+2025-07-22 22:10:02,518 - INFO - Limpieza completada: video_20_Usuario no disponible.txt
+2025-07-22 22:10:02,519 - INFO - Limpieza completada: video_1_Usuario no disponible.txt
+2025-07-22 22:10:02,520 - INFO - Limpieza completada: video_1_Usuario perdido.txt
+2025-07-22 22:10:02,522 - INFO - Limpieza completada: video_2_Usuario no disponible.txt
+2025-07-22 22:10:02,535 - INFO - Limpieza completada: video_2_Usuario perdido.txt
+2025-07-22 22:10:02,535 - INFO - Limpieza completada: video_3_Usuario no disponible.txt
+2025-07-22 22:10:02,536 - INFO - Limpieza completada: video_3_Usuario perdido.txt
+2025-07-22 22:10:02,538 - INFO - Limpieza completada: video_4_Usuario no disponible.txt
+2025-07-22 22:10:02,549 - INFO - Limpieza completada: video_4_Usuario perdido.txt
+2025-07-22 22:10:02,550 - INFO - Limpieza completada: video_5_Usuario perdido.txt
+2025-07-22 22:10:02,551 - INFO - Limpieza completada: video_6_Usuario no disponible.txt
+2025-07-22 22:10:02,551 - INFO - Limpieza completada: video_5_Usuario no disponible.txt
+2025-07-22 22:10:02,563 - INFO - Limpieza completada: video_7_Usuario perdido.txt
+2025-07-22 22:10:02,564 - INFO - Limpieza completada: video_7_Usuario no disponible.txt
+2025-07-22 22:10:02,565 - INFO - Limpieza completada: video_6_Usuario perdido.txt
+2025-07-22 22:10:02,565 - INFO - Limpieza completada: video_8_Usuario no disponible.txt
+2025-07-22 22:10:02,575 - INFO - Limpieza completada: video_9_Usuario perdido.txt
+2025-07-22 22:10:02,575 - INFO - Limpieza completada: video_9_Usuario no disponible.txt
+2025-07-22 22:10:02,576 - INFO - Limpieza completada: video_8_Usuario perdido.txt
+2025-07-22 22:10:02,577 - INFO - Limpieza paralela completada.
+2025-07-22 22:10:02,577 - INFO - Archivos limpiados en: limpieza
+2025-07-22 22:10:02,577 - INFO - CSV generado: turismo_keywords_hola_20250722_221002.csv
+2025-07-22 22:10:02,577 - INFO - JSON generado: videos_content_hola_20250722_221002.json
+2025-07-22 22:10:02,578 - INFO - Proceso completo finalizado exitosamente
+2025-07-22 22:10:02,796 - INFO - Driver cerrado
+2025-07-22 22:13:57,008 - INFO - Iniciando scraping ultra-paralelo para 'perritos' con 5 videos
+2025-07-22 22:13:58,436 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-22 22:14:01,001 - INFO - Driver configurado exitosamente en modo headless
+2025-07-22 22:14:14,272 - INFO - API de TikTok configurada con 2 sesiones paralelas
+2025-07-22 22:14:14,272 - INFO - Buscando videos con palabra clave: perritos
+2025-07-22 22:14:23,184 - INFO - Cargando videos con scroll optimizado...
+2025-07-22 22:14:34,725 - INFO - Encontrados 48 videos válidos
+2025-07-22 22:14:35,125 - INFO - Video 1 extraído: Usuario perdido
+2025-07-22 22:14:35,134 - INFO - Video 2 extraído: Usuario perdido
+2025-07-22 22:14:35,142 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 22:14:35,154 - INFO - Video 4 extraído: Usuario perdido
+2025-07-22 22:14:35,162 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 22:14:35,173 - INFO - Video 3 extraído: Usuario perdido
+2025-07-22 22:14:35,178 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 22:14:35,266 - INFO - Video 5 extraído: Usuario perdido
+2025-07-22 22:14:35,282 - INFO - Encontrados 5 videos, procesando comentarios con paralelización avanzada...
+2025-07-22 22:14:35,282 - INFO - Procesando lote 1/2 (3 videos)
+2025-07-22 22:14:35,533 - ERROR - Error al extraer comentarios del video 4: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:14:35,542 - ERROR - Error al extraer comentarios del video 2: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:14:35,544 - ERROR - Error al extraer comentarios del video 1: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:14:35,546 - INFO - Comentarios guardados en: comentarios/video_1_Usuario perdido.txt
+2025-07-22 22:14:35,547 - INFO - Comentarios guardados en: comentarios/video_2_Usuario perdido.txt
+2025-07-22 22:14:35,547 - INFO - Comentarios guardados en: comentarios/video_4_Usuario perdido.txt
+2025-07-22 22:14:36,695 - INFO - Procesando lote 2/2 (2 videos)
+2025-07-22 22:14:36,851 - ERROR - Error al extraer comentarios del video 3: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:14:36,863 - ERROR - Error al extraer comentarios del video 5: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:14:36,865 - INFO - Comentarios guardados en: comentarios/video_3_Usuario perdido.txt
+2025-07-22 22:14:36,866 - INFO - Comentarios guardados en: comentarios/video_5_Usuario perdido.txt
+2025-07-22 22:14:36,867 - INFO - Resultados guardados en CSV: resultados/tiktok_scraping_perritos_20250722_221436.csv
+2025-07-22 22:14:36,867 - INFO - Scraping completado, iniciando limpieza paralela...
+2025-07-22 22:14:36,873 - INFO - Limpieza completada: video_10_Usuario no disponible.txt
+2025-07-22 22:14:36,873 - INFO - Limpieza completada: video_10_Usuario perdido.txt
+2025-07-22 22:14:36,874 - INFO - Limpieza completada: video_11_Usuario no disponible.txt
+2025-07-22 22:14:36,875 - INFO - Limpieza completada: video_11_Usuario perdido.txt
+2025-07-22 22:14:36,875 - INFO - Limpieza completada: video_12_Usuario no disponible.txt
+2025-07-22 22:14:36,877 - INFO - Limpieza completada: video_13_Usuario no disponible.txt
+2025-07-22 22:14:36,878 - INFO - Limpieza completada: video_13_Usuario perdido.txt
+2025-07-22 22:14:36,878 - INFO - Limpieza completada: video_14_Usuario no disponible.txt
+2025-07-22 22:14:36,879 - INFO - Limpieza completada: video_12_Usuario perdido.txt
+2025-07-22 22:14:36,879 - INFO - Limpieza completada: video_14_Usuario perdido.txt
+2025-07-22 22:14:36,880 - INFO - Limpieza completada: video_15_Usuario perdido.txt
+2025-07-22 22:14:36,880 - INFO - Limpieza completada: video_15_Usuario no disponible.txt
+2025-07-22 22:14:36,882 - INFO - Limpieza completada: video_17_Usuario no disponible.txt
+2025-07-22 22:14:36,882 - INFO - Limpieza completada: video_16_Usuario no disponible.txt
+2025-07-22 22:14:36,883 - INFO - Limpieza completada: video_18_Usuario no disponible.txt
+2025-07-22 22:14:36,885 - INFO - Limpieza completada: video_19_Usuario no disponible.txt
+2025-07-22 22:14:36,885 - INFO - Limpieza completada: video_1_Usuario no disponible.txt
+2025-07-22 22:14:36,886 - INFO - Limpieza completada: video_20_Usuario no disponible.txt
+2025-07-22 22:14:36,887 - INFO - Limpieza completada: video_2_Usuario no disponible.txt
+2025-07-22 22:14:36,887 - INFO - Limpieza completada: video_3_Usuario no disponible.txt
+2025-07-22 22:14:36,890 - INFO - Limpieza completada: video_4_Usuario no disponible.txt
+2025-07-22 22:14:36,902 - INFO - Limpieza completada: video_1_Usuario perdido.txt
+2025-07-22 22:14:36,904 - INFO - Limpieza completada: video_2_Usuario perdido.txt
+2025-07-22 22:14:36,904 - INFO - Limpieza completada: video_5_Usuario no disponible.txt
+2025-07-22 22:14:36,905 - INFO - Limpieza completada: video_3_Usuario perdido.txt
+2025-07-22 22:14:36,907 - INFO - Limpieza completada: video_6_Usuario no disponible.txt
+2025-07-22 22:14:36,907 - INFO - Limpieza completada: video_6_Usuario perdido.txt
+2025-07-22 22:14:36,910 - INFO - Limpieza completada: video_7_Usuario no disponible.txt
+2025-07-22 22:14:36,910 - INFO - Limpieza completada: video_7_Usuario perdido.txt
+2025-07-22 22:14:36,911 - INFO - Limpieza completada: video_4_Usuario perdido.txt
+2025-07-22 22:14:36,912 - INFO - Limpieza completada: video_8_Usuario no disponible.txt
+2025-07-22 22:14:36,913 - INFO - Limpieza completada: video_8_Usuario perdido.txt
+2025-07-22 22:14:36,913 - INFO - Limpieza completada: video_9_Usuario no disponible.txt
+2025-07-22 22:14:36,913 - INFO - Limpieza completada: video_9_Usuario perdido.txt
+2025-07-22 22:14:36,920 - INFO - Limpieza completada: video_5_Usuario perdido.txt
+2025-07-22 22:14:36,923 - INFO - Limpieza paralela completada.
+2025-07-22 22:14:36,924 - INFO - Archivos limpiados en: limpieza
+2025-07-22 22:14:36,924 - INFO - CSV generado: turismo_keywords_perritos_20250722_221436.csv
+2025-07-22 22:14:36,924 - INFO - JSON generado: videos_content_perritos_20250722_221436.json
+2025-07-22 22:14:36,925 - INFO - Proceso completo finalizado exitosamente
+2025-07-22 22:14:37,195 - INFO - Driver cerrado
+2025-07-22 22:17:03,612 - INFO - Iniciando scraping ultra-paralelo para 'perritos' con 19 videos
+2025-07-22 22:17:05,694 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-22 22:17:08,295 - INFO - Driver configurado exitosamente sin modo headless
+2025-07-22 22:17:23,033 - INFO - API de TikTok configurada con 2 sesiones paralelas
+2025-07-22 22:17:23,034 - INFO - Buscando videos con palabra clave: perritos
+2025-07-22 22:17:33,012 - INFO - Cargando videos con scroll optimizado...
+2025-07-22 22:17:42,911 - INFO - Encontrados 24 videos válidos
+2025-07-22 22:17:43,421 - INFO - Video 1 extraído: Usuario perdido
+2025-07-22 22:17:43,443 - INFO - Video 2 extraído: Usuario perdido
+2025-07-22 22:17:43,470 - INFO - Video 3 extraído: Usuario perdido
+2025-07-22 22:17:43,490 - INFO - Video 4 extraído: Usuario perdido
+2025-07-22 22:17:43,922 - INFO - Video 5 extraído: Usuario perdido
+2025-07-22 22:17:43,946 - INFO - Video 6 extraído: Usuario perdido
+2025-07-22 22:17:43,968 - INFO - Video 7 extraído: Usuario perdido
+2025-07-22 22:17:43,989 - INFO - Video 8 extraído: Usuario perdido
+2025-07-22 22:17:44,464 - INFO - Video 9 extraído: Usuario perdido
+2025-07-22 22:17:44,487 - INFO - Video 10 extraído: Usuario perdido
+2025-07-22 22:17:44,511 - INFO - Video 11 extraído: Usuario perdido
+2025-07-22 22:17:44,545 - INFO - Video 12 extraído: Usuario perdido
+2025-07-22 22:17:44,974 - INFO - Video 13 extraído: Usuario perdido
+2025-07-22 22:17:44,998 - INFO - Video 14 extraído: Usuario perdido
+2025-07-22 22:17:45,017 - INFO - Video 15 extraído: Usuario perdido
+2025-07-22 22:17:45,036 - INFO - Video 16 extraído: Usuario perdido
+2025-07-22 22:17:45,047 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 22:17:45,389 - INFO - Video 17 extraído: Usuario perdido
+2025-07-22 22:17:45,412 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 22:17:45,413 - INFO - Video 18 extraído: Usuario perdido
+2025-07-22 22:17:45,432 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 22:17:45,433 - INFO - Video 19 extraído: Usuario perdido
+2025-07-22 22:17:45,434 - INFO - Encontrados 19 videos, procesando comentarios con paralelización avanzada...
+2025-07-22 22:17:45,434 - INFO - Procesando lote 1/7 (3 videos)
+2025-07-22 22:17:45,625 - ERROR - Error al extraer comentarios del video 2: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:17:45,637 - ERROR - Error al extraer comentarios del video 1: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:17:45,640 - ERROR - Error al extraer comentarios del video 3: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:17:45,641 - INFO - Comentarios guardados en: comentarios/video_1_Usuario perdido.txt
+2025-07-22 22:17:45,644 - INFO - Comentarios guardados en: comentarios/video_2_Usuario perdido.txt
+2025-07-22 22:17:45,644 - INFO - Comentarios guardados en: comentarios/video_3_Usuario perdido.txt
+2025-07-22 22:17:46,855 - INFO - Procesando lote 2/7 (3 videos)
+2025-07-22 22:17:47,017 - ERROR - Error al extraer comentarios del video 5: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:17:47,044 - ERROR - Error al extraer comentarios del video 4: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:17:47,106 - ERROR - Error al extraer comentarios del video 6: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:17:47,107 - INFO - Comentarios guardados en: comentarios/video_4_Usuario perdido.txt
+2025-07-22 22:17:47,109 - INFO - Comentarios guardados en: comentarios/video_5_Usuario perdido.txt
+2025-07-22 22:17:47,110 - INFO - Comentarios guardados en: comentarios/video_6_Usuario perdido.txt
+2025-07-22 22:17:48,195 - INFO - Procesando lote 3/7 (3 videos)
+2025-07-22 22:17:48,354 - ERROR - Error al extraer comentarios del video 9: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:17:48,379 - ERROR - Error al extraer comentarios del video 7: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:17:48,390 - ERROR - Error al extraer comentarios del video 8: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:17:48,391 - INFO - Comentarios guardados en: comentarios/video_7_Usuario perdido.txt
+2025-07-22 22:17:48,393 - INFO - Comentarios guardados en: comentarios/video_8_Usuario perdido.txt
+2025-07-22 22:17:48,394 - INFO - Comentarios guardados en: comentarios/video_9_Usuario perdido.txt
+2025-07-22 22:17:50,383 - INFO - Procesando lote 4/7 (3 videos)
+2025-07-22 22:17:50,553 - ERROR - Error al extraer comentarios del video 10: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:17:50,554 - ERROR - Error al extraer comentarios del video 11: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:17:50,559 - ERROR - Error al extraer comentarios del video 12: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:17:50,560 - INFO - Comentarios guardados en: comentarios/video_10_Usuario perdido.txt
+2025-07-22 22:17:50,560 - INFO - Comentarios guardados en: comentarios/video_11_Usuario perdido.txt
+2025-07-22 22:17:50,561 - INFO - Comentarios guardados en: comentarios/video_12_Usuario perdido.txt
+2025-07-22 22:17:52,332 - INFO - Procesando lote 5/7 (3 videos)
+2025-07-22 22:17:52,487 - ERROR - Error al extraer comentarios del video 14: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:17:52,492 - ERROR - Error al extraer comentarios del video 13: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:17:52,504 - ERROR - Error al extraer comentarios del video 15: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:17:52,506 - INFO - Comentarios guardados en: comentarios/video_13_Usuario perdido.txt
+2025-07-22 22:17:52,507 - INFO - Comentarios guardados en: comentarios/video_14_Usuario perdido.txt
+2025-07-22 22:17:52,508 - INFO - Comentarios guardados en: comentarios/video_15_Usuario perdido.txt
+2025-07-22 22:17:53,668 - INFO - Procesando lote 6/7 (3 videos)
+2025-07-22 22:17:53,820 - ERROR - Error al extraer comentarios del video 16: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:17:53,830 - ERROR - Error al extraer comentarios del video 17: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:17:53,834 - ERROR - Error al extraer comentarios del video 18: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:17:53,835 - INFO - Comentarios guardados en: comentarios/video_16_Usuario perdido.txt
+2025-07-22 22:17:53,836 - INFO - Comentarios guardados en: comentarios/video_17_Usuario perdido.txt
+2025-07-22 22:17:53,837 - INFO - Comentarios guardados en: comentarios/video_18_Usuario perdido.txt
+2025-07-22 22:17:55,273 - INFO - Procesando lote 7/7 (1 videos)
+2025-07-22 22:17:55,432 - ERROR - Error al extraer comentarios del video 19: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 22:17:55,434 - INFO - Comentarios guardados en: comentarios/video_19_Usuario perdido.txt
+2025-07-22 22:17:55,437 - INFO - Resultados guardados en CSV: resultados/tiktok_scraping_perritos_20250722_221755.csv
+2025-07-22 22:17:55,437 - INFO - Scraping completado, iniciando limpieza paralela...
+2025-07-22 22:17:55,445 - INFO - Limpieza completada: video_10_Usuario no disponible.txt
+2025-07-22 22:17:55,446 - INFO - Limpieza completada: video_11_Usuario no disponible.txt
+2025-07-22 22:17:55,447 - INFO - Limpieza completada: video_12_Usuario no disponible.txt
+2025-07-22 22:17:55,448 - INFO - Limpieza completada: video_13_Usuario no disponible.txt
+2025-07-22 22:17:55,463 - INFO - Limpieza completada: video_10_Usuario perdido.txt
+2025-07-22 22:17:55,463 - INFO - Limpieza completada: video_11_Usuario perdido.txt
+2025-07-22 22:17:55,464 - INFO - Limpieza completada: video_13_Usuario perdido.txt
+2025-07-22 22:17:55,465 - INFO - Limpieza completada: video_14_Usuario no disponible.txt
+2025-07-22 22:17:55,466 - INFO - Limpieza completada: video_15_Usuario no disponible.txt
+2025-07-22 22:17:55,466 - INFO - Limpieza completada: video_12_Usuario perdido.txt
+2025-07-22 22:17:55,466 - INFO - Limpieza completada: video_16_Usuario no disponible.txt
+2025-07-22 22:17:55,467 - INFO - Limpieza completada: video_17_Usuario no disponible.txt
+2025-07-22 22:17:55,479 - INFO - Limpieza completada: video_16_Usuario perdido.txt
+2025-07-22 22:17:55,480 - INFO - Limpieza completada: video_15_Usuario perdido.txt
+2025-07-22 22:17:55,480 - INFO - Limpieza completada: video_14_Usuario perdido.txt
+2025-07-22 22:17:55,480 - INFO - Limpieza completada: video_18_Usuario no disponible.txt
+2025-07-22 22:17:55,482 - INFO - Limpieza completada: video_19_Usuario no disponible.txt
+2025-07-22 22:17:55,484 - INFO - Limpieza completada: video_1_Usuario no disponible.txt
+2025-07-22 22:17:55,485 - INFO - Limpieza completada: video_17_Usuario perdido.txt
+2025-07-22 22:17:55,486 - INFO - Limpieza completada: video_20_Usuario no disponible.txt
+2025-07-22 22:17:55,488 - INFO - Limpieza completada: video_2_Usuario no disponible.txt
+2025-07-22 22:17:55,496 - INFO - Limpieza completada: video_18_Usuario perdido.txt
+2025-07-22 22:17:55,497 - INFO - Limpieza completada: video_3_Usuario no disponible.txt
+2025-07-22 22:17:55,498 - INFO - Limpieza completada: video_19_Usuario perdido.txt
+2025-07-22 22:17:55,499 - INFO - Limpieza completada: video_4_Usuario no disponible.txt
+2025-07-22 22:17:55,502 - INFO - Limpieza completada: video_1_Usuario perdido.txt
+2025-07-22 22:17:55,504 - INFO - Limpieza completada: video_5_Usuario no disponible.txt
+2025-07-22 22:17:55,505 - INFO - Limpieza completada: video_2_Usuario perdido.txt
+2025-07-22 22:17:55,507 - INFO - Limpieza completada: video_6_Usuario no disponible.txt
+2025-07-22 22:17:55,512 - INFO - Limpieza completada: video_3_Usuario perdido.txt
+2025-07-22 22:17:55,515 - INFO - Limpieza completada: video_7_Usuario no disponible.txt
+2025-07-22 22:17:55,518 - INFO - Limpieza completada: video_4_Usuario perdido.txt
+2025-07-22 22:17:55,519 - INFO - Limpieza completada: video_5_Usuario perdido.txt
+2025-07-22 22:17:55,520 - INFO - Limpieza completada: video_6_Usuario perdido.txt
+2025-07-22 22:17:55,520 - INFO - Limpieza completada: video_8_Usuario no disponible.txt
+2025-07-22 22:17:55,522 - INFO - Limpieza completada: video_9_Usuario no disponible.txt
+2025-07-22 22:17:55,530 - INFO - Limpieza completada: video_7_Usuario perdido.txt
+2025-07-22 22:17:55,532 - INFO - Limpieza completada: video_8_Usuario perdido.txt
+2025-07-22 22:17:55,536 - INFO - Limpieza completada: video_9_Usuario perdido.txt
+2025-07-22 22:17:55,538 - INFO - Limpieza paralela completada.
+2025-07-22 22:17:55,538 - INFO - Archivos limpiados en: limpieza
+2025-07-22 22:17:55,538 - INFO - CSV generado: turismo_keywords_perritos_20250722_221755.csv
+2025-07-22 22:17:55,539 - INFO - JSON generado: videos_content_perritos_20250722_221755.json
+2025-07-22 22:17:55,539 - INFO - Proceso completo finalizado exitosamente
+2025-07-22 22:17:55,856 - INFO - Driver cerrado
+2025-07-22 22:18:59,352 - INFO - Iniciando scraping ultra-paralelo para 'perritos' con 5 videos
+2025-07-22 22:19:02,100 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-22 22:19:04,652 - INFO - Driver configurado exitosamente en modo headless
+2025-07-22 22:19:12,651 - INFO - API de TikTok configurada con 1 sesiones paralelas
+2025-07-22 22:19:12,651 - INFO - Buscando videos con palabra clave: perritos
+2025-07-22 22:19:22,072 - INFO - Cargando videos con scroll optimizado...
+2025-07-22 22:19:32,184 - INFO - Encontrados 48 videos válidos
+2025-07-22 22:19:32,488 - INFO - Video 1 extraído: Usuario perdido
+2025-07-22 22:19:32,496 - INFO - Video 2 extraído: Usuario perdido
+2025-07-22 22:19:32,506 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 22:19:32,507 - INFO - Video 3 extraído: Usuario perdido
+2025-07-22 22:19:32,518 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 22:19:32,519 - INFO - Video 4 extraído: Usuario perdido
+2025-07-22 22:19:32,524 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 22:19:32,609 - INFO - Video 5 extraído: Usuario perdido
+2025-07-22 22:19:32,610 - INFO - Encontrados 5 videos, procesando comentarios con paralelización avanzada...
+2025-07-22 22:19:32,610 - INFO - Procesando lote 1/2 (3 videos)
+2025-07-22 22:19:35,836 - INFO - Comentarios guardados en: comentarios/video_1_Usuario perdido.txt
+2025-07-22 22:19:35,837 - INFO - Comentarios guardados en: comentarios/video_2_Usuario perdido.txt
+2025-07-22 22:19:35,839 - INFO - Comentarios guardados en: comentarios/video_3_Usuario perdido.txt
+2025-07-22 22:19:36,906 - INFO - Procesando lote 2/2 (2 videos)
+2025-07-22 22:19:40,333 - INFO - Comentarios guardados en: comentarios/video_4_Usuario perdido.txt
+2025-07-22 22:19:40,335 - INFO - Comentarios guardados en: comentarios/video_5_Usuario perdido.txt
+2025-07-22 22:19:40,336 - INFO - Resultados guardados en CSV: resultados/tiktok_scraping_perritos_20250722_221940.csv
+2025-07-22 22:19:40,336 - INFO - Scraping completado, iniciando limpieza paralela...
+2025-07-22 22:19:40,341 - INFO - Limpieza completada: video_10_Usuario no disponible.txt
+2025-07-22 22:19:40,342 - INFO - Limpieza completada: video_10_Usuario perdido.txt
+2025-07-22 22:19:40,343 - INFO - Limpieza completada: video_11_Usuario no disponible.txt
+2025-07-22 22:19:40,343 - INFO - Limpieza completada: video_11_Usuario perdido.txt
+2025-07-22 22:19:40,344 - INFO - Limpieza completada: video_12_Usuario no disponible.txt
+2025-07-22 22:19:40,344 - INFO - Limpieza completada: video_12_Usuario perdido.txt
+2025-07-22 22:19:40,345 - INFO - Limpieza completada: video_13_Usuario no disponible.txt
+2025-07-22 22:19:40,345 - INFO - Limpieza completada: video_14_Usuario no disponible.txt
+2025-07-22 22:19:40,346 - INFO - Limpieza completada: video_14_Usuario perdido.txt
+2025-07-22 22:19:40,346 - INFO - Limpieza completada: video_13_Usuario perdido.txt
+2025-07-22 22:19:40,346 - INFO - Limpieza completada: video_15_Usuario perdido.txt
+2025-07-22 22:19:40,347 - INFO - Limpieza completada: video_15_Usuario no disponible.txt
+2025-07-22 22:19:40,348 - INFO - Limpieza completada: video_16_Usuario no disponible.txt
+2025-07-22 22:19:40,348 - INFO - Limpieza completada: video_17_Usuario no disponible.txt
+2025-07-22 22:19:40,349 - INFO - Limpieza completada: video_16_Usuario perdido.txt
+2025-07-22 22:19:40,349 - INFO - Limpieza completada: video_17_Usuario perdido.txt
+2025-07-22 22:19:40,350 - INFO - Limpieza completada: video_18_Usuario no disponible.txt
+2025-07-22 22:19:40,351 - INFO - Limpieza completada: video_18_Usuario perdido.txt
+2025-07-22 22:19:40,352 - INFO - Limpieza completada: video_19_Usuario no disponible.txt
+2025-07-22 22:19:40,353 - INFO - Limpieza completada: video_19_Usuario perdido.txt
+2025-07-22 22:19:40,353 - INFO - Limpieza completada: video_1_Usuario no disponible.txt
+2025-07-22 22:19:40,354 - INFO - Limpieza completada: video_2_Usuario no disponible.txt
+2025-07-22 22:19:40,354 - INFO - Limpieza completada: video_20_Usuario no disponible.txt
+2025-07-22 22:19:40,356 - INFO - Limpieza completada: video_3_Usuario no disponible.txt
+2025-07-22 22:19:40,357 - INFO - Limpieza completada: video_4_Usuario no disponible.txt
+2025-07-22 22:19:40,382 - INFO - Limpieza completada: video_2_Usuario perdido.txt
+2025-07-22 22:19:40,382 - INFO - Limpieza completada: video_1_Usuario perdido.txt
+2025-07-22 22:19:40,383 - INFO - Limpieza completada: video_3_Usuario perdido.txt
+2025-07-22 22:19:40,383 - INFO - Limpieza completada: video_4_Usuario perdido.txt
+2025-07-22 22:19:40,384 - INFO - Limpieza completada: video_5_Usuario no disponible.txt
+2025-07-22 22:19:40,385 - INFO - Limpieza completada: video_6_Usuario no disponible.txt
+2025-07-22 22:19:40,385 - INFO - Limpieza completada: video_6_Usuario perdido.txt
+2025-07-22 22:19:40,387 - INFO - Limpieza completada: video_7_Usuario perdido.txt
+2025-07-22 22:19:40,388 - INFO - Limpieza completada: video_7_Usuario no disponible.txt
+2025-07-22 22:19:40,389 - INFO - Limpieza completada: video_8_Usuario no disponible.txt
+2025-07-22 22:19:40,389 - INFO - Limpieza completada: video_8_Usuario perdido.txt
+2025-07-22 22:19:40,389 - INFO - Limpieza completada: video_9_Usuario no disponible.txt
+2025-07-22 22:19:40,390 - INFO - Limpieza completada: video_9_Usuario perdido.txt
+2025-07-22 22:19:40,404 - INFO - Limpieza completada: video_5_Usuario perdido.txt
+2025-07-22 22:19:40,406 - INFO - Limpieza paralela completada.
+2025-07-22 22:19:40,406 - INFO - Archivos limpiados en: limpieza
+2025-07-22 22:19:40,407 - INFO - CSV generado: turismo_keywords_perritos_20250722_221940.csv
+2025-07-22 22:19:40,407 - INFO - JSON generado: videos_content_perritos_20250722_221940.json
+2025-07-22 22:19:40,408 - INFO - Proceso completo finalizado exitosamente
+2025-07-22 22:19:40,635 - INFO - Driver cerrado
+2025-07-22 22:59:43,029 - INFO - Iniciando scraping ultra-paralelo para 'cositas' con 2 videos
+2025-07-22 22:59:44,971 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-22 22:59:47,636 - INFO - Driver configurado exitosamente en modo headless
+2025-07-22 23:00:00,079 - INFO - API de TikTok configurada con 1 sesiones paralelas
+2025-07-22 23:00:00,080 - INFO - Buscando videos con palabra clave: cositas
+2025-07-22 23:00:07,764 - INFO - Cargando videos con scroll optimizado...
+2025-07-22 23:00:17,403 - INFO - Encontrados 48 videos válidos
+2025-07-22 23:00:17,653 - INFO - Video 1 extraído: Usuario perdido
+2025-07-22 23:00:17,667 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 23:00:17,668 - INFO - Video 2 extraído: Usuario perdido
+2025-07-22 23:00:17,669 - INFO - Encontrados 2 videos, procesando comentarios con paralelización avanzada...
+2025-07-22 23:00:17,669 - INFO - Procesando lote 1/1 (2 videos)
+2025-07-22 23:00:17,898 - ERROR - Error al extraer comentarios del video 2: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 23:00:17,899 - ERROR - Error al extraer comentarios del video 1: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2025-07-22 23:00:17,900 - INFO - Comentarios guardados en: comentarios/video_1_Usuario perdido.txt
+2025-07-22 23:00:17,902 - INFO - Comentarios guardados en: comentarios/video_2_Usuario perdido.txt
+2025-07-22 23:00:17,904 - INFO - Resultados guardados en CSV: resultados/tiktok_scraping_cositas_20250722_230017.csv
+2025-07-22 23:00:17,904 - INFO - Scraping completado, iniciando limpieza paralela...
+2025-07-22 23:00:17,924 - INFO - Limpieza completada: video_1_Usuario perdido.txt
+2025-07-22 23:00:17,924 - INFO - Limpieza completada: video_2_Usuario perdido.txt
+2025-07-22 23:00:17,926 - INFO - Limpieza paralela completada.
+2025-07-22 23:00:17,926 - INFO - Archivos limpiados en: limpieza
+2025-07-22 23:00:17,926 - INFO - CSV generado: turismo_keywords_cositas_20250722_230017.csv
+2025-07-22 23:00:17,927 - INFO - JSON generado: videos_content_cositas_20250722_230017.json
+2025-07-22 23:00:17,927 - INFO - Proceso completo finalizado exitosamente
+2025-07-22 23:00:18,152 - INFO - Driver cerrado
+2025-07-22 23:02:33,618 - INFO - Iniciando scraping ultra-paralelo para 'gatitos' con 5 videos
+2025-07-22 23:02:35,003 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-22 23:02:37,653 - INFO - Driver configurado exitosamente en modo headless
+2025-07-22 23:02:37,659 - ERROR - Error al configurar la API de TikTok: object NoneType can't be used in 'await' expression
+2025-07-22 23:02:37,659 - ERROR - Error durante el scraping: object NoneType can't be used in 'await' expression
+2025-07-22 23:02:37,800 - INFO - Driver cerrado
+2025-07-22 23:03:57,731 - INFO - Iniciando scraping ultra-paralelo para 'gatitos' con 5 videos
+2025-07-22 23:03:59,255 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-22 23:04:01,928 - INFO - Driver configurado exitosamente en modo headless
+2025-07-22 23:04:01,936 - ERROR - Error al configurar la API de TikTok: msToken no encontrado en localStorage
+2025-07-22 23:04:01,937 - ERROR - Error durante el scraping: msToken no encontrado en localStorage
+2025-07-22 23:04:02,080 - INFO - Driver cerrado
+2025-07-22 23:10:38,575 - INFO - Iniciando scraping ultra-paralelo para 'gatitos' con 10 videos
+2025-07-22 23:10:40,689 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-22 23:10:43,433 - INFO - Driver configurado exitosamente en modo headless
+2025-07-22 23:10:43,433 - ERROR - Error al configurar la API de TikTok: 'TikTokScraper' object has no attribute 'ms_tokens'
+2025-07-22 23:10:43,434 - ERROR - Error durante el scraping: 'TikTokScraper' object has no attribute 'ms_tokens'
+2025-07-22 23:10:43,575 - INFO - Driver cerrado
+2025-07-22 23:17:17,379 - INFO - Iniciando scraping ultra-paralelo para 'gatitos' con 5 videos
+2025-07-22 23:17:20,660 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-22 23:17:23,209 - INFO - Driver configurado exitosamente en modo headless
+2025-07-22 23:17:23,210 - INFO - Navegando a TikTok para obtener msToken...
+2025-07-22 23:17:31,445 - INFO - Configurando API con 1 token(s)
+2025-07-22 23:17:45,925 - INFO - Buscando videos con palabra clave: gatitos
+2025-07-22 23:17:51,910 - INFO - Cargando videos con scroll optimizado...
+2025-07-22 23:18:02,106 - INFO - Encontrados 48 videos válidos
+2025-07-22 23:18:02,437 - INFO - Video 1 extraído: Usuario perdido
+2025-07-22 23:18:02,451 - INFO - Video 2 extraído: Usuario perdido
+2025-07-22 23:18:02,460 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 23:18:02,489 - INFO - Video 4 extraído: Usuario perdido
+2025-07-22 23:18:02,504 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 23:18:02,505 - INFO - Video 3 extraído: Usuario perdido
+2025-07-22 23:18:02,510 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 23:18:02,619 - INFO - Video 5 extraído: Usuario perdido
+2025-07-22 23:18:02,622 - INFO - Encontrados 5 videos, procesando comentarios con paralelización avanzada...
+2025-07-22 23:18:02,623 - INFO - Procesando lote 1/2 (3 videos)
+2025-07-22 23:18:02,842 - ERROR - Error al extraer comentarios del video 1: Page.evaluate: TypeError: Cannot read properties of undefined (reading 'call')
+    at Array.Q (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:13151)
+    at H (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:210177)
+    at https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:49863
+    at window.fetch (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/secsdk/secsdk-lastest.umd.js:5211:40)
+    at eval (eval at evaluate (:291:30), <anonymous>:3:21)
+    at new Promise (<anonymous>)
+    at eval (eval at evaluate (:291:30), <anonymous>:2:24)
+    at UtilityScript.evaluate (<anonymous>:298:18)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2025-07-22 23:18:02,866 - ERROR - Error al extraer comentarios del video 2: Page.evaluate: TypeError: Cannot read properties of undefined (reading 'call')
+    at Array.Q (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:13151)
+    at H (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:210177)
+    at https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:49863
+    at window.fetch (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/secsdk/secsdk-lastest.umd.js:5211:40)
+    at eval (eval at evaluate (:291:30), <anonymous>:3:21)
+    at new Promise (<anonymous>)
+    at eval (eval at evaluate (:291:30), <anonymous>:2:24)
+    at UtilityScript.evaluate (<anonymous>:298:18)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2025-07-22 23:18:02,889 - ERROR - Error al extraer comentarios del video 4: Page.evaluate: TypeError: Cannot read properties of undefined (reading 'call')
+    at Array.Q (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:13151)
+    at H (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:210177)
+    at https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:49863
+    at window.fetch (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/secsdk/secsdk-lastest.umd.js:5211:40)
+    at eval (eval at evaluate (:291:30), <anonymous>:3:21)
+    at new Promise (<anonymous>)
+    at eval (eval at evaluate (:291:30), <anonymous>:2:24)
+    at UtilityScript.evaluate (<anonymous>:298:18)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2025-07-22 23:18:02,894 - INFO - Comentarios guardados en: comentarios/video_1_Usuario perdido.txt
+2025-07-22 23:18:02,898 - INFO - Comentarios guardados en: comentarios/video_2_Usuario perdido.txt
+2025-07-22 23:18:02,901 - INFO - Comentarios guardados en: comentarios/video_4_Usuario perdido.txt
+2025-07-22 23:18:04,073 - INFO - Procesando lote 2/2 (2 videos)
+2025-07-22 23:18:04,131 - ERROR - Error al extraer comentarios del video 3: Page.evaluate: TypeError: Cannot read properties of undefined (reading 'call')
+    at Array.Q (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:13151)
+    at H (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:210177)
+    at https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:49863
+    at window.fetch (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/secsdk/secsdk-lastest.umd.js:5211:40)
+    at eval (eval at evaluate (:291:30), <anonymous>:3:21)
+    at new Promise (<anonymous>)
+    at eval (eval at evaluate (:291:30), <anonymous>:2:24)
+    at UtilityScript.evaluate (<anonymous>:298:18)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2025-07-22 23:18:04,154 - ERROR - Error al extraer comentarios del video 5: Page.evaluate: TypeError: Cannot read properties of undefined (reading 'call')
+    at Array.Q (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:13151)
+    at H (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:210177)
+    at https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:49863
+    at window.fetch (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/secsdk/secsdk-lastest.umd.js:5211:40)
+    at eval (eval at evaluate (:291:30), <anonymous>:3:21)
+    at new Promise (<anonymous>)
+    at eval (eval at evaluate (:291:30), <anonymous>:2:24)
+    at UtilityScript.evaluate (<anonymous>:298:18)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2025-07-22 23:18:04,157 - INFO - Comentarios guardados en: comentarios/video_3_Usuario perdido.txt
+2025-07-22 23:18:04,160 - INFO - Comentarios guardados en: comentarios/video_5_Usuario perdido.txt
+2025-07-22 23:18:04,165 - INFO - Resultados guardados en CSV: resultados/tiktok_scraping_gatitos_20250722_231804.csv
+2025-07-22 23:18:04,168 - INFO - Scraping completado, iniciando limpieza paralela...
+2025-07-22 23:18:04,202 - INFO - Limpieza completada: video_2_Usuario perdido.txt
+2025-07-22 23:18:04,204 - INFO - Limpieza completada: video_3_Usuario perdido.txt
+2025-07-22 23:18:04,205 - INFO - Limpieza completada: video_4_Usuario perdido.txt
+2025-07-22 23:18:04,207 - INFO - Limpieza completada: video_1_Usuario perdido.txt
+2025-07-22 23:18:04,216 - INFO - Limpieza completada: video_5_Usuario perdido.txt
+2025-07-22 23:18:04,220 - INFO - Limpieza paralela completada.
+2025-07-22 23:18:04,221 - INFO - Archivos limpiados en: limpieza
+2025-07-22 23:18:04,221 - INFO - CSV generado: turismo_keywords_gatitos_20250722_231804.csv
+2025-07-22 23:18:04,222 - INFO - JSON generado: videos_content_gatitos_20250722_231804.json
+2025-07-22 23:18:04,223 - INFO - Proceso completo finalizado exitosamente
+2025-07-22 23:18:04,825 - INFO - Driver cerrado
+2025-07-22 23:29:38,129 - INFO - Iniciando scraping ultra-paralelo para 'gatitos' con 5 videos
+2025-07-22 23:29:39,647 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-22 23:29:42,348 - INFO - Driver configurado exitosamente en modo headless
+2025-07-22 23:29:42,348 - INFO - Navegando a TikTok para obtener msToken...
+2025-07-22 23:29:50,366 - INFO - Configurando API con 1 token(s)
+2025-07-22 23:30:11,260 - INFO - Buscando videos con palabra clave: gatitos
+2025-07-22 23:30:18,410 - INFO - Cargando videos con scroll optimizado...
+2025-07-22 23:30:27,925 - INFO - Encontrados 48 videos válidos
+2025-07-22 23:30:28,299 - INFO - Video 1 extraído: Usuario perdido
+2025-07-22 23:30:28,315 - INFO - Video 3 extraído: Usuario perdido
+2025-07-22 23:30:28,323 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 23:30:28,341 - INFO - Video 4 extraído: Usuario perdido
+2025-07-22 23:30:28,346 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 23:30:28,365 - INFO - Video 2 extraído: Usuario perdido
+2025-07-22 23:30:28,370 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 23:30:28,464 - INFO - Video 5 extraído: Usuario perdido
+2025-07-22 23:30:28,465 - INFO - Encontrados 5 videos, procesando comentarios con paralelización avanzada...
+2025-07-22 23:30:28,465 - INFO - Procesando lote 1/2 (3 videos)
+2025-07-22 23:30:28,566 - ERROR - Error al extraer comentarios del video 3: Page.evaluate: TypeError: Cannot read properties of undefined (reading 'call')
+    at Array.Q (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:13151)
+    at H (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:210177)
+    at https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:49863
+    at window.fetch (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/secsdk/secsdk-lastest.umd.js:5211:40)
+    at eval (eval at evaluate (:291:30), <anonymous>:3:21)
+    at new Promise (<anonymous>)
+    at eval (eval at evaluate (:291:30), <anonymous>:2:24)
+    at UtilityScript.evaluate (<anonymous>:298:18)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2025-07-22 23:30:28,576 - ERROR - Error al extraer comentarios del video 4: Page.evaluate: TypeError: Cannot read properties of undefined (reading 'call')
+    at Array.Q (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:13151)
+    at H (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:210177)
+    at https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:49863
+    at window.fetch (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/secsdk/secsdk-lastest.umd.js:5211:40)
+    at eval (eval at evaluate (:291:30), <anonymous>:3:21)
+    at new Promise (<anonymous>)
+    at eval (eval at evaluate (:291:30), <anonymous>:2:24)
+    at UtilityScript.evaluate (<anonymous>:298:18)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2025-07-22 23:30:29,316 - ERROR - Error al extraer comentarios del video 1: Page.evaluate: TypeError: Cannot read properties of undefined (reading 'call')
+    at Array.Q (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:13151)
+    at H (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:210177)
+    at https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:49863
+    at window.fetch (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/secsdk/secsdk-lastest.umd.js:5211:40)
+    at eval (eval at evaluate (:291:30), <anonymous>:3:21)
+    at new Promise (<anonymous>)
+    at eval (eval at evaluate (:291:30), <anonymous>:2:24)
+    at UtilityScript.evaluate (<anonymous>:298:18)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2025-07-22 23:30:29,319 - INFO - Comentarios guardados en: comentarios/video_1_Usuario perdido.txt
+2025-07-22 23:30:29,320 - INFO - Comentarios guardados en: comentarios/video_3_Usuario perdido.txt
+2025-07-22 23:30:29,321 - INFO - Comentarios guardados en: comentarios/video_4_Usuario perdido.txt
+2025-07-22 23:30:30,568 - INFO - Procesando lote 2/2 (2 videos)
+2025-07-22 23:30:30,599 - ERROR - Error al extraer comentarios del video 2: Page.evaluate: TypeError: Cannot read properties of undefined (reading 'call')
+    at Array.Q (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:13151)
+    at H (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:210177)
+    at https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:49863
+    at window.fetch (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/secsdk/secsdk-lastest.umd.js:5211:40)
+    at eval (eval at evaluate (:291:30), <anonymous>:3:21)
+    at new Promise (<anonymous>)
+    at eval (eval at evaluate (:291:30), <anonymous>:2:24)
+    at UtilityScript.evaluate (<anonymous>:298:18)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2025-07-22 23:30:30,614 - ERROR - Error al extraer comentarios del video 5: Page.evaluate: TypeError: Cannot read properties of undefined (reading 'call')
+    at Array.Q (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:13151)
+    at H (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:210177)
+    at https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/webmssdk/1.0.0.314/webmssdk.js:1:49863
+    at window.fetch (https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/secsdk/secsdk-lastest.umd.js:5211:40)
+    at eval (eval at evaluate (:291:30), <anonymous>:3:21)
+    at new Promise (<anonymous>)
+    at eval (eval at evaluate (:291:30), <anonymous>:2:24)
+    at UtilityScript.evaluate (<anonymous>:298:18)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2025-07-22 23:30:30,616 - INFO - Comentarios guardados en: comentarios/video_2_Usuario perdido.txt
+2025-07-22 23:30:30,617 - INFO - Comentarios guardados en: comentarios/video_5_Usuario perdido.txt
+2025-07-22 23:30:30,619 - INFO - Resultados guardados en CSV: resultados/tiktok_scraping_gatitos_20250722_233030.csv
+2025-07-22 23:30:30,619 - INFO - Scraping completado, iniciando limpieza paralela...
+2025-07-22 23:30:30,645 - INFO - Limpieza completada: video_3_Usuario perdido.txt
+2025-07-22 23:30:30,646 - INFO - Limpieza completada: video_2_Usuario perdido.txt
+2025-07-22 23:30:30,646 - INFO - Limpieza completada: video_4_Usuario perdido.txt
+2025-07-22 23:30:30,646 - INFO - Limpieza completada: video_1_Usuario perdido.txt
+2025-07-22 23:30:30,660 - INFO - Limpieza completada: video_5_Usuario perdido.txt
+2025-07-22 23:30:30,663 - INFO - Limpieza paralela completada.
+2025-07-22 23:30:30,663 - INFO - Archivos limpiados en: limpieza
+2025-07-22 23:30:30,663 - INFO - CSV generado: turismo_keywords_gatitos_20250722_233030.csv
+2025-07-22 23:30:30,663 - INFO - JSON generado: videos_content_gatitos_20250722_233030.json
+2025-07-22 23:30:30,664 - INFO - Proceso completo finalizado exitosamente
+2025-07-22 23:30:30,930 - INFO - Driver cerrado
+2025-07-22 23:31:02,362 - INFO - Iniciando scraping ultra-paralelo para 'turismo' con 5 videos
+2025-07-22 23:31:04,248 - INFO - patching driver executable C:\Users\colla\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-07-22 23:31:06,839 - INFO - Driver configurado exitosamente en modo headless
+2025-07-22 23:31:16,484 - INFO - API de TikTok configurada con 1 sesiones paralelas
+2025-07-22 23:31:16,488 - INFO - Buscando videos con palabra clave: turismo
+2025-07-22 23:31:25,086 - INFO - Cargando videos con scroll optimizado...
+2025-07-22 23:31:35,081 - INFO - Encontrados 24 videos válidos
+2025-07-22 23:31:35,875 - INFO - Video 1 extraído: Usuario perdido
+2025-07-22 23:31:35,904 - INFO - Video 2 extraído: Usuario perdido
+2025-07-22 23:31:35,919 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 23:31:35,943 - INFO - Video 3 extraído: Usuario perdido
+2025-07-22 23:31:35,956 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 23:31:36,000 - INFO - Video 4 extraído: Usuario perdido
+2025-07-22 23:31:36,008 - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-07-22 23:31:36,230 - INFO - Video 5 extraído: Usuario perdido
+2025-07-22 23:31:36,232 - INFO - Encontrados 5 videos, procesando comentarios con paralelización avanzada...
+2025-07-22 23:31:36,232 - INFO - Procesando lote 1/2 (3 videos)
+2025-07-22 23:31:39,597 - INFO - Comentarios guardados en: comentarios/video_1_Usuario perdido.txt
+2025-07-22 23:31:39,598 - INFO - Comentarios guardados en: comentarios/video_2_Usuario perdido.txt
+2025-07-22 23:31:39,599 - INFO - Comentarios guardados en: comentarios/video_3_Usuario perdido.txt
+2025-07-22 23:31:41,290 - INFO - Procesando lote 2/2 (2 videos)
+2025-07-22 23:31:43,958 - INFO - Comentarios guardados en: comentarios/video_4_Usuario perdido.txt
+2025-07-22 23:31:43,959 - INFO - Comentarios guardados en: comentarios/video_5_Usuario perdido.txt
+2025-07-22 23:31:43,961 - INFO - Resultados guardados en CSV: resultados/tiktok_scraping_turismo_20250722_233143.csv
+2025-07-22 23:31:43,961 - INFO - Scraping completado, iniciando limpieza paralela...
+2025-07-22 23:31:43,997 - INFO - Limpieza completada: video_2_Usuario perdido.txt
+2025-07-22 23:31:43,998 - INFO - Limpieza completada: video_3_Usuario perdido.txt
+2025-07-22 23:31:43,999 - INFO - Limpieza completada: video_1_Usuario perdido.txt
+2025-07-22 23:31:43,999 - INFO - Limpieza completada: video_4_Usuario perdido.txt
+2025-07-22 23:31:44,013 - INFO - Limpieza completada: video_5_Usuario perdido.txt
+2025-07-22 23:31:44,015 - INFO - Limpieza paralela completada.
+2025-07-22 23:31:44,016 - INFO - Archivos limpiados en: limpieza
+2025-07-22 23:31:44,017 - INFO - CSV generado: turismo_keywords_turismo_20250722_233143.csv
+2025-07-22 23:31:44,017 - INFO - JSON generado: videos_content_turismo_20250722_233143.json
+2025-07-22 23:31:44,018 - INFO - Proceso completo finalizado exitosamente
+2025-07-22 23:31:44,252 - INFO - Driver cerrado

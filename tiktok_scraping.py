@@ -145,8 +145,7 @@ class TikTokScraper:
             
             # Múltiples tokens para distribuir la carga
             ms_tokens = [
-                "bfAPdiUYH7YeBS9binkc2hmtymBjQj38mbno2JXG-Xsk5s4zq_WVznCiBRLXtej1qOnNZpDz4xbAgL5jQfhZ_EoxdOGZZgZ1T0lvpLLROA6xv6I6iRLVkaNfh79tWKf87-7PS7mQoaaFjvFkFG5A73X3Hw==",
-                "bfAPdiUYH7YeBS9binkc2hmtymBjQj38mbno2JXG-Xsk5s4zq_WVznCiBRLXtej1qOnNZpDz4xbAgL5jQfhZ_EoxdOGZZgZ1T0lvpLLROA6xv6I6iRLVkaNfh79tWKf87-7PS7mQoaaFjvFkFG5A73X3Hw=="
+                "spfa3_YeetdmS6dfCVsK1cSXa35vUe-oIvAg_RFkd9iYKcQBhyA8GehFJiI1gTpdXrWYjVoZhvLiMJlHKdKnzQLHZQQxZllk2D3u3T9JpFl5ouUJPqLqzkCYDEuSbG8TsftWmRbtx9ChUIAUNRApDMhF51M="
             ]
             
             await self.tiktok_api.create_sessions(
