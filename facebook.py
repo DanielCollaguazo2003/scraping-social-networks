@@ -321,6 +321,34 @@ async def scroll_hasta_cargar_nuevas_publicaciones(page, publicaciones_actuales)
     
     return await nuevas_publicaciones.count()
 
+def generar_json_resultados(results, query):
+    """Genera el archivo JSON con los resultados del scraping"""
+    try:
+        # Formatear los resultados según el formato solicitado
+        json_data = []
+        
+        for result in results:
+            json_entry = {
+                "url": result.get("url", ""),
+                "text": result.get("text", "")
+            }
+            json_data.append(json_entry)
+        
+        # Crear nombre del archivo con timestamp
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"facebook_scraping_{query.replace(' ', '_')}_{timestamp}.json"
+        
+        # Guardar el archivo JSON
+        with open(filename, 'w', encoding='utf-8') as f:
+            json.dump(json_data, f, ensure_ascii=False, indent=2)
+        
+        logger.info(f"JSON generado: {filename} con {len(json_data)} publicaciones")
+        return filename
+        
+    except Exception as e:
+        logger.error(f"Error al generar JSON: {str(e)}")
+        return None
+
 class FacebookScraper:
     def __init__(self):
         self.logger = logger
@@ -471,6 +499,16 @@ class FacebookScraper:
                     indice_actual += 1
                 
                 await browser.close()
+                
+            # Generar el archivo JSON con los resultados
+            if results:
+                json_filename = generar_json_resultados(results, query)
+                if json_filename:
+                    self.logger.info(f"Scraping completado. Resultados guardados en: {json_filename}")
+                else:
+                    self.logger.error("Error al generar el archivo JSON")
+            else:
+                self.logger.warning("No se encontraron resultados para procesar")
                 
             return results
                 

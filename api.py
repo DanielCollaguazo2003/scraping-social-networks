@@ -17,8 +17,41 @@ from x import scrape
 from tiktok_scraping import TikTokScraper
 from facebook import scrape_facebook  # Importar la función de Facebook
 
+from pydantic import BaseModel
+from typing import Optional, Dict
+
+from typing import Optional, Dict, Any
+
+class PostData(BaseModel):
+    platform: str
+    url: str
+    content: Optional[str] = None
+    user: Optional[str] = None
+    created_at: Optional[str] = None
+    retweet_count: Optional[int] = 0
+    favorite_count: Optional[int] = 0
+    sentiment: Optional[Dict[str, Any]] = None  # Lo dejas flexible para evitar error
+    error: Optional[str] = None
+
+
+
 load_dotenv()
 app = FastAPI(title="Multi-Platform Social Media Search API", version="3.0.0")
+
+from fastapi.middleware.cors import CORSMiddleware
+
+origins = [
+    "http://localhost:4200",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # WebSocket Manager
@@ -157,67 +190,91 @@ def calculate_sentiment_summary(results: List[PostData]) -> Dict[str, Any]:
         "dominant_sentiment": max(sentiment_counts, key=sentiment_counts.get)
     }
 
+def safe_parse_date(raw_date: str) -> Optional[str]:
+    """Convierte fecha de Twitter a ISO 8601, si es posible"""
+    try:
+        # Ejemplo: "Tue Jul 22 20:34:36 +0000 2025"
+        dt = datetime.strptime(raw_date, "%a %b %d %H:%M:%S %z %Y")
+        return dt.isoformat()
+    except Exception as e:
+        print(f"[WARN] Error al convertir fecha: {e}")
+        return None
+
 async def scrape_twitter_data(query: str, max_results: int, progress_callback, analyze_sentiment: bool = True):
-    """Scraping de Twitter simplificado"""
     try:
         await progress_callback("Iniciando Twitter", 0, 100, "twitter")
-        
-        # Usar el módulo existente de scraping
+
         results = scrape(query, max_results, max_workers=3)
-        
+
         post_data = []
         for result in results:
-            sentiment = None
-            if analyze_sentiment and result.get("text"):
-                sentiment = AnalizadorTexto.analizar_texto_completo(result["text"])
-            
-            post_data.append(PostData(
-                platform="twitter",
-                url=result.get("url", ""),
-                content=result.get("text"),
-                user=result.get("user"),
-                created_at=result.get("created_at"),
-                retweet_count=result.get("retweet_count", 0),
-                favorite_count=result.get("favorite_count", 0),
-                sentiment=sentiment,
-                error=result.get("error")
-            ))
-        
+            try:
+                content = result.get("text") or ""
+                sentiment = None
+                if analyze_sentiment and content.strip():
+                    analisis_completo = AnalizadorTexto().analizar_texto_completo(content)
+                    sentiment = analisis_completo.get("sentimiento")
+
+                post = PostData(
+                    platform="twitter",
+                    url=result.get("url", ""),
+                    content=content,
+                    user=result.get("user") or None,
+                    created_at=safe_parse_date(result.get("created_at", "")),
+                    retweet_count=result.get("retweet_count", 0) or 0,
+                    favorite_count=result.get("favorite_count", 0) or 0,
+                    sentiment=sentiment,
+                    error=result.get("error")
+                )
+                post_data.append(post)
+
+            except Exception as e:
+                print(f"[ERROR] Falló el procesamiento de un resultado: {e}")
+
         await progress_callback("Twitter completado", 100, 100, "twitter")
+        print(f"[DEBUG] Twitter retornó {len(post_data)} resultados")
         return post_data
-        
+
     except Exception as e:
         await progress_callback("Error en Twitter", 0, 100, "twitter")
         raise
 
 async def scrape_tiktok_data(query: str, max_results: int, progress_callback, analyze_sentiment: bool = True):
-    """Scraping de TikTok simplificado"""
+    """Scraping de TikTok simplificado con análisis de sentimiento corregido"""
     try:
         await progress_callback("Iniciando TikTok", 0, 100, "tiktok")
-        
+
         tiktok_scraper = TikTokScraper()
         tiktok_scraper.setup_driver()
         await tiktok_scraper.setup_tiktok_api()
-        
+
         await progress_callback("Buscando videos", 30, 100, "tiktok")
         videos_data = tiktok_scraper.search_videos(query, max_results)
-        
+
         if not videos_data:
             await progress_callback("Sin videos", 100, 100, "tiktok")
             return []
-        
+
         await progress_callback("Extrayendo comentarios", 60, 100, "tiktok")
         all_post_data = []
-        
+
+        analizador = AnalizadorTexto()  # ✅ Instancia del analizador
+
         for video_data in videos_data:
             try:
                 comments = await tiktok_scraper.extract_comments_with_api(video_data['url'], video_data['numero'])
-                
+
                 # Post del video
                 sentiment = None
                 if analyze_sentiment and video_data.get('descripcion'):
-                    sentiment = AnalizadorTexto.analizar_texto_completo(video_data['descripcion'])
-                
+                    resultado = analizador.analizar_texto_completo(video_data['descripcion'])
+                    sentimiento_raw = resultado.get("sentimiento")
+                    sentiment = SentimentAnalysis(
+                        label=sentimiento_raw["label"],
+                        score=sentimiento_raw["score"],
+                        confidence=sentimiento_raw["confidence"]
+                    )
+
                 video_post = PostData(
                     platform="tiktok",
                     url=video_data['url'],
@@ -228,13 +285,19 @@ async def scrape_tiktok_data(query: str, max_results: int, progress_callback, an
                     comments_count=len(comments)
                 )
                 all_post_data.append(video_post)
-                
+
                 # Posts de comentarios
                 for comment in comments:
                     comment_sentiment = None
                     if analyze_sentiment and comment.get('texto'):
-                        comment_sentiment = AnalizadorTexto.analizar_texto_completo(comment['texto'])
-                    
+                        resultado = analizador.analizar_texto_completo(comment['texto'])
+                        sentimiento_raw = resultado.get("sentimiento")
+                        comment_sentiment = SentimentAnalysis(
+                            label=sentimiento_raw["label"],
+                            score=sentimiento_raw["score"],
+                            confidence=sentimiento_raw["confidence"]
+                        )
+
                     comment_post = PostData(
                         platform="tiktok",
                         url=f"{video_data['url']}#comment_{comment['numero']}",
@@ -245,15 +308,16 @@ async def scrape_tiktok_data(query: str, max_results: int, progress_callback, an
                         likes=comment.get('likes', 0)
                     )
                     all_post_data.append(comment_post)
-                
+
             except Exception as e:
-                print(f"Error procesando video: {e}")
+                print(f"[ERROR] Error procesando video: {e}")
                 continue
-        
+
         tiktok_scraper.close_driver()
         await progress_callback("TikTok completado", 100, 100, "tiktok")
+        print(f"[DEBUG] TikTok retornó {len(all_post_data)} resultados")
         return all_post_data
-        
+
     except Exception as e:
         await progress_callback("Error en TikTok", 0, 100, "tiktok")
         raise
@@ -263,34 +327,58 @@ async def scrape_facebook_data(query: str, max_results: int, progress_callback, 
     try:
         await progress_callback("Iniciando Facebook", 0, 100, "facebook")
         
-        # Usar la función de scraping de Facebook importada
         results = await scrape_facebook(query, max_results, max_workers=3)
 
         post_data = []
+
+        if not results:
+            await progress_callback("Sin resultados de Facebook", 100, 100, "facebook")
+            return []
+
+        analizador = AnalizadorTexto()  # ✅ instancia del analizador de texto
+
         for result in results:
-            sentiment = None
-            if analyze_sentiment and result.get("text"):
-                sentiment = AnalizadorTexto.analizar_texto_completo(result["text"])
-            
-            post_data.append(PostData(
-                platform="facebook",
-                url=result.get("url", ""),
-                content=result.get("text"),
-                user=result.get("user"),
-                created_at=result.get("created_at"),
-                retweet_count=result.get("retweet_count", 0),
-                favorite_count=result.get("favorite_count", 0),
-                comments_count=result.get("comment_count", 0),
-                sentiment=sentiment,
-                error=result.get("error")
-            ))
-        
+            try:
+                sentiment = None
+                text = result.get("text", "")
+                
+                if analyze_sentiment and text:
+                    resultado = analizador.analizar_texto_completo(text)
+                    sentimiento_raw = resultado.get("sentimiento")
+                    sentiment = SentimentAnalysis(
+                        label=sentimiento_raw["label"],
+                        score=sentimiento_raw["score"],
+                        confidence=sentimiento_raw["confidence"]
+                    )
+
+                
+                post = PostData(
+                    platform="facebook",
+                    url=result.get("url", ""),
+                    content=text,
+                    user=result.get("user", "desconocido"),
+                    created_at=result.get("created_at", datetime.now().isoformat()),
+                    retweet_count=result.get("retweet_count", 0),
+                    favorite_count=result.get("favorite_count", 0),
+                    comments_count=result.get("comment_count", 0),
+                    sentiment=sentiment,
+                    error=result.get("error", None)
+                )
+                post_data.append(post)
+
+            except Exception as post_error:
+                print(f"[ERROR] Fallo procesando un post de Facebook: {post_error}")
+                continue
+
         await progress_callback("Facebook completado", 100, 100, "facebook")
+        print(f"[DEBUG] Facebook retornó {len(post_data)} resultados")
         return post_data
-        
+
     except Exception as e:
         await progress_callback("Error en Facebook", 0, 100, "facebook")
-        raise
+        print(f"[ERROR] Scraping general de Facebook falló: {e}")
+        return []
+
 
 async def run_multi_platform_scraping(task_id: str, query: str, max_results: int, platforms: List[str], analyze_sentiment: bool = True):
     """Ejecuta scraping en múltiples plataformas"""
@@ -311,22 +399,28 @@ async def run_multi_platform_scraping(task_id: str, query: str, max_results: int
         
         # Ejecutar scraping en paralelo
         scraping_tasks = []
+        platform_names = []
+        
         if "twitter" in platforms:
-            scraping_tasks.append(scrape_twitter_data(query, max_results, progress_callback, analyze_sentiment))
+            scraping_tasks.append(scrape_twitter_data(query, 3, progress_callback, analyze_sentiment))
+            platform_names.append("twitter")
         if "tiktok" in platforms:
-            scraping_tasks.append(scrape_tiktok_data(query, max_results, progress_callback, analyze_sentiment))
+            scraping_tasks.append(scrape_tiktok_data(query, 3, progress_callback, analyze_sentiment))
+            platform_names.append("tiktok")
         if "facebook" in platforms:
-            scraping_tasks.append(scrape_facebook_data(query, max_results, progress_callback, analyze_sentiment))
+            scraping_tasks.append(scrape_facebook_data(query, 3, progress_callback, analyze_sentiment))
+            platform_names.append("facebook")
         
         results = await asyncio.gather(*scraping_tasks, return_exceptions=True)
         
-        # Procesar resultados
+        # Procesar resultados - ARREGLADO para no perder datos
         all_results = []
         platform_results = {}
         
         for i, result in enumerate(results):
-            platform = platforms[i]
+            platform = platform_names[i]
             if isinstance(result, Exception):
+                print(f"Error en {platform}: {str(result)}")  # Debug
                 platform_results[platform] = []
                 # Enviar error por WebSocket
                 await manager.send_progress(task_id, {
@@ -337,18 +431,20 @@ async def run_multi_platform_scraping(task_id: str, query: str, max_results: int
                     "timestamp": datetime.now().isoformat()
                 })
             else:
-                platform_results[platform] = result
-                all_results.extend(result)
+                platform_results[platform] = result or []  # Asegurar que no sea None
+                if result:
+                    print(f"[DEBUG] Agregando {len(result)} resultados de {platform}")
+                    all_results.extend(result)
                 # Enviar completado por WebSocket
                 await manager.send_progress(task_id, {
                     "type": "platform_completed",
                     "task_id": task_id,
                     "platform": platform,
-                    "results_count": len(result),
+                    "results_count": len(result or []),
                     "timestamp": datetime.now().isoformat()
                 })
         
-        # Actualizar tarea
+        # Actualizar tarea - SIEMPRE, incluso si hay errores parciales
         sentiment_summary = calculate_sentiment_summary(all_results)
         
         tasks_storage[task_id].status = TaskStatus.COMPLETED
@@ -368,6 +464,7 @@ async def run_multi_platform_scraping(task_id: str, query: str, max_results: int
         })
         
     except Exception as e:
+        print(f"Error general en scraping: {str(e)}")  # Debug
         tasks_storage[task_id].status = TaskStatus.FAILED
         tasks_storage[task_id].error = str(e)
         tasks_storage[task_id].completed_at = datetime.now()
@@ -379,7 +476,7 @@ async def run_multi_platform_scraping(task_id: str, query: str, max_results: int
             "error": str(e),
             "timestamp": datetime.now().isoformat()
         })
-
+        
 async def generate_ai_report(task_data: TaskInfo, report_type: str, language: str = "es"):
     """Genera reporte usando OpenAI API"""
     if not task_data.results:
@@ -500,6 +597,16 @@ async def get_progress(task_id: str):
     
     return tasks_storage[task_id]
 
+def serialize_post(post: PostData) -> dict:
+    """Convierte un objeto PostData en un diccionario serializable."""
+    if post is None:
+        return {}
+    data = post.dict()
+    # Si el campo 'sentiment' es un objeto, conviértelo a dict
+    if data.get("sentiment") and hasattr(data["sentiment"], "dict"):
+        data["sentiment"] = data["sentiment"].dict()
+    return data
+
 @app.get("/results/{task_id}")
 async def get_results(task_id: str):
     """Obtener resultados de una tarea"""
@@ -508,21 +615,41 @@ async def get_results(task_id: str):
     
     task_info = tasks_storage[task_id]
     
-    if task_info.status != TaskStatus.COMPLETED:
-        raise HTTPException(status_code=400, detail="La tarea no está completada")
-    
-    return {
+    # Simplificar la respuesta y mostrar solo lo importante
+    response_data = {
         "task_id": task_info.task_id,
+        "status": task_info.status.value,
         "query": task_info.query,
         "platforms": task_info.platforms,
         "total_results": task_info.total,
-        "results": task_info.results,
-        "platform_results": task_info.platform_results,
-        "sentiment_summary": task_info.sentiment_summary,
         "created_at": task_info.created_at,
         "completed_at": task_info.completed_at
     }
+    
+    # Solo incluir resultados si la tarea está completada
+    if task_info.status == TaskStatus.COMPLETED:
+        response_data.update({
+            "results": [serialize_post(result) for result in task_info.results] if task_info.results else [],
+            "platform_results": {
+                platform: [serialize_post(result) for result in results] 
+                for platform, results in (task_info.platform_results or {}).items()
+            },
+            "sentiment_summary": task_info.sentiment_summary or {}
+        })
+    
+    # Si hay error, mostrarlo
+    if task_info.error:
+        response_data["error"] = task_info.error
+    
+    # Solo mostrar progreso si la tarea no está completada
+    if task_info.status != TaskStatus.COMPLETED:
+        response_data["progress"] = task_info.progress
+    
+    return response_data
 
+# También arregla esta parte en run_multi_platform_scraping:
+
+        
 @app.post("/report")
 async def generate_report(request: ReportRequest):
     """Generar reportes con IA"""

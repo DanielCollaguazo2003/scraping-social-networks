@@ -145,7 +145,7 @@ class TikTokScraper:
             
             # Múltiples tokens para distribuir la carga
             ms_tokens = [
-                "spfa3_YeetdmS6dfCVsK1cSXa35vUe-oIvAg_RFkd9iYKcQBhyA8GehFJiI1gTpdXrWYjVoZhvLiMJlHKdKnzQLHZQQxZllk2D3u3T9JpFl5ouUJPqLqzkCYDEuSbG8TsftWmRbtx9ChUIAUNRApDMhF51M="
+                "e1zeZ9T8jeV1yRc8RHAsg938GawFqqB6RTB6_j8GV1WRLQz_BEbBjmZS2ogGRrLJdAk0OtMmS4FTG42uvJqN2XvBO-XeAHMlIWr5m19eg_xDMbHpu1vKjq79VhDzYunEFqxt8QmnVIZT3mH2ilpHwfn2Hhc="
             ]
             
             await self.tiktok_api.create_sessions(
@@ -373,7 +373,7 @@ class TikTokScraper:
             
             async with semaphore:
                 comment_count = 0
-                async for comment in video.comments(count=150):  # Aumentado límite
+                async for comment in video.comments(count=10):  # Aumentado límite
                     comment_count += 1
                     comments.append({
                         'numero': comment_count,
