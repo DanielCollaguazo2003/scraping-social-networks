@@ -53,7 +53,7 @@ client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # WebSocket Manager
 class ConnectionManager:
-    def _init_(self):
+    def __init__(self):
         self.active_connections: Dict[str, WebSocket] = {}
 
     async def connect(self, websocket: WebSocket, task_id: str):
@@ -137,7 +137,7 @@ class TaskInfo(BaseModel):
 tasks_storage: Dict[str, TaskInfo] = {}
 
 class ProgressTracker:
-    def _init_(self, task_id: str):
+    def __init__(self, task_id: str):
         self.task_id = task_id
         self.platform_progress = {}
     
@@ -601,13 +601,15 @@ A partir de los siguientes textos extraídos de redes sociales, responde *exclus
         "usuario": "",
         "calificacion": 1-5,
         "fecha": "",
-        "comentario": ""
+        "comentario": "",
+        "reporte": ""
       }
     ]
   }
 }
 
-Devuelve los campos que apliquen según los textos. Si no hay datos en una categoría, deja "reporte": "Sin datos relevantes encontrados" y el arreglo correspondiente vacío ([]), en caso de haber resultados coloca el repote con datos reales, del analisis de sentimientos con metricas y eso.
+Devuelve los campos que apliquen según los textos. Si no hay datos en una categoría, deja "reporte": "Sin datos relevantes encontrados", y el arreglo correspondiente vacío ([]), eso por cada categoria, en cambio si hay datos, coloca el reporte con datos reales del analisis de sentimientos con metricas y eso, si te paso con las metricas, son algo así label=<SentimentLabel.POSITIVE: 'positive'>, score=0.5732721090316772, confidence=0.5733).
+ademas en las opiniones, quiero que pongas el sentimiento analizado del comentario que muuestras, junto con el reporte del analisis de sentimientos, esto por cada opinion que pones en opiniones, como esta la estructura
 
 Aquí están los textos:
 ---

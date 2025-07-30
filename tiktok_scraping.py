@@ -80,7 +80,7 @@ class TikTokScraper:
                 logging.StreamHandler()
             ]
         )
-        self.logger = logging.getLogger(_name_)
+        self.logger = logging.getLogger(__name__)
     
     def setup_directories(self):
         """Crea los directorios necesarios"""
@@ -145,7 +145,7 @@ class TikTokScraper:
             
             # Múltiples tokens para distribuir la carga
             ms_tokens = [   
-                "Lp_HVYaW4K0GBzUEtwMeJQzaQJ_mZN2f5OcIuu96086xLWMOP57VFUoMWPtBY_UHQot9OXQjLreedOx3O5wql9GXOCjBevEmYXKIGq4b6KDj_Lm0JqDEvZylziKYDo_DmOyb5afug0mqIJIsUXv65J2Vv6c="
+                "AfiQE6u-RF-Gqs1L4eq0Sx-fijozjvLWoLYvLUOo_8Mew0ZBQNw-086L08NAJLX69LvWAcAhKFDEhfsFS4NW0pHjTHYgfiktOtHa_woivwijIWniL0n7BvQWK6ttnAar71pA7KxU6tBwNfpQ74R0d770LJw="
             ]
             
             await self.tiktok_api.create_sessions(
