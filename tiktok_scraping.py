@@ -25,7 +25,7 @@ import multiprocessing
 from TikTokApi import TikTokApi
 
 class TikTokScraper:
-    def __init__(self):
+    def _init_(self):
         self.driver = None
         self.tiktok_api = None
         self.setup_logging()
@@ -80,7 +80,7 @@ class TikTokScraper:
                 logging.StreamHandler()
             ]
         )
-        self.logger = logging.getLogger(__name__)
+        self.logger = logging.getLogger(_name_)
     
     def setup_directories(self):
         """Crea los directorios necesarios"""
@@ -144,8 +144,8 @@ class TikTokScraper:
             self.tiktok_api = TikTokApi()
             
             # Múltiples tokens para distribuir la carga
-            ms_tokens = [
-                "e1zeZ9T8jeV1yRc8RHAsg938GawFqqB6RTB6_j8GV1WRLQz_BEbBjmZS2ogGRrLJdAk0OtMmS4FTG42uvJqN2XvBO-XeAHMlIWr5m19eg_xDMbHpu1vKjq79VhDzYunEFqxt8QmnVIZT3mH2ilpHwfn2Hhc="
+            ms_tokens = [   
+                "Lp_HVYaW4K0GBzUEtwMeJQzaQJ_mZN2f5OcIuu96086xLWMOP57VFUoMWPtBY_UHQot9OXQjLreedOx3O5wql9GXOCjBevEmYXKIGq4b6KDj_Lm0JqDEvZylziKYDo_DmOyb5afug0mqIJIsUXv65J2Vv6c="
             ]
             
             await self.tiktok_api.create_sessions(
@@ -383,7 +383,7 @@ class TikTokScraper:
                         'timestamp': datetime.now().isoformat()
                     })
                     
-                    if comment_count >= 150:
+                    if comment_count >= 10:
                         break
                 
                 self.logger.info(f"📝 Extraídos {len(comments)} comentarios del video {video_num}")
@@ -426,7 +426,7 @@ class TikTokScraper:
         """Guarda los resultados en un archivo CSV"""
         try:
             with self.lock:
-                filename = f"resultados/tiktok_scraping_{keyword}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+                filename = f"resultados/tiktok_scraping_{keyword}{datetime.now().strftime('%Y%m%d%H%M%S')}.csv"
                 
                 with open(filename, 'w', newline='', encoding='utf-8') as csvfile:
                     fieldnames = ['numero', 'usuario', 'descripcion', 'url', 'total_comentarios']
@@ -508,8 +508,8 @@ class TikTokScraper:
         carpeta_origen = "comentarios"
         carpeta_destino = "limpieza"
         
-        csv_filename = f"turismo_keywords_{keyword}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
-        json_filename = f"videos_content_{keyword}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        csv_filename = f"turismo_keywords_{keyword}{datetime.now().strftime('%Y%m%d%H%M%S')}.csv"
+        json_filename = f"videos_content_{keyword}{datetime.now().strftime('%Y%m%d%H%M%S')}.json"
         
         videos_json_data = []
         

@@ -11,7 +11,7 @@ import json
 import logging
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(_name_)
 
 load_dotenv()
 
@@ -241,7 +241,7 @@ def scrape(query: str, max_results: int = 15, max_workers: int = 15):
         go_to_explore(driver)
         search_keyword(driver, query)
         
-        tweet_links = get_tweet_links(driver, max_results, extra_scrolls=20)
+        tweet_links = get_tweet_links(driver, max_results, extra_scrolls=5)
         
         if not tweet_links:
             logger.warning("No se encontraron enlaces de tweets")
@@ -282,7 +282,7 @@ def main():
         go_to_explore(driver)
         search_keyword(driver, search_term)
         
-        tweet_links = get_tweet_links(driver, max_tweets, extra_scrolls=20)
+        tweet_links = get_tweet_links(driver, max_tweets, extra_scrolls=5)
         
         if not tweet_links:
             logger.warning("No se encontraron enlaces de tweets")

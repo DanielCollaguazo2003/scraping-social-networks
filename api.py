@@ -40,23 +40,20 @@ app = FastAPI(title="Multi-Platform Social Media Search API", version="3.0.0")
 
 from fastapi.middleware.cors import CORSMiddleware
 
-origins = [
-    "http://localhost:4200",
-]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],  # o limitar a localhost
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # WebSocket Manager
 class ConnectionManager:
-    def __init__(self):
+    def _init_(self):
         self.active_connections: Dict[str, WebSocket] = {}
 
     async def connect(self, websocket: WebSocket, task_id: str):
@@ -134,12 +131,13 @@ class TaskInfo(BaseModel):
     completed_at: Optional[datetime] = None
     error: Optional[str] = None
     sentiment_summary: Optional[Dict[str, Any]] = None
+    gpt_report: Optional[str] = None 
 
 # Storage
 tasks_storage: Dict[str, TaskInfo] = {}
 
 class ProgressTracker:
-    def __init__(self, task_id: str):
+    def _init_(self, task_id: str):
         self.task_id = task_id
         self.platform_progress = {}
     
@@ -454,14 +452,21 @@ async def run_multi_platform_scraping(task_id: str, query: str, max_results: int
         tasks_storage[task_id].sentiment_summary = sentiment_summary
         tasks_storage[task_id].completed_at = datetime.now()
         
-        # Enviar mensaje de finalización
+        # Generar el reporte antes de marcar como completado
+        reporte = await generar_reporte_chatgpt(tasks_storage[task_id])
+        tasks_storage[task_id].gpt_report = reporte
+
+        # Enviar mensaje de finalización (ahora sí, con todo listo)
         await manager.send_progress(task_id, {
             "type": "task_completed",
             "task_id": task_id,
             "total_results": len(all_results),
             "sentiment_summary": sentiment_summary,
+            "gpt_report": reporte,  # si quieres enviarlo también por socket
             "timestamp": datetime.now().isoformat()
         })
+
+        
         
     except Exception as e:
         print(f"Error general en scraping: {str(e)}")  # Debug
@@ -477,63 +482,160 @@ async def run_multi_platform_scraping(task_id: str, query: str, max_results: int
             "timestamp": datetime.now().isoformat()
         })
         
-async def generate_ai_report(task_data: TaskInfo, report_type: str, language: str = "es"):
-    """Genera reporte usando OpenAI API"""
-    if not task_data.results:
-        raise HTTPException(status_code=400, detail="No hay datos para generar reporte")
-    
-    posts_sample = task_data.results[:10]
-    
-    prompt = f"""
-    Analiza los datos de redes sociales sobre "{task_data.query}" en {language}:
-    
-    Plataformas: {', '.join(task_data.platforms)}
-    Total posts: {len(task_data.results)}
-    Sentimientos: {json.dumps(task_data.sentiment_summary, indent=2)}
-    
-    Muestra de posts:
-    {json.dumps([{"platform": p.platform, "content": p.content, "sentiment": p.sentiment.label if p.sentiment else None} for p in posts_sample], indent=2)}
-    
-    Genera un {report_type} en formato JSON con:
-    - "summary": resumen ejecutivo
-    - "key_insights": lista de insights principales
-    - "recommendations": lista de recomendaciones
-    """
-    
-    try:
-        response = await openai.ChatCompletion.acreate(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "Eres un experto analista de redes sociales."},
-                {"role": "user", "content": prompt}
-            ],
-            max_tokens=1500,
-            temperature=0.7
-        )
         
-        ai_response = response.choices[0].message.content
+def preparar_datos_para_chatgpt(task_info: TaskInfo) -> str:
+    """Genera un reporte completo para ChatGPT a partir de la información de la tarea"""
+    lines = []
+
+    # Información general de la tarea
+    lines.append(f"🧾 Reporte de Tarea: {task_info.task_id}")
+    lines.append(f"🔍 Consulta: {task_info.query}")
+    lines.append(f"📡 Plataformas: {', '.join(task_info.platforms)}")
+    lines.append(f"📊 Total de resultados: {task_info.results}")
+    lines.append(f"📅 Creada: {task_info.created_at}")
+    lines.append(f"✅ Completada: {task_info.completed_at}")
+    lines.append(f"📌 Estado: {task_info.status.value}")
+
+    # Resumen de sentimientos
+    if task_info.sentiment_summary:
+        lines.append("\n📈 Resumen de Sentimientos:")
+        for k, v in task_info.sentiment_summary.items():
+            lines.append(f"  - {k.capitalize()}: {v}")
+    
+    # Resultados por plataforma
+    if task_info.platform_results:
+        lines.append("\n🗂 Resultados por Plataforma:")
+        for platform, posts in task_info.platform_results.items():
+            lines.append(f"\n🔹 {platform}:")
+            for post in posts:
+                sentiment = post.sentiment.label if post.sentiment else "N/A"
+                lines.append(f"  • {post.content or ''} (Sentimiento: {sentiment})")
+
+    elif task_info.results:
+        # Resultados sin distinción por plataforma
+        lines.append("\n📝 Resultados:")
+        for post in task_info.results:
+            sentiment = post.sentiment.label if post.sentiment else "N/A"
+            lines.append(f"  • [{post.platform}] {post.content or ''} (Sentimiento: {sentiment})")
+
+    return "\n".join(lines)
+
+
+
+PROMPT_BASE = """
+Actúa como un analista de datos turísticos.
+
+A partir de los siguientes textos extraídos de redes sociales, responde *exclusivamente* en formato JSON (no incluyas explicaciones adicionales ni texto fuera del JSON). El JSON debe incluir las siguientes categorías, cada una con un reporte (resumen de análisis) y los datos estructurados correspondientes:
+
+{
+  "eventos_turisticos": {
+    "reporte": "", 
+    "eventos": [
+      {
+        "nombre": "",
+        "fecha": "",
+        "ubicacion": "",
+        "descripcion": ""
+      }
+    ]
+  },
+  "alertas": {
+    "reporte": "", 
+    "alertas": [
+      {
+        "titulo": "",
+        "fecha": "",
+        "ubicacion": "",
+        "nivel": "Alta | Media | Baja",
+        "icono": "",
+        "explicacion": ""
+      }
+    ]
+  },
+  "precios": {
+    "reporte": "",
+    "comida": "",
+    "hospedaje": "",
+    "transporte": "",
+    "actividades": ""
+  },
+  "gastronomia": {
+    "reporte": "",
+    "platos": [
+      {
+        "nombre": "",
+        "descripcion": ""
+      }
+    ]
+  },
+  "seguridad": {
+    "reporte": "",
+    "incidentes": [
+      {
+        "titulo": "",
+        "fecha": "",
+        "ubicacion": "",
+        "nivel": "Alto | Medio | Bajo",
+        "icono": "",
+        "reporte": ""
+      }
+    ]
+  },
+  "salud": {
+    "reporte": "",
+    "noticias": [
+      {
+        "titulo": "",
+        "fecha": "",
+        "nota": "",
+        "nivel": "Alta | Media | Baja",
+        "icono": "",
+        "reporte": ""
+      }
+    ]
+  },
+  "opiniones": {
+    "reporte": "",
+    "comentarios": [
+      {
+        "usuario": "",
+        "calificacion": 1-5,
+        "fecha": "",
+        "comentario": ""
+      }
+    ]
+  }
+}
+
+Devuelve los campos que apliquen según los textos. Si no hay datos en una categoría, deja "reporte": "Sin datos relevantes encontrados" y el arreglo correspondiente vacío ([]), en caso de haber resultados coloca el repote con datos reales, del analisis de sentimientos con metricas y eso.
+
+Aquí están los textos:
+---
+{TEXTOS}
+"""
+
+
+import openai
+
+async def generar_reporte_chatgpt(task_info: TaskInfo) -> str:
+    contenido = preparar_datos_para_chatgpt(task_info)
+    prompt = PROMPT_BASE.replace("{TEXTOS}", contenido)
+    print("Prompt para ChatGPT:", prompt)  # Debug
+
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": "Eres un experto en análisis social turístico."},
+            {"role": "user", "content": prompt}
+        ]
+    )
+
+    resultado = response.choices[0].message.content
+    print(f"[GPT] Reporte generado:\n{resultado}")
+    return resultado
+
+ 
         
-        try:
-            parsed_response = json.loads(ai_response)
-        except json.JSONDecodeError:
-            parsed_response = {
-                "summary": ai_response,
-                "key_insights": ["Análisis generado por IA"],
-                "recommendations": ["Revisar datos manualmente"]
-            }
-        
-        return {
-            "task_id": task_data.task_id,
-            "report_type": report_type,
-            "generated_at": datetime.now(),
-            "report": parsed_response.get("summary", ai_response),
-            "key_insights": parsed_response.get("key_insights", []),
-            "sentiment_overview": task_data.sentiment_summary,
-            "recommendations": parsed_response.get("recommendations", [])
-        }
-        
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error generando reporte: {str(e)}")
 
 # WebSocket endpoint
 @app.websocket("/ws/{task_id}")
@@ -588,6 +690,43 @@ async def search(request: SearchRequest, background_tasks: BackgroundTasks):
         "platforms": platforms,
         "websocket_url": f"/ws/{task_id}"
     }
+    
+@app.get("/results/{task_id}")
+async def get_results(task_id: str):
+    """Obtener resultados de una tarea"""
+    if task_id not in tasks_storage:
+        raise HTTPException(status_code=404, detail="Tarea no encontrada")
+    
+    task_info = tasks_storage[task_id]
+    
+    response_data = {
+        "task_id": task_info.task_id,
+        "status": task_info.status.value,
+        "query": task_info.query,
+        "platforms": task_info.platforms,
+        "total_results": task_info.total,
+        "created_at": task_info.created_at,
+        "completed_at": task_info.completed_at
+    }
+    
+    if task_info.status == TaskStatus.COMPLETED:
+        response_data.update({
+            "results": [serialize_post(result) for result in task_info.results] if task_info.results else [],
+            "platform_results": {
+                platform: [serialize_post(result) for result in results] 
+                for platform, results in (task_info.platform_results or {}).items()
+            },
+            "sentiment_summary": task_info.sentiment_summary or {},
+            "gpt_report": task_info.gpt_report or "No se pudo generar el reporte de IA."
+        })
+    
+    if task_info.error:
+        response_data["error"] = task_info.error
+
+    if task_info.status != TaskStatus.COMPLETED:
+        response_data["progress"] = task_info.progress
+    
+    return response_data  # ✅ NECESARIO
 
 @app.get("/progress/{task_id}")
 async def get_progress(task_id: str):
@@ -607,35 +746,7 @@ def serialize_post(post: PostData) -> dict:
         data["sentiment"] = data["sentiment"].dict()
     return data
 
-@app.get("/results/{task_id}")
-async def get_results(task_id: str):
-    """Obtener resultados de una tarea"""
-    if task_id not in tasks_storage:
-        raise HTTPException(status_code=404, detail="Tarea no encontrada")
-    
-    task_info = tasks_storage[task_id]
-    
-    # Simplificar la respuesta y mostrar solo lo importante
-    response_data = {
-        "task_id": task_info.task_id,
-        "status": task_info.status.value,
-        "query": task_info.query,
-        "platforms": task_info.platforms,
-        "total_results": task_info.total,
-        "created_at": task_info.created_at,
-        "completed_at": task_info.completed_at
-    }
-    
-    # Solo incluir resultados si la tarea está completada
-    if task_info.status == TaskStatus.COMPLETED:
-        response_data.update({
-            "results": [serialize_post(result) for result in task_info.results] if task_info.results else [],
-            "platform_results": {
-                platform: [serialize_post(result) for result in results] 
-                for platform, results in (task_info.platform_results or {}).items()
-            },
-            "sentiment_summary": task_info.sentiment_summary or {}
-        })
+
     
     # Si hay error, mostrarlo
     if task_info.error:
@@ -650,19 +761,6 @@ async def get_results(task_id: str):
 # También arregla esta parte en run_multi_platform_scraping:
 
         
-@app.post("/report")
-async def generate_report(request: ReportRequest):
-    """Generar reportes con IA"""
-    if request.task_id not in tasks_storage:
-        raise HTTPException(status_code=404, detail="Tarea no encontrada")
-    
-    task_info = tasks_storage[request.task_id]
-    
-    if task_info.status != TaskStatus.COMPLETED:
-        raise HTTPException(status_code=400, detail="La tarea debe estar completada")
-    
-    return await generate_ai_report(task_info, request.report_type, request.language)
-
 @app.get("/tasks")
 async def get_tasks():
     """Obtener todas las tareas"""
